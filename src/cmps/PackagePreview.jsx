@@ -1,9 +1,9 @@
-import React from 'react'
+// import React from 'react'
 
-export function PackagePreview() {
-    return (
-        <div>
-            hey
-        </div>
-    )
-}
+// export function PackagePreview() {
+//     return (
+//         <div>
+//             hey
+//         </div>
+//     )
+// }
