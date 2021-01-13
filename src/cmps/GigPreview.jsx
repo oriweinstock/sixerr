@@ -6,7 +6,7 @@ export function GigPreview({ gig }) {
             <Link to={`/gig/${gig._id}`}>
                 <h2>{gig.title}</h2>
             </Link>
-            <h3>{gig.price}</h3>
+            <h3>{gig.packages[0].price}</h3>
         </li>
     )
 }
