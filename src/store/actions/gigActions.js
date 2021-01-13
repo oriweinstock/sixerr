@@ -12,6 +12,10 @@ export function loadGigs() {
     }
 }
 
+export function loadGig(gigId) {
+    return gigService.getById(gigId)
+}
+
 export function removeGig(gigId) {
     return async (dispatch) => {
         await gigService.deleteGig(gigId)
