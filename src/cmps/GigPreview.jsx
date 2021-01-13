@@ -2,11 +2,15 @@ import { Link } from 'react-router-dom'
 
 export function GigPreview({ gig }) {
     return (
-        <li className="gig-preview mrg-end mrg-bottom shadow rounded">
+        <li className="gig-preview mrg-end mrg-bottom">
             <Link to={`/gig/${gig._id}`}>
-                <h2>{gig.title}</h2>
+                <img src={gig.imgUrls[0]} alt="" />
             </Link>
-            <h3>{gig.packages[0].price}</h3>
+
+            <div className="flex column space-between">
+                <h2>{gig.title}</h2>
+                <h3>Starting at <span>{gig.packages[0].price}$</span></h3>
+            </div>
         </li>
     )
 }

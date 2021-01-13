@@ -14,18 +14,19 @@ class _AppHeader extends React.Component {
     render() {
         // const { user } = this.props
         return (
-            <div className="flex space-between align-base mrg-start mrg-end">
-                <h1>GIGS HEADER!!! <span className="flip">R'</span> SIXERR</h1>
-                {/* <ul className="clean-list flex">
+            <section className="app-header flex space-between align-center main-layout">
+                <h1>Sixerr<span>.</span></h1>
+                {/* <h1>GIGS HEADER!!! <span className="flip">R'</span> SIXERR</h1> */}
+                <ul className="header-nav clean-list flex align-center bold">
 
-                    <NavLink to="/"><li className="mrg-end">HOME/LOGO</li></NavLink>
-                    <NavLink to="/gig"><li className="mrg-end">Explore</li></NavLink>
-                    <NavLink to="/chat"><li className="mrg-end">Messages</li></NavLink>
-                    <NavLink to="/order"><li className="mrg-end">Orders</li></NavLink>
-                    <NavLink to="/userprofile"><li className="mrg-end">My Account</li></NavLink>
+                    <NavLink className="fast-trans" to="/"><li>HOME/LOGO</li></NavLink>
+                    <NavLink className="fast-trans" to="/gig"><li>Explore</li></NavLink>
+                    <NavLink className="fast-trans" to="/chat"><li>Messages</li></NavLink>
+                    <NavLink className="fast-trans" to="/order"><li>Orders</li></NavLink>
+                    <NavLink className="fast-trans" to="/userprofile"><li>My Account</li></NavLink>
                 </ul>
-                {user && <h3>Welcome {user.username}</h3>}*/}
-            </div> 
+                {/* {user && <h3>Welcome {user.username}</h3>} */}
+            </section>
         )
     }
 }
