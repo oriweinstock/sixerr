@@ -1,57 +1,49 @@
 import { gigService } from "../../services/gigService.js";
 
 export function loadGigs() {
-    return (dispatch, getState) => {
-        const {filterBy} = getState().gigModule
-        return gigService.query(filterBy)
-            .then(gigs => {
-                const action = {
-                    type: 'SET_GIGS',
-                    gigs
-                }
-                dispatch(action)
-            })
+    return async (dispatch, getState) => {
+        const { filterBy } = getState().gigModule
+        const gigs = await gigService.query(filterBy)
+        const action = {
+            type: 'SET_GIGS',
+            gigs
+        }
+        dispatch(action)
     }
-}
-
-export function getById(gigId) {
-    return gigService.getById(gigId)
 }
 
 export function removeGig(gigId) {
-    return (dispatch) => {
-        return gigService.deleteGig(gigId)
-            .then(() => {
-                const action = {
-                    type: 'REMOVE_GIG',
-                    gigId
-                }
-                dispatch(action)
-            })
+    return async (dispatch) => {
+        await gigService.deleteGig(gigId)
+        const action = {
+            type: 'REMOVE_GIG',
+            gigId
+        }
+        dispatch(action)
+
     }
 }
+
 export function addGig(gig) {
-    return (dispatch) => {
-        return gigService.save(gig)
-            .then((savedGig) => {
-                const action = {
-                    type: 'ADD_GIG',
-                    savedGig
-                }
-                dispatch(action)
-            })
+    return async (dispatch) => {
+        const savedGig = await gigService.save(gig)
+        const action = {
+            type: 'ADD_GIG',
+            savedGig
+        }
+        dispatch(action)
+
     }
 }
 export function updateGig(gig) {
-    return (dispatch) => {
-        return gigService.save(gig)
-            .then((gig) => {
-                const action = {
-                    type: 'SAVE_GIG',
-                    gig
-                }
-                dispatch(action)
-            })
+    return async (dispatch) => {
+        const savedGig = await gigService.save(gig)
+        const action = {
+            type: 'SAVE_GIG',
+            savedGig
+        }
+        dispatch(action)
+
     }
 }
 

@@ -7,17 +7,20 @@ import { loadGigs, setFilter, removeGig } from "../store/actions/gigActions.js";
 class _SixerrApp extends React.Component {
 
     componentDidMount() {
-
+        this.props.loadGigs()
     }
 
-    onDelete = () => {}
+    onDelete = () => { }
 
     render() {
         return (
-            <>
+            <section className="sixerr-app">
                 <h1>Welcome to Sixerr</h1>
+                <div className="flex space-around align-center mrg-top mrg-bottom">
+                    {/* <GigFilter /> */}
+                </div>
                 <GigList gigs={this.props.gigs} onDelete={this.onDelete} />
-            </>
+            </section>
 
         )
     }
