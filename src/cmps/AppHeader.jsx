@@ -3,21 +3,20 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 
+
 class _AppHeader extends React.Component {
     componentDidMount() {
-        // console.log(this.props)
     }
-    
-    logout = async () => {
-        await this.props.logout()
-        // console.log('user logged out. frontend')
-    }
+    // logout = async () => {
+    //     await this.props.logout()
+    //     // console.log('user logged out. frontend')
+    // }
     render() {
-        const { user } = this.props
+        // const { user } = this.props
         return (
             <div className="flex space-between align-base mrg-start mrg-end">
-                <h1>GIGS!!! <span className="flip">R'</span> SIXERR</h1>
-                <ul className="clean-list flex">
+                <h1>GIGS HEADER!!! <span className="flip">R'</span> SIXERR</h1>
+                {/* <ul className="clean-list flex">
 
                     <NavLink to="/"><li className="mrg-end">HOME/LOGO</li></NavLink>
                     <NavLink to="/gig"><li className="mrg-end">Explore</li></NavLink>
@@ -25,8 +24,8 @@ class _AppHeader extends React.Component {
                     <NavLink to="/order"><li className="mrg-end">Orders</li></NavLink>
                     <NavLink to="/userprofile"><li className="mrg-end">My Account</li></NavLink>
                 </ul>
-                {/* {user && <h3>Welcome {user.username}</h3>} */}
-            </div>
+                {user && <h3>Welcome {user.username}</h3>}*/}
+            </div> 
         )
     }
 }
@@ -38,7 +37,6 @@ const mapGlobalStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-    // logout
 }
 
 export const AppHeader = connect(mapGlobalStateToProps, mapDispatchToProps)(_AppHeader)
