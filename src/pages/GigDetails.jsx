@@ -1,13 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {PackageList} from '../cmps/PackageList.jsx'
+import { PackageList } from '../cmps/PackageList.jsx'
 import { SellerPreview } from '../cmps/SellerPreview'
 // import { Link } from 'react-router-dom'
-// import { gigService } from '../services/gigService'
-// import { saveGig, removeGig } from '../store/actions/gigActions'
+import { gigService } from '../services/gigService'
+import { addGig } from '../store/actions/gigActions'
 // import { loadReviews, addReview } from '../store/actions/reviewActions'
 
-export class GigDetails extends React.Component {
+class _GigDetails extends React.Component {
 
     state = {
         gig: {
@@ -62,7 +62,7 @@ export class GigDetails extends React.Component {
                         communication: 4,
                         recommend: 4,
                         asDescribed: 4,
-                        imgUrl:'https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light'
+                        imgUrl: 'https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light'
                     },
                     by: {
                         _id: "u102",
@@ -71,16 +71,32 @@ export class GigDetails extends React.Component {
                     }
                 }
             ]
-        }
+        },
+        isGigOwner: false,
+        isTitleEditble:false
+    }
+    
+    
+
+    makeEditable = () => {
+        const isTitleEditble = !this.state.isTitleEditble
+        this.setState({ isTitleEditble })
     }
 
+
     render() {
+        let { isGigOwner } = this.state
+        let {isTitleEditble} = this.state
+        isGigOwner = true
         const { gig } = this.state
         if (!gig) return <div>No gig...</div>
         console.log("render , gig.packages", gig.packages)
         return (
             <section className="gig-details">
-                <h1>{gig.title}</h1>
+                {isTitleEditble || isGigOwner && <h1>{gig.title} {isGigOwner && <button onClick={() => this.makeEditable()}>Edit</button>}</h1>}
+                {isTitleEditble && <form action="">
+                <input className="title-input" type="text" />
+                </form>}
                 <div className="img-details-conatiner">
                     <img src={gig.imgUrls[0]} />
                 </div>
@@ -107,14 +123,14 @@ export class GigDetails extends React.Component {
     }
 }
 
-// const mapGlobalStateToProps = (state) => {
-//     return {
-//         gigs: state.gigModule.gigs,
-//     }
-// }
+const mapStateToProps = (state) => {
+    return {
+        gigs: state.gigModule.gigs,
+    }
+}
 
-// const mapDispatchToProps = {
+const mapDispatchToProps = {
+    addGig,
+}
 
-// }
-
-// export const GigDetails = connect(mapGlobalStateToProps, mapDispatchToProps)(_GigDetails)
+export const GigDetails = connect(mapStateToProps, mapDispatchToProps)(_GigDetails)

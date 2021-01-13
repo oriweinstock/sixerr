@@ -5,16 +5,16 @@ import {GigEdit} from './pages/GigEdit.jsx'
 
 export const routes = [
     {
+        path:'/gig/edit/:gigId?',
+        component: GigEdit
+    },
+    {
         path:'/gig/:gigId',
         component: GigDetails
     },
     {
         path:'/gig',
         component: SixerrApp
-    },
-    {
-        path:'/gig/edit/:gigId?',
-        component: GigEdit
     }
     // {
     //     path:'/profile',

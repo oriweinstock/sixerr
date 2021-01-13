@@ -22,6 +22,7 @@ async function deleteGig(gigId) {
 }
 
 async function save(gigToSave) {
+    console.log("save , gigToSave", gigToSave)
     if (gigToSave._id) {
         return httpService.put(`gig/${gigToSave._id}`, gigToSave) // UPDATE
     } else {
