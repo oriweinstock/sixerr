@@ -1,6 +1,12 @@
 body {
     background-color: aqua;
 }
+// SETUP
+@import '../setup/vars';
 
-@import '../basics/_helpers';
-@import '../cmps/_GigPreview';
+// BASE
+@import 'helpers';
+
+// COMPONENTS
+@import '../cmps/GigPreview';
+@import '../cmps/AppHeader';
