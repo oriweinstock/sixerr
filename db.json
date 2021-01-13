@@ -1,0 +1,97 @@
+{
+    "order": [
+        {
+            "_id": "o1225",
+            "createdAt": 9898989,
+            "buyer": "mini-user",
+            "totalPrice": 20,
+            "currency": "USD",
+            "gig": {
+                "_id": "v102",
+                "title": "I will turn your childrens book into a video with narration",
+                "imgUrl": ""
+            },
+            "status": "pending"
+        }
+    ],
+    "gig": [
+        {
+            "_id": "s101",
+            "category": "book",
+            "title": "I will turn your childrens book into a video with narration",
+            "packages": [
+                {
+                    "type": "basic",
+                    "desc": "",
+                    "priceUsd": 50,
+                    "revisionsCount": 1,
+                    "deliveryDays": 8,
+                    "features": [ "runningTime 60 seconds" , "dubbing", "Background Imagery"]
+                }
+            ],
+            "owner": {
+                "_id": "u101",
+                "fullname": "user1",
+                "imgUrl": "/img/img1.jpg"
+            },
+            "desc": "Turn your children’s picture book into a promotional powerhouse!",
+            "tags": [
+                "book to video",
+                "books for kids"
+            ],
+            "imgUrls": [
+                "gig.jpg",
+                "more1.jpg",
+                "more2.jpg"
+            ],
+            "reviews": [
+                {
+                    "id": "madeId",
+                    "rating": 4,
+                    "txt": "a real proffesional..",
+                    "createdAt": "timestamp",
+                    "purchasedAt": "timestamp",
+                    "seller": {
+                        "communication": 5,
+                        "recommend": 3,
+                        "asDescribed": 5
+                    },                    
+                    "by": {
+                        "_id": "u102",
+                        "fullname": "user2",
+                        "imgUrl": "/img/img2.jpg"
+                    }
+                }
+            ]
+        }
+    ],
+    "user": [
+        {
+            "_id": "u101",
+            "fullname": "User 1",
+            "imgUrl": "/img/img1.jpg",
+            "isAdmin": false,
+            "username": "user1",
+            "password": "secret"
+        },
+        {
+            "_id": "u102",
+            "fullname": "User 2",
+            "imgUrl": "/img/img2.jpg",
+            "isAdmin": false,
+            "username": "user2",
+            "password": "secret",
+            "sellerExtInfo": {
+                "desc": "",
+                "languages": [],
+                "occupation": "",
+                "skills": [],
+                "education": "",
+                "certification": "",
+                "website": "",
+                "email": "",
+                "phone": ""
+            }
+        }
+    ]
+}
