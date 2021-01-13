@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { GigPreview } from "./GigPreview"
 
 export function GigList({ gigs }) {
 
@@ -6,12 +6,7 @@ export function GigList({ gigs }) {
     return (
         <div>
             <div className="flex space-around align-center mrg-top mrg-bottom">
-                <GigFilter />
-                <Link to="/gigs/add">
-                    <Button variant="contained" color="primary">
-                        Add Gig
-                </Button>
-                </Link>
+                {/* <GigFilter /> */}
             </div>
             <ul className="gig-list clean-list flex">
                 {gigs.map(gig => <GigPreview key={gig._id} gig={gig}></GigPreview>)}
