@@ -1,61 +1,50 @@
 {
-    "order": [
-        {
-            "_id": "o1225",
-            "createdAt": 9898989,
-            "buyer": "mini-user",
-            "totalPrice": 20,
-            "currency": "USD",
-            "gig": {
-                "_id": "v102",
-                "title": "I will turn your childrens book into a video with narration",
-                "imgUrl": ""
-            },
-            "status": "pending"
-        }
-    ],
     "gig": [
         {
             "_id": "s101",
-            "category": "book",
             "title": "I will turn your childrens book into a video with narration",
+            "desc": "Turn your children’s picture book into a promotional powerhouse!",
+            "tags": [
+                "Graphic Design",
+                "Logo",
+                "Photoshop"
+            ],
             "packages": [
                 {
                     "type": "basic",
-                    "desc": "",
-                    "priceUsd": 50,
+                    "desc": "Basic narration",
+                    "price": 50,
                     "revisionsCount": 1,
                     "deliveryDays": 8,
-                    "features": [ "runningTime 60 seconds" , "dubbing", "Background Imagery"]
+                    "features": [
+                        "RunningTime 60 seconds",
+                        "Dubbing",
+                        "Background Imagery"
+                    ]
                 }
             ],
             "owner": {
                 "_id": "u101",
-                "fullname": "user1",
+                "fullname": "David Abu Puki",
                 "imgUrl": "/img/img1.jpg"
             },
-            "desc": "Turn your children’s picture book into a promotional powerhouse!",
-            "tags": [
-                "book to video",
-                "books for kids"
-            ],
             "imgUrls": [
-                "gig.jpg",
-                "more1.jpg",
-                "more2.jpg"
+                "gig_preview.jpg",
+                "slide1.jpg",
+                "slide2.jpg"
             ],
             "reviews": [
                 {
                     "id": "madeId",
                     "rating": 4,
                     "txt": "a real proffesional..",
-                    "createdAt": "timestamp",
-                    "purchasedAt": "timestamp",
+                    "createdAt": 12233367771,
+                    "purchasedAt": 12233369812,
                     "seller": {
                         "communication": 5,
                         "recommend": 3,
                         "asDescribed": 5
-                    },                    
+                    },
                     "by": {
                         "_id": "u102",
                         "fullname": "user2",
@@ -81,17 +70,37 @@
             "isAdmin": false,
             "username": "user2",
             "password": "secret",
-            "sellerExtInfo": {
-                "desc": "",
-                "languages": [],
-                "occupation": "",
-                "skills": [],
-                "education": "",
-                "certification": "",
-                "website": "",
-                "email": "",
-                "phone": ""
+            "sellerProfile": {
+                "desc": "Professional Narrator",
+                "languages": [
+                    "Italian",
+                    "English"
+                ],
+                "occupation": "Fox new anchorman",
+                "skills": [
+                    "Narrating",
+                    "Speech Writing"
+                ],
+                "education": "Coding Academy",
+                "certification": "CA Cert#ACC2",
+                "email": "bill@msdos6.22.com",
+                "phone": "03-5331112"
             }
+        }
+    ],
+    "order": [
+        {
+            "_id": "o1225",
+            "createdAt": 9898989,
+            "buyer": "{mini-user}",
+            "totalPrice": 20,
+            "currency": "USD",
+            "gig": {
+                "_id": "v102",
+                "title": "I will turn your childrens book into a video with narration",
+                "imgUrl": "www.images.com/BABA01.jpg"
+            },
+            "status": "pending"
         }
     ]
 }
