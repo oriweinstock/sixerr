@@ -1,0 +1,53 @@
+.gig-details {
+    display: flex;
+    flex-direction: column;
+    h1 {
+        text-align: start;
+    }
+}
+
+.img-details-conatiner {
+    border: 1px solid black;
+    padding: 3rem;
+    padding-block-start: 2rem;
+    padding-block-end: 2rem;
+    width: 34.375rem;
+    height: 26.6rem;
+}
+.img-details-conatiner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.short-review {
+    margin-block-start: 3.5rem;
+    border: 1px solid black;
+    h5{
+        padding: none;
+        margin: none;
+    }
+}
+
+.owner-img-container {
+    padding: 1rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.desc{
+    margin-block-start: 1rem;
+    border: 1px solid black;
+    h4{
+        width: 60rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+

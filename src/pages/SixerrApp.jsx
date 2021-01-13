@@ -18,7 +18,6 @@ class _SixerrApp extends React.Component {
                 <h1>Welcome to Sixerr</h1>
                 <GigList gigs={this.props.gigs} onDelete={this.onDelete} />
             </>
-
         )
     }
 }
