@@ -24,7 +24,9 @@ export function logout() {
             })
     }}
 export function addUser(user) {
-    console.log(user)
+    // Add default empty fields
+    user.imgUrl =  '/img/img1.jpg'
+    user.isAdmin =  false
     return (dispatch) => {
         return userService.signup(user)
             .then(user => {
