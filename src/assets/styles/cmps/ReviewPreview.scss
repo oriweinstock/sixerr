@@ -1,0 +1,20 @@
+.review-card {
+    margin-block-start: 2rem;
+    border-top: 1px solid #dadbdd;
+    border-bottom: 1px solid #dadbdd;
+    .avatar-container {
+        margin-block-start: 1.2rem;
+        padding-inline-end: 1rem;
+    }
+    .review-info {
+        margin-block-start: 1.2rem;
+        h4 {
+            margin: 0;
+        }
+    }
+    p{
+        margin: 0;
+        margin-block-start:0.5rem ;
+        margin-block-end:2rem ;
+    }
+}
