@@ -14,8 +14,7 @@ class _SixerrApp extends React.Component {
 
     render() {
         return (
-            <section className="sixerr-app">
-                <h1>Welcome to Sixerr</h1>
+            <section className="sixerr-app main-layout">
                 <div className="flex space-around align-center mrg-top mrg-bottom">
                     {/* <GigFilter /> */}
                 </div>
