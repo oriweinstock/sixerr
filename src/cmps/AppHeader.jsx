@@ -25,13 +25,10 @@ class _AppHeader extends React.Component {
                     <NavLink className="fast-trans" to="/order"><li>Orders</li></NavLink>
                     {/* IF Logged in: */}
                     <NavLink className="fast-trans" to="/userprofile"><li>My Account</li></NavLink>
-<<<<<<< HEAD
                     {/* IF logged out: */}
                     <NavLink className="" to="#" onClick={() => alert('!')}>Test</NavLink>
-=======
                     {/* TEMP BY DUDI */}
                     {/* <NavLink className="fast-trans" to="/login"><li>My Account</li></NavLink> */}
->>>>>>> c625276dcfd9628c35bff651cfb9289d75401123
                 </ul>
                 {user && <h3>Welcome {user.username}</h3>}
             </section>
