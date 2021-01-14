@@ -1,9 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { GigReview } from '../cmps/GigReview.jsx'
 import { PackageList } from '../cmps/PackageList.jsx'
 import { SellerPreview } from '../cmps/SellerPreview'
 // import { Link } from 'react-router-dom'
-import { gigService } from '../services/gigService'
+// import { gigService } from '../services/gigService'
 import { addGig, loadGig } from '../store/actions/gigActions'
 // import { loadReviews, addReview } from '../store/actions/reviewActions'
 
@@ -22,8 +23,10 @@ class _GigDetails extends React.Component {
 
     }
 
-    handleChange = (value, field) => {
-        console.log('field', field);
+    handleChange = (ev, field) => {
+        console.log("field", field)
+        const value = ev.target.innerText
+        console.log("value", value)
         this.setState(prevState => {
             return {
                 gig: {
@@ -34,19 +37,18 @@ class _GigDetails extends React.Component {
         })
     }
 
+
     render() {
-        let { isGigOwner } = this.state
-        console.log("render , isGigOwner", isGigOwner)
+        const { isGigOwner } = this.state
         const { gig } = this.state
+        console.log("render , gig", gig)
+        // console.log("render , reviews", reviews)
         if (!gig) return <div>No gig...</div>
         return (
-            <section className="gig-details">
-                {/* {isTitleEditble || isGigOwner && <h1>{gig.title} {isGigOwner && <button onClick={() => this.makeEditable()}>Edit</button>}</h1>}
-                {isTitleEditble && <form action=""> */}
-                {/* <input className="title-input" type="text" /> */}
-                {/* </form>} */}
-                <h1 ref="textarea" onKeyDown={() => this.handleChange(gig.title, 'title')} contenteditable={`${isGigOwner}`}>{gig.title}</h1>
-                <h2 contenteditable={true}>hey</h2>
+            <section className="gig-details main-layout">
+                <div onInput={(ev) => this.handleChange(ev, 'title')}>
+                    <h1 contentEditable suppressContentEditableWarning={`${isGigOwner}`}>{gig.title}</h1>
+                </div>
                 <div className="img-details-conatiner">
                     <img src={gig.imgUrls[0]} />
                 </div>
@@ -63,10 +65,11 @@ class _GigDetails extends React.Component {
                     <h2>About This Gig</h2>
                     <h4>{gig.desc}</h4>
                 </div>
-                
+
                 {/* packagesList */}
+                <GigReview gig={gig} />
                 <SellerPreview seller={gig.owner} />
-                <PackageList packages={gig.packages}/>
+                <PackageList packages={gig.packages} />
                 {/* sellerPreview */}
                 {/* reviews */}
             </section>
@@ -85,3 +88,41 @@ const mapDispatchToProps = {
 }
 
 export const GigDetails = connect(mapStateToProps, mapDispatchToProps)(_GigDetails)
+
+
+//with input
+{/* {isTitleEditble || isGigOwner && <h1>{gig.title} {isGigOwner && <button onClick={() => this.makeEditable()}>Edit</button>}</h1>}
+                {isTitleEditble && <form action=""> */}
+{/* <input className="title-input" type="text" /> */ }
+{/* </form>} */ }
+
+
+
+// {/* <div key={idx} className={`${todo.isDone && 'todo-done'} flex space-between`} onInput={(ev) => { onNoteChosen(ev, idx) }}>
+//                     <p contentEditable suppressContentEditableWarning={true}>{todo.text}</p>
+//                     <img className={`${!todo.isDone && 'my-active'} pointer`} onClick={() => { onTodoDone(idx) }} src="apps/Keep/assets/img/V.png" />
+//                 </div> */}
+
+
+
+                // onUpdateNote = (ev, noteId, todoIdx) => {
+                //     if (!ev) return
+                //     const text = ev.target.innerText
+                //     noteService.getNoteById(noteId)
+                //         .then(noteToEdit => {
+                //             switch (noteToEdit.type) {
+                //                 case 'noteText':
+                //                     noteToEdit.info.text = text;
+                //                     noteService.save(noteToEdit)
+                //                     break
+                //                 case 'noteTodos':
+                //                     noteToEdit.info.todos[todoIdx].text = text;
+                //                     noteService.save(noteToEdit)
+                //                     break;
+                //                 case 'noteImg':
+                //                 case 'noteVideo':
+                //                     noteToEdit.info.title = text;
+                //                     noteService.save(noteToEdit)
+                //             }
+                //         })
+                // }
