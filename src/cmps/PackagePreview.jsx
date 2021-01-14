@@ -4,16 +4,7 @@ export function PackagePreview({ pack }) {
     console.log("PackagePreview , package", pack)
     return (
         <>
-            <tbody>
-                <tr >
-                    <th>Package</th>
-                    <td>
-                        <p>${pack.price}</p>
-                        <p>{pack.type}</p>
-                        <p>${pack.price} STARTER</p>
-                    </td>
-                </tr>
-            </tbody>
+        <div>Package Preview</div>
         </>
     )
 }
