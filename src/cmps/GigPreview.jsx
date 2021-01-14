@@ -9,7 +9,9 @@ export function GigPreview({ gig }) {
 
             <div className="flex column space-between">
                 <h2>{gig.title}</h2>
-                <h3>Starting at <span>{gig.packages[0].price}$</span></h3>
+                <div className="gig-preview-bottom">
+                    <h3>Starting at <span>{gig.packages[0].price}$</span></h3>
+                </div>
             </div>
         </li>
     )
