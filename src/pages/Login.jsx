@@ -1,4 +1,4 @@
-import {Component} from 'react';
+import { Component } from 'react';
 import { connect } from 'react-redux'
 
 import { login, logout, addUser } from "../store/actions/userActions.js"
@@ -19,7 +19,7 @@ class _Login extends Component {
     }
 
     // componentDidMount () {
-        
+
     // }
 
     loginHandleChange = ev => {
@@ -85,26 +85,25 @@ class _Login extends Component {
                     signupCred: { username: '', password: '', fullname: '' },
                 }, () => { this.props.history.push('/gig') })
         }
-        catch (err) {   
-                console.log('ERR', err)
-                this.setState(prevState => ({
-                    signupCred: {
-                        ...prevState.signupCred,
-                        password: ''
-                    },
-                    msg: 'Could not sign up please try again'
-                }))
+        catch (err) {
+            console.log('ERR', err)
+            this.setState(prevState => ({
+                signupCred: {
+                    ...prevState.signupCred,
+                    password: ''
+                },
+                msg: 'Could not sign up please try again'
+            }))
         }
     }
 
     render() {
-    
+
         const loggedInUser = this.props.user //TODO pay attention later 
         console.log(loggedInUser)
 
         let signupSection = (
             <form className="frm" onSubmit={this.doSignup}>
-                <h2>Signup</h2>
                 <input
                     type="text"
                     name="fullname"
@@ -132,7 +131,6 @@ class _Login extends Component {
         )
         let loginSection = (
             <form className="frm" onSubmit={this.doLogin}>
-                <h2>Login</h2>
                 <input
                     type="text"
                     name="username"
@@ -149,16 +147,18 @@ class _Login extends Component {
                     placeholder="Password"
                 />
                 <br />
-                <button>Login</button>
+                <button className="rounded">Continue</button>
+                <hr/>
+                <h4>Not a member yet? <span>Join now</span></h4>
             </form>
         )
 
 
         return (
-            <div className="login">
+            <div className="login main-layout shadow rounded">
                 <h1>
-                    Login / Signup
-            </h1>
+                    Sign In to Sixerr
+                </h1>
                 <p>{this.state.msg}</p>
                 {loggedInUser && (
                     <div>
@@ -169,7 +169,7 @@ class _Login extends Component {
                     </div>
                 )}
                 {!loggedInUser && loginSection}
-                {!loggedInUser && signupSection}
+                {/* {!loggedInUser && signupSection} */}
 
 
             </div>
