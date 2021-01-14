@@ -1,14 +1,13 @@
-body {
-    background-color: aqua;
-}
 // SETUP
 @import '../setup/vars';
 
 // BASE
 @import 'helpers';
+@import 'base';
 
 // COMPONENTS
-@import '../cmps/GigPreview';
 @import '../cmps/AppHeader';
+@import '../cmps/GigList';
+@import '../cmps/GigPreview';
 @import '../cmps/GigDetails';
 @import '../cmps/SellerPreview';
