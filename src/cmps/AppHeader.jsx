@@ -9,7 +9,7 @@ import { logout } from '../store/actions/userActions'
 class _AppHeader extends React.Component {
 
     state = {
-        isLoginOpen: true
+        isLoginOpen: false
     }
 
     componentDidMount() {
@@ -40,12 +40,15 @@ class _AppHeader extends React.Component {
                         {user && <NavLink className="fast-trans" to="#" onClick={this.props.logout}>
                             <li>Logout</li>
                         </NavLink>}
-                        {!user && <NavLink className="" to="#" onClick={this.onToggleLogin}><li>Login</li></NavLink>}
+                        {!user &&
+                            <NavLink className="" to="#" onClick={this.onToggleLogin}>
+                                <li>Login</li>
+                            </NavLink>}
                         {user && <h3>{user.username}</h3>}
                     </ul>
 
                 </section>
-                {isLoginOpen && !user && <Login toggleLogin={this.onToggleLogin}/>}
+                {isLoginOpen && !user && <Login toggleLogin={this.onToggleLogin} />}
             </>
         )
     }

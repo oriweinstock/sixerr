@@ -598,6 +598,22 @@
       "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
       "_id": "lfE5k8E"
+    },
+    {
+      "username": "puki",
+      "password": "baba",
+      "fullname": "Puki Ben David",
+      "imgUrl": "/img/img1.jpg",
+      "isAdmin": false,
+      "_id": "q2bgD8N"
+    },
+    {
+      "username": "baba",
+      "password": "baba",
+      "fullname": "Baba",
+      "imgUrl": "/img/img1.jpg",
+      "isAdmin": false,
+      "_id": "HKG9eC5"
     }
   ]
 }
