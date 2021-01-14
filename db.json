@@ -161,6 +161,23 @@
             "fullname": "user2",
             "imgUrl": "/img/img2.jpg"
           }
+        },
+        {
+          "id": "79rKD",
+          "rating": "",
+          "txt": "amazing seller!",
+          "createdAt": 1610659121292,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
         }
       ]
     },
@@ -469,8 +486,8 @@
     },
     {
       "_id": "s110",
-      "title": "I will design your garden, backyard,swimming pool patio, terrace and render images",
-      "desc": "I'm a Landscape Architect who professionally involved in architectural designing and visualization. I will provide outstanding quality renderings from your Architectural drawings. (Kindly check the gig images and video.Those are completely my own works and I'm passionate on that). There you can place any of your order without any doubt.",
+      "title": "I will design your garden, backyard,swimming pool patio, terrace and render images!!!",
+      "desc": "!I'm a Landscape Architect who professionally involved in architectural designing and visualization. I will provide outstanding quality renderings from your Architectural drawings. (Kindly check the gig images and video.Those are completely my own works and I'm passionate on that). There you can place any of your order without any doubt!!",
       "tags": [
         "3d",
         "design"

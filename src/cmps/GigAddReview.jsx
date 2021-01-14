@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { utilService } from '../services/utilService.js'
-
-export class GigAddReview extends Component {
+import { addGig, updateGig } from '../store/actions/gigActions'
+import StarIcon from '@material-ui/icons/Star';
+class _GigAddReview extends Component {
 
 
     state = {
@@ -11,28 +12,23 @@ export class GigAddReview extends Component {
         review: null,
     }
 
-
     componentDidMount() {
         const { gig } = this.props
         const { user } = this.props
         const review = this.createReviewTemplate(gig, user)
-        console.log("componentDidMount , review", review)
         this.setState({ gig, user, review })
     }
 
     createReviewTemplate = (gig, user) => {
         const by = { _id: user._id, fullname: user.fullname, imgUrl: user.imgUrl }
         const id = utilService.makeId()
-        const review = { id, rating: '', createdAt: null, purchasedAt: null, seller: gig.owner, by }
+        const review = { id, rating: '', txt: '', createdAt: null, purchasedAt: null, seller: gig.owner, by }
         return review
     }
 
     handleChange = ({ target }) => {
-        console.log('handle change!');
         const field = target.name
-        console.log("field", field)
         const value = target.value
-        console.log("value", value)
         this.setState(prevState => {
             return {
                 review: {
@@ -43,34 +39,60 @@ export class GigAddReview extends Component {
         })
     }
     handleRate = (rate) => {
-        console.log("rate", rate)
         const { review } = { ...this.state }
-        console.log("review", review)
         review.rating = rate
+        console.log("review", review)
         this.setState({ review })
     }
 
-    render() {
-        const { user } = this.state
-        const { gig } = this.state
+    onAddReview = () => {
         const { review } = this.state
-        console.log("render , review", review)
-        console.log('this.state', this.state);
+        const { gig } = this.state
+        const { user } = this.state
+        let reviewToAdd = { ...review }
+        const purchasedAt = "purchase At"
+        const date = Date.now()
+        reviewToAdd.createdAt = date
+        reviewToAdd.purchasedAt = purchasedAt
+        gig.reviews.push(reviewToAdd)
+        this.props.updateGig(gig).then(() => {
+            console.log('review added succefully');
+        })
+    }
+
+    render() {
+        const { user, gig, review } = this.state
         return (
             <>
                 {/* Require on Button....  */}
                 <div className="flex">
-                    <button onClick={() => this.handleRate('1')}>*</button>
-                    <button onClick={() => this.handleRate('2')}>**</button>
-                    <button onClick={() => this.handleRate('3')}>***</button>
-                    <button onClick={() => this.handleRate('4')}>****</button>
-                    <button onClick={() => this.handleRate('5')}>*****</button>
+                    <StarIcon className="star" onClick={() => this.handleRate('1')} ></StarIcon>
+                    <StarIcon className="star" onClick={() => this.handleRate('2')} ></StarIcon>
+                    <StarIcon className="star" onClick={() => this.handleRate('3')} ></StarIcon>
+                    <StarIcon className="star" onClick={() => this.handleRate('4')} ></StarIcon>
+                    <StarIcon className="star" onClick={() => this.handleRate('5')} ></StarIcon>
                 </div>
-                <form onSubmit={this.onAddReview} className="flex column justify-center">
-                    <textarea type="text" name="txt" placeholder='enter review...' onChange={this.handleChange} required />
-                </form>
+                {/* <form onSubmit={this.onAddReview()} className="flex column justify-center"> */}
+                <textarea type="text" name="txt" placeholder='enter review...' onChange={this.handleChange} required />
+                <button onClick={() => this.onAddReview()}>Add Review</button>
+                {/* </form> */}
 
             </>
         )
     }
 }
+
+
+const mapStateToProps = (state) => {
+    return {
+        gigs: state.gigModule.gigs,
+        user: state.userModule.user
+    }
+}
+
+const mapDispatchToProps = {
+    addGig,
+    updateGig
+}
+
+export const GigAddReview = connect(mapStateToProps, mapDispatchToProps)(_GigAddReview)
