@@ -7,6 +7,7 @@ class _Login extends Component {
 
     state = {
         msg: '',
+        isSignUp: false,
         loginCred: {
             username: '',
             password: ''
@@ -42,6 +43,10 @@ class _Login extends Component {
         }))
     }
 
+    toggleIsNewUser = () => {
+        this.setState({ isSignUp: !this.state.isSignUp })
+    }
+
     doLogin = async ev => {
         ev.preventDefault()
         const userCreds = this.state.loginCred
@@ -52,8 +57,8 @@ class _Login extends Component {
             await this.props.login(userCreds)
             this.setState(
                 {
-                    loginCred: { username: '', password: '' },
-                }, () => { this.props.history.push('/gig') })
+                    loginCred: { username: '', password: '' }
+                })
 
         }
         catch (err) {
@@ -73,6 +78,7 @@ class _Login extends Component {
     }
 
     doSignup = async ev => {
+        
         ev.preventDefault()
         const { username, password, fullname } = this.state.signupCred
         if (!username || !password || !fullname) {
@@ -100,78 +106,86 @@ class _Login extends Component {
     render() {
 
         const loggedInUser = this.props.user //TODO pay attention later 
+        const { isSignUp: isNewUser } = this.state
         console.log(loggedInUser)
 
         let signupSection = (
-            <form className="frm" onSubmit={this.doSignup}>
-                <input
-                    type="text"
-                    name="fullname"
-                    value={this.state.signupCred.fullname}
-                    onChange={this.signupHandleChange}
-                    placeholder="Full name"
-                />
-                <input
-                    name="password"
-                    type="password"
-                    value={this.state.signupCred.password}
-                    onChange={this.signupHandleChange}
-                    placeholder="Password"
-                />
-                <input
-                    type="text"
-                    name="username"
-                    value={this.state.signupCred.username}
-                    onChange={this.signupHandleChange}
-                    placeholder="Username"
-                />
-                <br />
-                <button>Signup</button>
-            </form>
+            <>
+                <h1>Join Sixerr</h1>
+                <form className="frm" onSubmit={this.doSignup}>
+                    <input
+                        type="text"
+                        name="fullname"
+                        value={this.state.signupCred.fullname}
+                        onChange={this.signupHandleChange}
+                        placeholder="Full name"
+                    />
+                    <input
+                        name="password"
+                        type="password"
+                        value={this.state.signupCred.password}
+                        onChange={this.signupHandleChange}
+                        placeholder="Password"
+                    />
+                    <input
+                        type="text"
+                        name="username"
+                        value={this.state.signupCred.username}
+                        onChange={this.signupHandleChange}
+                        placeholder="Username"
+                    />
+                    <button>Continue</button>
+                    <hr />
+                    <h4>Already a member? <span onClick={this.toggleIsNewUser}>Sign In</span></h4>
+                </form>
+            </>
         )
         let loginSection = (
-            <form className="frm" onSubmit={this.doLogin}>
-                <input
-                    type="text"
-                    name="username"
-                    value={this.state.loginCred.username}
-                    onChange={this.loginHandleChange}
-                    placeholder="Username"
-                />
-                <br />
-                <input
-                    type="password"
-                    name="password"
-                    value={this.state.loginCred.password}
-                    onChange={this.loginHandleChange}
-                    placeholder="Password"
-                />
-                <br />
-                <button className="rounded">Continue</button>
-                <hr/>
-                <h4>Not a member yet? <span>Join now</span></h4>
-            </form>
+            <>
+                <h1>Sign In to Sixerr</h1>
+                <form className="frm" onSubmit={this.doLogin}>
+                    <input
+                        type="text"
+                        name="username"
+                        value={this.state.loginCred.username}
+                        onChange={this.loginHandleChange}
+                        placeholder="Username"
+                        autoFocus
+                    />
+                    <br />
+                    <input
+                        type="password"
+                        name="password"
+                        value={this.state.loginCred.password}
+                        onChange={this.loginHandleChange}
+                        placeholder="Password"
+                    />
+                    <br />
+                    <button className="rounded" onClick={this.doLogin}>Continue</button>
+                    <hr />
+                    <h4>Not a member yet? <span onClick={this.toggleIsNewUser}>Join Now</span></h4>
+                </form>
+            </>
         )
 
 
         return (
-            <div className="login main-layout shadow rounded">
-                <h1>
-                    Sign In to Sixerr
-                </h1>
-                <p>{this.state.msg}</p>
-                {loggedInUser && (
-                    <div>
-                        <h3>
-                            Welcome {loggedInUser.fullname}
-                            <button onClick={this.doLogout}>Logout</button>
-                        </h3>
-                    </div>
-                )}
-                {!loggedInUser && loginSection}
-                {/* {!loggedInUser && signupSection} */}
+            <div className="main-screen" onClick={this.props.toggleLogin}>
+                <div className="login main-layout shadow rounded">
+                    <p>{this.state.msg}</p>
+                    {loggedInUser && (
+                        <div>
+                            <h3>
+                                Welcome {loggedInUser.fullname}
+                                <button onClick={this.doLogout}>Logout</button>
+                            </h3>
+                        </div>
+                    )}
+                    {!isNewUser && loginSection}
+                    {isNewUser && signupSection}
 
 
+                </div>
             </div>
         )
     }
