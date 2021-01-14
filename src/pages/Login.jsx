@@ -1,9 +1,9 @@
 import {Component} from 'react';
 import { connect } from 'react-redux'
 
-import { login, logout, addUser, loadUser } from "../store/actions/userActions.js"
+import { login, logout, addUser } from "../store/actions/userActions.js"
 
-class Login extends Component {
+class _Login extends Component {
 
     state = {
         msg: '',
@@ -19,7 +19,6 @@ class Login extends Component {
     }
 
     // componentDidMount () {
-    //     this.props.loadUser().then(console.log(this.props.user));
         
     // }
 
@@ -54,7 +53,7 @@ class Login extends Component {
             this.setState(
                 {
                     loginCred: { username: '', password: '' },
-                }, () => { this.props.history.push('/toy') })
+                }, () => { this.props.history.push('/gig') })
 
         }
         catch (err) {
@@ -84,7 +83,7 @@ class Login extends Component {
             this.setState(
                 {
                     signupCred: { username: '', password: '', fullname: '' },
-                }, () => { this.props.history.push('/toy') })
+                }, () => { this.props.history.push('/gig') })
         }
         catch (err) {   
                 console.log('ERR', err)
@@ -190,7 +189,6 @@ const mapDispatchToProps = {
     login,
     logout,
     addUser,
-    loadUser
 }
 
 export const Login = connect(mapStateToProps, mapDispatchToProps)(_Login)
