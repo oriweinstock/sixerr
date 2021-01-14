@@ -60,8 +60,8 @@ class _GigEdit extends Component {
                 <textarea name="title" autoFocus rows="3" cols="60" value={gig.title} type="text" placeholder="Enter Gig Title..." value={gig.title} onChange={this.handleInput} required autoComplete="off" />
                 <h4>Edit Desc</h4>
                 <textarea name="desc" autoFocus rows="3" cols="60" value={gig.title} type="text" placeholder="Enter Gig Desc..." value={gig.desc} onChange={this.handleInput} required autoComplete="off" />
-                <select onChange={this.handleInput} name="tags">
-                    <option value="graphicDesign">graphic design </option>
+                <select onChange={this.handleInput} name="tags" required>
+                    <option value="graphic design">graphic design </option>
                     <option value="minimalist">minimalist</option>
                     <option value="flat">flat</option>
                     <option value="modern">modern</option>
