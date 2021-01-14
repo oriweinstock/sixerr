@@ -1,34 +1,59 @@
 .gig-details {
-    display: flex;
-    justify-content: space-between;
-    .gig-title {
-        text-align: start;
-        font-size: 28px;
-    }
-    .seller-overview {
-        display: flex;
-        width: 400px;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        .order-count{
-            color: rgb(192, 192, 192);
-        }
-    }
-    .sidebar{
-        // flex-grow: 5;
-        // min-width: 200px;
-        // min-width: 400px;
-        width: 40%;
-        padding: 2rem;
-        background-color: yellow;
-        max-height: 460px;
+    font: 400 16px/24px "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    position: relative;
 
+    .main-details {
+        // padding: 2rem;
+        margin-right: 20px;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        > * {
+            width: 100%;
+        }
+        .gig-title {
+            text-align: start;
+            font-size: 28px;
+            line-height: 130%;
+        }
+        .seller-overview {
+            display: flex;
+            // max-width: 450px;
+
+            justify-content: space-between;
+            align-items: center;
+            // padding: 20px;
+            margin-block-end: 1.25rem;
+            .order-count {
+                color: rgb(192, 192, 192);
+            }
+        }
+
+        .imgs-gallery-container {
+            height: 80px;
+            margin-top: 10px;
+            .img-gallery {
+                width: 100px;
+                margin: 0 5px;
+                cursor: pointer;
+                opacity: 0.3;
+                &.active{
+                    opacity: 1;
+                }
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
     }
 }
 
 .img-details-conatiner {
-    width: 34.375rem;
+    // width: 34.375rem;
     height: 26.6rem;
 }
 .img-details-conatiner img {
@@ -62,7 +87,7 @@
     margin-block-start: 1rem;
     // border: 1px solid black;
     h4 {
-        width: 60rem;
+        // width: 60rem;
         display: flex;
         flex-wrap: wrap;
     }
@@ -74,4 +99,3 @@
     border: none;
     margin-block-end: 1rem;
 }
-

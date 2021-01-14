@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { GigReview } from '../cmps/GigReview.jsx'
+import { GigAddReview } from '../cmps/GigAddReview.jsx'
 import { PackageList } from '../cmps/PackageList.jsx'
 import { SellerPreview } from '../cmps/SellerPreview'
 // import { Link } from 'react-router-dom'
@@ -8,6 +8,8 @@ import { SellerPreview } from '../cmps/SellerPreview'
 import { addGig, loadGig, updateGig } from '../store/actions/gigActions'
 import Avatar from '@material-ui/core/Avatar';
 import StarRateIcon from '@material-ui/icons/StarRate';
+import SideBar from '../cmps/SideBar.jsx'
+import ReviewList from '../cmps/ReviewList.jsx'
 
 
 // import { loadReviews, addReview } from '../store/actions/reviewActions'
@@ -17,7 +19,8 @@ class _GigDetails extends React.Component {
     state = {
         gig: null,
         isGigOwner: true,
-        isTitleEditble: false
+        isTitleEditble: false,
+        numImgChoosen: 0
     }
 
     async componentDidMount() {
@@ -48,7 +51,6 @@ class _GigDetails extends React.Component {
             return acc += review.rating
         }, 0)
         const avg = Math.floor(sumRate / reviews.length)
-
         return avg;
         // {/* </div> */ }
         // return <div>{(<StarRateIcon />).repeat(avg)}</div>
@@ -64,19 +66,25 @@ class _GigDetails extends React.Component {
     }
 
 
+    onChooseImg = (imgIdx) => {
+        console.log(imgIdx);
+        this.setState({ numImgChoosen: imgIdx })
+    }
+
     render() {
-        const { isGigOwner } = this.state
-        const { gig } = this.state
+        const {isGigOwner} = this.state
+        const { gig, numImgChoosen } = this.state
         const { user } = this.props
-        // console.log("render , reviews", reviews)
+        console.log("render , user", user)
         if (!gig) return <div>No gig...</div>
         return (
             <section className="gig-details main-layout">
-                <div>
-                    {/* <div onInput={(ev) => this.handleChange(ev, 'title')}> */}
-                        {/* <h1 className="gig-title" contentEditable suppressContentEditableWarning={`${isGigOwner}`}>{gig.title}</h1> */}
-                    {/* </div> */}
-                        <h1 className="gig-title" >{gig.title}</h1>
+
+                <div className="main-details">
+                    {/* <div onInput={(ev) => this.handleChange(ev, 'title')}> 
+                    <h1 className="gig-title" contentEditable suppressContentEditableWarning={`${isGigOwner}`}>{gig.title}</h1>
+                    </div> */}
+                    <h1 className="gig-title" contentEditable suppressContentEditableWarning={`${isGigOwner}`} >{gig.title}</h1>
                     <div className="seller-overview">
                         <Avatar alt="Remy Sharp" src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light" />
                         <small>{gig.owner.fullname}</small>
@@ -95,7 +103,16 @@ class _GigDetails extends React.Component {
                         <span className="order-count">1 Orders in Queue</span>
                     </div>
                     <div className="img-details-conatiner">
-                        <img src={gig.imgUrls[0]} />
+                        <img src={gig.imgUrls[numImgChoosen]} />
+                    </div>
+                    <div className="imgs-gallery-container flex">
+                        {gig.imgUrls.map((imgUrl, idx) => {
+                            var className = "img-gallery"
+                            if (numImgChoosen === idx) className += " active"
+                            return <div key={idx} onClick={() => this.onChooseImg(idx)} className={className}>
+                                <img src={imgUrl} />
+                            </div>
+                        })}
                     </div>
                     <div className="short-review flex">
                         <div className="owner-img-container">
@@ -112,18 +129,14 @@ class _GigDetails extends React.Component {
                     </div>
 
                     {/* packagesList */}
-                    {user && <GigReview gig={gig} user={user} onAddReview={this.onAddReview} />}
+                    {user && <GigAddReview gig={gig} user={user} onAddReview={this.onAddReview} />}
                     <SellerPreview seller={gig.owner} />
                     <PackageList packages={gig.packages} />
                     {/* sellerPreview */}
+                    <ReviewList gig={gig} user={user} />
                     {/* reviews */}
                 </div>
-                <div className="sidebar">
-                    <div className="package-content flex space-between">
-                        <h3> Best SEO Off Page Backlinks Service</h3>
-                        <h3>${gig.packages[0].price}0</h3>
-                    </div>
-                </div>
+                <SideBar gig={gig} />
             </section>
         )
     }

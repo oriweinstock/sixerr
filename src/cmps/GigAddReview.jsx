@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { utilService } from '../services/utilService.js'
 
-export class GigReview extends Component {
+export class GigAddReview extends Component {
 
 
     state = {
@@ -10,7 +10,6 @@ export class GigReview extends Component {
         user: null,
         review: null,
     }
-
 
 
     componentDidMount() {
