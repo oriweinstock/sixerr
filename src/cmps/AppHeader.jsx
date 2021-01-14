@@ -12,7 +12,7 @@ class _AppHeader extends React.Component {
     //     // console.log('user logged out. frontend')
     // }
     render() {
-        // const { user } = this.props
+        const { user } = this.props
         return (
             <section className="app-header flex space-between align-center main-layout">
                 <h1>Sixerr<span>.</span></h1>
@@ -24,8 +24,10 @@ class _AppHeader extends React.Component {
                     <NavLink className="fast-trans" to="/chat"><li>Messages</li></NavLink>
                     <NavLink className="fast-trans" to="/order"><li>Orders</li></NavLink>
                     <NavLink className="fast-trans" to="/userprofile"><li>My Account</li></NavLink>
+                    {/* TEMP BY DUDI */}
+                    {/* <NavLink className="fast-trans" to="/login"><li>My Account</li></NavLink> */}
                 </ul>
-                {/* {user && <h3>Welcome {user.username}</h3>} */}
+                {user && <h3>Welcome {user.username}</h3>}
             </section>
         )
     }
@@ -33,7 +35,7 @@ class _AppHeader extends React.Component {
 
 const mapGlobalStateToProps = (state) => {
     return {
-        // user: state.userModule.user
+        user: state.userModule.user
     }
 }
 

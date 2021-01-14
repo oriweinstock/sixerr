@@ -1,42 +1,77 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { utilService } from '../services/utilService.js'
 
 export class GigReview extends Component {
 
 
     state = {
         gig: null,
-        reviews: {
-            id: "madeId",
-            rating: 5,
-            txt: "Thank you for a job well done. You exceeded my expectations. I will definitely work with this designer in the future.",
-            createdAt: "timestamp",
-            purchasedAt: "timestamp",
-            seller: {
-                communication: 5,
-                recommend: 5,
-                asDescribed: 5
-            },
-            // by: {
-            //     _id: u102,
-            //     fullname: "user2",
-            //     imgUrl: "/img/img2.jpg"
-            // }
-        }
+        user: null,
+        review: null,
     }
 
 
 
     componentDidMount() {
         const { gig } = this.props
-            this.setState({ gig })
+        const { user } = this.props
+        const review = this.createReviewTemplate(gig, user)
+        console.log("componentDidMount , review", review)
+        this.setState({ gig, user, review })
+    }
+
+    createReviewTemplate = (gig, user) => {
+        const by = { _id: user._id, fullname: user.fullname, imgUrl: user.imgUrl }
+        const id = utilService.makeId()
+        const review = { id, rating: '', createdAt: null, purchasedAt: null, seller: gig.owner, by }
+        return review
+    }
+
+    handleChange = ({ target }) => {
+        console.log('handle change!');
+        const field = target.name
+        console.log("field", field)
+        const value = target.value
+        console.log("value", value)
+        this.setState(prevState => {
+            return {
+                review: {
+                    ...prevState.review,
+                    [field]: value
+                }
+            }
+        })
+    }
+    handleRate = (rate) => {
+        console.log("rate", rate)
+        const { review } = { ...this.state }
+        console.log("review", review)
+        review.rating = rate
+        this.setState({ review })
     }
 
     render() {
+        const { user } = this.state
+        const { gig } = this.state
+        const { review } = this.state
+        console.log("render , review", review)
+        console.log('this.state', this.state);
         return (
-            <div>
-                gig review
-            </div>
+            <>
+                {/* Require on Button....  */}
+                <div className="flex">
+                    <button onClick={() => this.handleRate('1')}>*</button>
+                    <button onClick={() => this.handleRate('2')}>**</button>
+                    <button onClick={() => this.handleRate('3')}>***</button>
+                    <button onClick={() => this.handleRate('4')}>****</button>
+                    <button onClick={() => this.handleRate('5')}>*****</button>
+                </div>
+                <form onSubmit={this.onAddReview} className="flex column justify-center">
+                    <textarea type="text" name="txt" placeholder='enter review...' onChange={this.handleChange} required />
+                </form>
+
+            </>
         )
     }
 }
