@@ -573,9 +573,16 @@
     },
     {
       "username": "kupersd",
+      "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610707693/z56f1yp74i8k4efbpyrc.jpg",
       "password": "123456",
-      "fullname": "David Kuperstein",
-      "_id": "olqIJNj"
+      "fullname": "David K",
+      "_id": "olqIJNj",
+      "viewedGigIds": [
+        "s102",
+        "s108",
+        "s104",
+        "s109"
+      ]
     },
     {
       "username": "oriw",
