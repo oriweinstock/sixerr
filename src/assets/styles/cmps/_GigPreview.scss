@@ -1,37 +1,37 @@
 .gig-preview {
     
     color: $darkColor;
+
     h2 {
-        padding: 5px;
+        padding-inline-start: 5px;
         font-size: 1rem;
         font-weight: normal;
         line-height: 1.3em;
-        height: 2.4em;
+        height: 2.8em;
         overflow: hidden;
-        text-overflow: ellipsis;
     }
 
-    h3 {
-        border-top: 1px solid $darkColor;
-        display: inline-block;
-        padding-top: 10px;
-        height: 20px;
-        font-weight: normal;
-        font-size: 0.9em;
-        padding: 5px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-
-        span {
-            color: $boldColor;
-            font-weight: bold;
+    .gig-preview-bottom {
+        border-top: 1px solid $altColor;
+        background-color: #fff;
+        
+        h3 {
+            padding-inline-start: 5px;
+            font-weight: normal;
+            font-size: 0.9em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+            span {
+                color: $boldColor;
+                font-weight: bold;
+            }
         }
     }
+    
     a {
         text-decoration: none;
     }
 
-    div {
-    }
     img {
         width: 100%;
         height: 50%;

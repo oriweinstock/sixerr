@@ -1,10 +1,17 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { GigAddReview } from '../cmps/GigAddReview.jsx'
 import { PackageList } from '../cmps/PackageList.jsx'
 import { SellerPreview } from '../cmps/SellerPreview'
 // import { Link } from 'react-router-dom'
-import { gigService } from '../services/gigService'
-import { addGig, loadGig } from '../store/actions/gigActions'
+// import { gigService } from '../services/gigService'
+import { addGig, loadGig, updateGig } from '../store/actions/gigActions'
+import Avatar from '@material-ui/core/Avatar';
+import StarRateIcon from '@material-ui/icons/StarRate';
+import SideBar from '../cmps/SideBar.jsx'
+import ReviewList from '../cmps/ReviewList.jsx'
+
+
 // import { loadReviews, addReview } from '../store/actions/reviewActions'
 
 class _GigDetails extends React.Component {
@@ -12,7 +19,8 @@ class _GigDetails extends React.Component {
     state = {
         gig: null,
         isGigOwner: true,
-        isTitleEditble: false
+        isTitleEditble: false,
+        numImgChoosen: 0
     }
 
     async componentDidMount() {
@@ -22,8 +30,10 @@ class _GigDetails extends React.Component {
 
     }
 
-    handleChange = (value, field) => {
-        console.log('field', field);
+    handleChange = (ev, field) => {
+        console.log("field", field)
+        const value = ev.target.innerText
+        console.log("value", value)
         this.setState(prevState => {
             return {
                 gig: {
@@ -34,41 +44,99 @@ class _GigDetails extends React.Component {
         })
     }
 
+    getAvgRate = () => {
+        const { reviews } = this.state.gig
+        console.log("reviews", reviews)
+        const sumRate = reviews.reduce((acc, review) => {
+            return acc += review.rating
+        }, 0)
+        const avg = Math.floor(sumRate / reviews.length)
+        return avg;
+        // {/* </div> */ }
+        // return <div>{(<StarRateIcon />).repeat(avg)}</div>
+    }
+
+    async onAddReview(gig, review) {
+        // let date = new Date()
+        // const CreatedAt = date.now()
+        gig.reviews.push(review)
+        this.props.updateGig(gig).then(() => {
+            console.log('review added succefully');
+        })
+    }
+
+
+    onChooseImg = (imgIdx) => {
+        console.log(imgIdx);
+        this.setState({ numImgChoosen: imgIdx })
+    }
+
     render() {
-        let { isGigOwner } = this.state
-        console.log("render , isGigOwner", isGigOwner)
-        const { gig } = this.state
+        const {isGigOwner} = this.state
+        const { gig, numImgChoosen } = this.state
+        const { user } = this.props
+        console.log("render , user", user)
         if (!gig) return <div>No gig...</div>
         return (
-            <section className="gig-details">
-                {/* {isTitleEditble || isGigOwner && <h1>{gig.title} {isGigOwner && <button onClick={() => this.makeEditable()}>Edit</button>}</h1>}
-                {isTitleEditble && <form action=""> */}
-                {/* <input className="title-input" type="text" /> */}
-                {/* </form>} */}
-                <h1 ref="textarea" onKeyDown={() => this.handleChange(gig.title, 'title')} contenteditable={`${isGigOwner}`}>{gig.title}</h1>
-                <h2 contenteditable={true}>hey</h2>
-                <div className="img-details-conatiner">
-                    <img src={gig.imgUrls[0]} />
-                </div>
-                <div className="short-review flex">
-                    <div className="owner-img-container">
-                        <img src={gig.reviews[0].seller.imgUrl} />
+            <section className="gig-details main-layout">
+
+                <div className="main-details">
+                    {/* <div onInput={(ev) => this.handleChange(ev, 'title')}> 
+                    <h1 className="gig-title" contentEditable suppressContentEditableWarning={`${isGigOwner}`}>{gig.title}</h1>
+                    </div> */}
+                    <h1 className="gig-title" contentEditable suppressContentEditableWarning={`${isGigOwner}`} >{gig.title}</h1>
+                    <div className="seller-overview">
+                        <Avatar alt="Remy Sharp" src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light" />
+                        <small>{gig.owner.fullname}</small>
+                        <span>|</span>
+                        {/* todo print it multiple times */}
+                        <div className="flex">
+                            <StarRateIcon />
+                            <StarRateIcon />
+                            <StarRateIcon />
+                            <StarRateIcon />
+                        </div>
+                        <span>{this.getAvgRate()}</span>
+                        <span>({gig.reviews.length})</span>
+                        <span>|</span>
+                        {/* get orders from gig */}
+                        <span className="order-count">1 Orders in Queue</span>
                     </div>
-                    <div>
-                        <h5>{gig.owner.fullname}</h5>
-                        <p>{gig.reviews[0].txt}</p>
+                    <div className="img-details-conatiner">
+                        <img src={gig.imgUrls[numImgChoosen]} />
                     </div>
+                    <div className="imgs-gallery-container flex">
+                        {gig.imgUrls.map((imgUrl, idx) => {
+                            var className = "img-gallery"
+                            if (numImgChoosen === idx) className += " active"
+                            return <div key={idx} onClick={() => this.onChooseImg(idx)} className={className}>
+                                <img src={imgUrl} />
+                            </div>
+                        })}
+                    </div>
+                    <div className="short-review flex">
+                        <div className="owner-img-container">
+                            <img src={gig.reviews[0].seller.imgUrl} />
+                        </div>
+                        <div>
+                            <h5>{gig.owner.fullname}</h5>
+                            <p>{gig.reviews[0].txt}</p>
+                        </div>
+                    </div>
+                    <div className="desc">
+                        <h2>About This Gig</h2>
+                        <h4>{gig.desc}</h4>
+                    </div>
+
+                    {/* packagesList */}
+                    {user && <GigAddReview gig={gig} user={user} onAddReview={this.onAddReview} />}
+                    <SellerPreview seller={gig.owner} />
+                    <PackageList packages={gig.packages} />
+                    {/* sellerPreview */}
+                    <ReviewList gig={gig} user={user} />
+                    {/* reviews */}
                 </div>
-                <div className="desc">
-                    <h2>About This Gig</h2>
-                    <h4>{gig.desc}</h4>
-                </div>
-                
-                {/* packagesList */}
-                <SellerPreview seller={gig.owner} />
-                <PackageList packages={gig.packages}/>
-                {/* sellerPreview */}
-                {/* reviews */}
+                <SideBar gig={gig} />
             </section>
         )
     }
@@ -77,11 +145,51 @@ class _GigDetails extends React.Component {
 const mapStateToProps = (state) => {
     return {
         gigs: state.gigModule.gigs,
+        user: state.userModule.user
     }
 }
 
 const mapDispatchToProps = {
     addGig,
+    updateGig
 }
 
 export const GigDetails = connect(mapStateToProps, mapDispatchToProps)(_GigDetails)
+
+
+//with input
+{/* {isTitleEditble || isGigOwner && <h1>{gig.title} {isGigOwner && <button onClick={() => this.makeEditable()}>Edit</button>}</h1>}
+                {isTitleEditble && <form action=""> */}
+{/* <input className="title-input" type="text" /> */ }
+{/* </form>} */ }
+
+
+
+// {/* <div key={idx} className={`${todo.isDone && 'todo-done'} flex space-between`} onInput={(ev) => { onNoteChosen(ev, idx) }}>
+//                     <p contentEditable suppressContentEditableWarning={true}>{todo.text}</p>
+//                     <img className={`${!todo.isDone && 'my-active'} pointer`} onClick={() => { onTodoDone(idx) }} src="apps/Keep/assets/img/V.png" />
+//                 </div> */}
+
+
+
+                // onUpdateNote = (ev, noteId, todoIdx) => {
+                //     if (!ev) return
+                //     const text = ev.target.innerText
+                //     noteService.getNoteById(noteId)
+                //         .then(noteToEdit => {
+                //             switch (noteToEdit.type) {
+                //                 case 'noteText':
+                //                     noteToEdit.info.text = text;
+                //                     noteService.save(noteToEdit)
+                //                     break
+                //                 case 'noteTodos':
+                //                     noteToEdit.info.todos[todoIdx].text = text;
+                //                     noteService.save(noteToEdit)
+                //                     break;
+                //                 case 'noteImg':
+                //                 case 'noteVideo':
+                //                     noteToEdit.info.title = text;
+                //                     noteService.save(noteToEdit)
+                //             }
+                //         })
+                // }

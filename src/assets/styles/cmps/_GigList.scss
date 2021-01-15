@@ -1,15 +1,13 @@
 .gig-list {
     // color: aqua;
     
-    ul {
-        
-        display: flex;
+    ul {        
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
 
         li {
-            background-color: #fff;
             width: 180px;
+            border: 1px solid $altColor;
         }
     }
 }

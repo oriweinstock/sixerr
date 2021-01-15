@@ -1,8 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: $lightColor;
 }
 
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+
+#root.darkened .main-screen {
+    visibility: visible;
+    opacity: 1;
+}
+
 .main-layout {
-    max-width: 800px;
+    max-width: 860px;
     margin: 0 auto;
 }

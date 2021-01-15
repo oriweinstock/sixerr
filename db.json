@@ -582,6 +582,38 @@
       "password": "123456",
       "fullname": "Ori W",
       "_id": "h8mW4vL"
+    },
+    {
+      "username": "123456",
+      "password": "admin",
+      "fullname": "admin",
+      "imgUrl": "/img/img1.jpg",
+      "isAdmin": false,
+      "_id": "wXRfYat"
+    },
+    {
+      "username": "admin",
+      "password": "admin",
+      "fullname": "tomer maruani",
+      "imgUrl": "/img/img1.jpg",
+      "isAdmin": false,
+      "_id": "lfE5k8E"
+    },
+    {
+      "username": "puki",
+      "password": "baba",
+      "fullname": "Puki Ben David",
+      "imgUrl": "/img/img1.jpg",
+      "isAdmin": false,
+      "_id": "q2bgD8N"
+    },
+    {
+      "username": "baba",
+      "password": "baba",
+      "fullname": "Baba",
+      "imgUrl": "/img/img1.jpg",
+      "isAdmin": false,
+      "_id": "HKG9eC5"
     }
   ]
 }

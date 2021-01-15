@@ -3,7 +3,6 @@ import {GigDetails} from './pages/GigDetails.jsx'
 import {GigEdit} from './pages/GigEdit.jsx'
 import { Profile } from './pages/Profile.jsx'
 
-
 export const routes = [
     {
         path:'/gig/edit/:gigId?',
