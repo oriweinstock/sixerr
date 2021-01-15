@@ -2,6 +2,8 @@ import { loadGigs, addGig } from '../store/actions/gigActions.js';
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { gigService } from '../services/gigService.js'
+import { utilService } from '../services/utilService.js'
+
 
 
 class _GigEdit extends Component {
@@ -50,6 +52,63 @@ class _GigEdit extends Component {
     createTemplatePackages = () => {
         return [{ type: 'basic', desc: '', price: null, revisionsCount: null, deliveryDays: null, features: [] }]
     }
+
+    createGigTemplate = () => {
+        const _id = utilService.makeId()
+        return { _id, title: "", desc: "", tags: [], packages: [{ type: "basic", desc: "", price: null, revisionsCount: null, deliveryDays: null, features: [], owner: {} }] }
+    }
+
+    // {
+    //     "_id": "s105",
+    //     "title": "I will create luxury geometric patterns, background for you",
+    //     "desc": "I will design INCREDIBLY BEAUTIFUL geometric line or dots pattern, for personal and commercial use starting from 5$ ONLY. As VECTOR files they will be editable for you. I want to make your product simple, but special and unforgettable.",
+    //     "tags": [
+    //       "graphic design",
+    //       "flat",
+    //       "modern"
+    //     ],
+    //     "packages": [
+    //       {
+    //         "type": "basic",
+    //         "desc": "",
+    //         "price": 20,
+    //         "revisionsCount": 2,
+    //         "deliveryDays": 1,
+    //         "features": [
+    //           "Source File"
+    //         ]
+    //       }
+    //     ],
+    //     "owner": {
+    //       "_id": "u103",
+    //       "fullname": "user3",
+    //       "imgUrl": "/img/img3.jpg"
+    //     },
+    //     "imgUrls": [
+    //       "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/156162379/original/9c48c36d227033912ad3098440e9a90f8503d9d4/create-luxury-geometric-patterns-and-background-for-you.png",
+    //       "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/b9d0a4a0fc3c4807eccc781ecfadc97c-1597784095/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-08-18%20%D0%B2%2023.51.35/cr",
+    //       "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/156162379/original/9087a56206fcc647d954fbe88c28fc61d673b936/create-luxury-geometric-patterns-and-background-for-you.png"
+    //     ],
+    //     "reviews": [
+    //       {
+    //         "id": "madeId",
+    //         "rating": 5,
+    //         "txt": "Thank you for a job well done. You exceeded my expectations. I will definitely work with this designer in the future.",
+    //         "createdAt": "timestamp",
+    //         "purchasedAt": "timestamp",
+    //         "seller": {
+    //           "communication": 5,
+    //           "recommend": 5,
+    //           "asDescribed": 5
+    //         },
+    //         "by": {
+    //           "_id": "u102",
+    //           "fullname": "user2",
+    //           "imgUrl": "/img/img2.jpg"
+    //         }
+    //       }
+    //     ]
+    //   },
 
 
 
@@ -150,6 +209,7 @@ class _GigEdit extends Component {
 const mapStateToProps = (state) => {
     return {
         gigs: state.gigModule.gigs,
+        user: state.userModule.user
     }
 }
 

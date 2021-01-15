@@ -86,7 +86,8 @@ class _GigDetails extends React.Component {
         isDescEditble = !isDescEditble
         this.setState({ isDescEditble })
     }
-    onNextPageLightBox = () => {
+    onNextPageLightBox = (ev) => {
+        ev.stopPropagation()
         let { numImgChoosen } = this.state
         const { gig } = this.state
         numImgChoosen++
@@ -95,7 +96,8 @@ class _GigDetails extends React.Component {
         this.setState({ numImgChoosen, currImg })
         console.log("numImgChoosen", numImgChoosen)
     }
-    onPrevPageLightBox = () => {
+    onPrevPageLightBox = (ev) => {
+        ev.stopPropagation()
         let { numImgChoosen } = this.state
         const { gig } = this.state
         numImgChoosen--
@@ -160,11 +162,11 @@ class _GigDetails extends React.Component {
                         </div>
                         <div className="img-details-conatiner" onClick={() => this.onToggleImgLightbox()}>
                             <FullscreenIcon className="full-screen-icon" />
-                            {!gig.videoSrc && <video controls >
+                            {/* {!gig.videoSrc && <video controls >
                                 {/* <source src={gig.videoSrc} /> */}
-                                <source src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/jkj847uw28tkz4ruicat" />
-                            </video>}
-                            {/* <img src={gig.imgUrls[numImgChoosen]} /> */}
+                                {/* <source src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/jkj847uw28tkz4ruicat" /> */}
+                            {/* </video>} */}
+                            <img src={gig.imgUrls[numImgChoosen]} />
                         </div>
                         <div className="imgs-gallery-container flex">
                             {gig.imgUrls.map((imgUrl, idx) => {
