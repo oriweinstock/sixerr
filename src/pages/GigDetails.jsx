@@ -11,6 +11,10 @@ import StarRateIcon from '@material-ui/icons/StarRate';
 import SideBar from '../cmps/SideBar.jsx'
 import ReviewList from '../cmps/ReviewList.jsx'
 import EditIcon from '@material-ui/icons/Edit';
+import { GigImgLightBox } from '../cmps/GigImgLightBox';
+import FullscreenIcon from '@material-ui/icons/Fullscreen';
+import { gigEdit } from '../pages/GigEdit'
+import { Link } from 'react-router-dom'
 
 
 // import { loadReviews, addReview } from '../store/actions/reviewActions'
@@ -22,13 +26,18 @@ class _GigDetails extends React.Component {
         isGigOwner: true,
         isTitleEditble: false,
         isDescEditble: false,
-        numImgChoosen: 0
+        numImgChoosen: 0,
+        isLightBoxOpen: false,
+        currImg: "",
     }
 
     async componentDidMount() {
         const gigId = this.props.match.params.gigId
         const gig = await loadGig(gigId)
-        this.setState({ gig })
+        const { numImgChoosen } = this.state
+        const currImg = gig.imgUrls[numImgChoosen]
+        this.setState({ gig, currImg })
+
 
     }
 
@@ -43,34 +52,13 @@ class _GigDetails extends React.Component {
             }
         })
     }
-
-    getAvgRate = () => {
-        const { reviews } = this.state.gig
-        const sumRate = reviews.reduce((acc, review) => {
-            return acc += review.rating
-        }, 0)
-        const avg = Math.floor(sumRate / reviews.length)
-        return avg;
-        // {/* </div> */ }
-        // return <div>{(<StarRateIcon />).repeat(avg)}</div>
+    onToggleImgLightbox = () => {
+        console.log('toggle img lightBox');
+        const { isLightBoxOpen } = this.state
+        const { numImgChoosen } = this.state
+        const currImg = this.state.gig.imgUrls[numImgChoosen]
+        this.setState({ isLightBoxOpen: !isLightBoxOpen, currImg })
     }
-
-    // onAddReview = (review, gig) => {
-    //     console.log("onAddReview , gig", gig)
-    //     let reviewToAdd = { ...review }
-    //     // let date = new Date()
-    //     // const CreatedAt = Date.now()
-    //     const purchasedAt = "purchase At"
-    //     const date = Date.now()
-    //     reviewToAdd.createdAt = date
-    //     reviewToAdd.purchasedAt = purchasedAt
-    //     console.log("onAddReview , review", reviewToAdd)
-    //     // gig.reviews.push(reviewToAdd)
-    //     // this.props.updateGig(gig).then(() => {
-    //     // console.log("onAddReview , gig", gig)
-    //     //     console.log('review added succefully');
-    //     // })
-    // }
 
 
     onEdit = (ev) => {
@@ -85,6 +73,7 @@ class _GigDetails extends React.Component {
     }
 
     onChooseImg = (imgIdx) => {
+        // console.log("imgIdx", imgIdx)
         this.setState({ numImgChoosen: imgIdx })
     }
 
@@ -97,83 +86,127 @@ class _GigDetails extends React.Component {
         isDescEditble = !isDescEditble
         this.setState({ isDescEditble })
     }
+    onNextPageLightBox = () => {
+        let { numImgChoosen } = this.state
+        const { gig } = this.state
+        numImgChoosen++
+        if (numImgChoosen === gig.imgUrls.length) numImgChoosen = 0
+        const currImg = gig.imgUrls[numImgChoosen]
+        this.setState({ numImgChoosen, currImg })
+        console.log("numImgChoosen", numImgChoosen)
+    }
+    onPrevPageLightBox = () => {
+        let { numImgChoosen } = this.state
+        const { gig } = this.state
+        numImgChoosen--
+        if (numImgChoosen === -1) numImgChoosen = gig.imgUrls.length - 1
+        const currImg = gig.imgUrls[numImgChoosen]
+        this.setState({ numImgChoosen, currImg })
+        console.log("numImgChoosen", numImgChoosen)
+    }
+    getAvgRate = () => {
+        const { reviews } = this.state.gig
+        const sumRate = reviews.reduce((acc, review) => {
+            return acc += review.rating
+        }, 0)
+        const avg = Math.floor(sumRate / reviews.length)
+        console.log("avg", avg)
+        return avg;
+    }
+
 
     render() {
-        const { gig, numImgChoosen, isTitleEditble, isGigOwner, isDescEditble } = this.state
+        const { gig, numImgChoosen, isTitleEditble, isGigOwner, isDescEditble, isLightBoxOpen } = this.state
+        console.log("render , numImgChoosen", numImgChoosen)
         const { user } = this.props
+        const { currImg } = this.state
+        // const starsLength = this.getAvgRate()
+        // console.log("render , startLength", starsLength)
         if (!gig) return <div>No gig...</div>
-        return (
-            <section className="gig-details main-layout">
 
-                <div className="main-details">
-                    {/* <div onInput={(ev) => this.handleChange(ev, 'title')}> 
+        // title, description, package, tags
+
+        return (
+            <>
+                {/* <gigEdit /> */}
+                <Link to='/gig/edit' ><button>Add Gig</button></Link>
+                {isLightBoxOpen && <GigImgLightBox onToggleImgLightbox={this.onToggleImgLightbox} currImg={currImg} onNextPageLightBox={this.onNextPageLightBox} onPrevPageLightBox={this.onPrevPageLightBox} />}
+                <section className="gig-details main-layout">
+                    <div className="main-details">
+                        {/* <div onInput={(ev) => this.handleChange(ev, 'title')}> 
                     <h1 className="gig-title" contentEditable suppressContentEditableWarning={`${isGigOwner}`}>{gig.title}</h1>
                     </div> */}
-                    <div className="flex">
-                        {isGigOwner && <h1 className="gig-title" onInput={(ev) => this.handleChange(ev, 'title')} contentEditable={isTitleEditble}>{gig.title}</h1>}
-                        < EditIcon className="edit-icon" onClick={() => this.toggleIsTitleEditble(isTitleEditble)} />
-                    </div>
-                    {isTitleEditble && <button onClick={this.onEdit}>Save</button>}
-                    <div className="seller-overview">
-                        <Avatar alt="Remy Sharp" src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light" />
-                        <small>{gig.owner.fullname}</small>
-                        <span>|</span>
-                        {/* todo print it multiple times */}
                         <div className="flex">
-                            <StarRateIcon />
-                            <StarRateIcon />
-                            <StarRateIcon />
-                            <StarRateIcon />
+                            {isGigOwner && <h1 autofocus className="gig-title" onInput={(ev) => this.handleChange(ev, 'title')} contentEditable={isTitleEditble}>{gig.title}</h1>}
+                            < EditIcon className="edit-icon" onClick={() => this.toggleIsTitleEditble(isTitleEditble)} />
                         </div>
-                        <span>{this.getAvgRate()}</span>
-                        <span>({gig.reviews.length})</span>
-                        <span>|</span>
-                        {/* get orders from gig */}
-                        <span className="order-count">1 Orders in Queue</span>
-                    </div>
-                    <div className="img-details-conatiner">
-                        <img src={gig.imgUrls[numImgChoosen]} />
-                    </div>
-                    <div className="imgs-gallery-container flex">
-                        {gig.imgUrls.map((imgUrl, idx) => {
-                            var className = "img-gallery"
-                            if (numImgChoosen === idx) className += " active"
-                            return <div key={idx} onClick={() => this.onChooseImg(idx)} className={className}>
-                                <img src={imgUrl} />
+                        {isTitleEditble && <button onClick={this.onEdit}>Save</button>}
+                        <div className="seller-overview">
+                            <Avatar alt="Remy Sharp" src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light" />
+                            <small>{gig.owner.fullname}</small>
+                            <span>|</span>
+                            {/* todo print it multiple times */}
+                            <div className="flex">
+                                {/* {starsLength.map((avg,idx) =>{
+                                return <StarRateIcon key={idx} />
+                                })} */}
+                                <StarRateIcon ></StarRateIcon>
                             </div>
-                        })}
-                    </div>
-                    <h2 className="short-review-header">What people loved about this seller</h2>
-                    <div className="short-review flex">
-                        <div className="avatar-container">
-                            {/* <img src={gig.reviews[0].seller.imgUrl} /> */}
-                            <Avatar  alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                            <span>{this.getAvgRate()}</span>
+                            <span>({gig.reviews.length})</span>
+                            <span>|</span>
+                            {/* get orders from gig */}
+                            <span className="order-count">1 Orders in Queue</span>
                         </div>
-                        <div className="content">
-                            <h6>{gig.owner.fullname}</h6>
-                            {/* <p>{gig.reviews[0].txt}</p> */}
-                            <p>On your service has provided great service for me the last 30 days. All posts are in my niche and engagement has increased across all platforms. I will be</p>
+                        <div className="img-details-conatiner" onClick={() => this.onToggleImgLightbox()}>
+                            <FullscreenIcon className="full-screen-icon" />
+                            {!gig.videoSrc && <video controls >
+                                {/* <source src={gig.videoSrc} /> */}
+                                <source src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/jkj847uw28tkz4ruicat" />
+                            </video>}
+                            {/* <img src={gig.imgUrls[numImgChoosen]} /> */}
                         </div>
-                    </div>
-                    <div className="desc">
-                        <h2>About This Gig</h2>
-                        <div className="flex">
-                            {isGigOwner && <h4 className="gig-desc" onInput={(ev) => this.handleChange(ev, 'desc')} contentEditable={isDescEditble} >{gig.desc}</h4>}
-                            < EditIcon className="edit-icon" onClick={() => this.toggleIsDescEditble(isDescEditble)} />
+                        <div className="imgs-gallery-container flex">
+                            {gig.imgUrls.map((imgUrl, idx) => {
+                                var className = "img-gallery"
+                                if (numImgChoosen === idx) className += " active"
+                                return <div key={idx} onClick={() => this.onChooseImg(idx)} className={className}>
+                                    <img src={imgUrl} />
+                                </div>
+                            })}
                         </div>
-                    </div>
-                    {isDescEditble && <button onClick={this.onEdit}>Save</button>}
+                        <h2 className="short-review-header">What people loved about this seller</h2>
+                        <div className="short-review flex">
+                            <div className="avatar-container">
+                                {/* <img src={gig.reviews[0].seller.imgUrl} /> */}
+                                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                            </div>
+                            <div className="content">
+                                <h6>{gig.owner.fullname}</h6>
+                                {/* <p>{gig.reviews[0].txt}</p> */}
+                                <p>On your service has provided great service for me the last 30 days. All posts are in my niche and engagement has increased across all platforms. I will be</p>
+                            </div>
+                        </div>
+                        <div className="desc">
+                            <h2>About This Gig</h2>
+                            <div className="flex">
+                                {isGigOwner && <h4 className="gig-desc" onInput={(ev) => this.handleChange(ev, 'desc')} contentEditable={isDescEditble} >{gig.desc}</h4>}
+                                < EditIcon className="edit-icon" onClick={() => this.toggleIsDescEditble(isDescEditble)} />
+                            </div>
+                        </div>
+                        {isDescEditble && <button onClick={this.onEdit}>Save</button>}
 
-                    {/* packagesList */}
-                    <SellerPreview seller={gig.owner} />
-                    <PackageList packages={gig.packages} />
-                    {/* sellerPreview */}
-                    <ReviewList gig={gig} user={user} />
-                    {user && <GigAddReview gig={gig} user={user} onAddReview={this.onAddReview} />}
-                    {/* reviews */}
-                </div>
-                <SideBar gig={gig} />
-            </section>
+                        {/* packagesList */}
+                        <SellerPreview seller={gig.owner} />
+                        <PackageList packages={gig.packages} />
+                        {/* sellerPreview */}
+                        <ReviewList gig={gig} user={user} />
+                        {user && <GigAddReview gig={gig} user={user} onAddReview={this.onAddReview} />}
+                        {/* reviews */}
+                    </div>
+                    <SideBar gig={gig} />
+                </section>
+            </>
         )
     }
 }

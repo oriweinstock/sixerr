@@ -11,54 +11,64 @@
 
     transition: opacity .8s;
 
-.login {
-    position: fixed;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    width: 30vw;
-    min-width: 280px;
-    max-width: 360px;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    color: $darkColor;
-    text-align: center;
+    .login {
+        position: fixed;
+        cursor: default;
+        top: 50%;
+        left: 50%;
+        width: 30vw;
+        min-width: 280px;
+        max-width: 360px;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        color: $darkColor;
+        text-align: center;
 
-    transition: 1s;
+        transition: 1s;
 
-    h1 {
-        font-size: 1.6em;
-        margin: 30px;
-    }
+        h1 {
+            font-size: 1.6em;
+            margin: 30px;
+        }
 
-    input, button {
-        width: 90%;
-        height: 2em;
-        margin-bottom: 1.5em;
-        font-size: 1em;
-    }
-    
-    input {
-        padding: 10px;
-    }
+        p {
+            position: absolute;
+            bottom: 160px;
+            width: 90%;
+            left: 5%;
+            text-align: left;
+            font-size: 0.8em;
+        }
 
-    button {
-        background-color: $boldColor;
-        color: $lightColor;
-        font-weight: bold;
-        height: 2.5rem;
-        font-size: 1rem;
-    }
-    
-    h4 {
-        font-weight: normal;
+        input, button {
+            width: 90%;
+            height: 2em;
+            margin-bottom: 1.5em;
+            font-size: 1em;
+        }
+        
+        input {
+            padding: 10px;
+        }
 
-        span {
+        button {
+            margin-top: 30px;
+            background-color: $boldColor;
+            color: $lightColor;
             font-weight: bold;
-            color: $boldColor;
-            cursor: pointer;
+            height: 2.5rem;
+            font-size: 1rem;
+        }
+        
+        h4 {
+            font-weight: normal;
+
+            span {
+                font-weight: bold;
+                color: $boldColor;
+                cursor: pointer;
+            }
         }
     }
-}
 
 }

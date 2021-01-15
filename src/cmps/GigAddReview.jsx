@@ -54,6 +54,7 @@ class _GigAddReview extends Component {
         const date = Date.now()
         reviewToAdd.createdAt = date
         reviewToAdd.purchasedAt = purchasedAt
+        console.log("reviewToAdd", reviewToAdd)
         gig.reviews.push(reviewToAdd)
         this.props.updateGig(gig).then(() => {
             console.log('review added succefully');

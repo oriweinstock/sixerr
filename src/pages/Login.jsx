@@ -23,6 +23,13 @@ class _Login extends Component {
 
     // }
 
+    componentWillUnmount() {
+        this.setState(
+            {
+                loginCred: { username: '', password: '' }
+            })
+    }
+
     loginHandleChange = ev => {
         const { name, value } = ev.target
         this.setState(prevState => ({
@@ -43,32 +50,34 @@ class _Login extends Component {
         }))
     }
 
-    toggleIsNewUser = () => {
+    toggleIsNewUser = (ev) => {
+        ev.stopPropagation()
         this.setState({ isSignUp: !this.state.isSignUp })
+    }
+
+    captureModalClick = (ev) => {
+        ev.stopPropagation()
     }
 
     doLogin = async ev => {
         ev.preventDefault()
+        ev.stopPropagation()
         const userCreds = this.state.loginCred
         if (!userCreds.username || !userCreds.password) {
             return this.setState({ loginCred: { username: '', password: '' }, msg: 'Please enter user/password' })
         }
         try {
             await this.props.login(userCreds)
-            this.setState(
-                {
-                    loginCred: { username: '', password: '' }
-                })
+            this.props.toggleLogin()
 
-        }
-        catch (err) {
+        } catch (err) {
             console.log('ERR', err)
             this.setState(prevState => ({
                 loginCred: {
                     ...prevState.loginCred,
                     password: ''
                 },
-                msg: 'Wrong username or password, please try again'
+                msg: 'Wrong username or password'
             }))
         }
     }
@@ -78,18 +87,17 @@ class _Login extends Component {
     }
 
     doSignup = async ev => {
-        
         ev.preventDefault()
+        ev.stopPropagation()
         const { username, password, fullname } = this.state.signupCred
+
         if (!username || !password || !fullname) {
             return this.setState({ msg: 'All inputs are required' })
         }
         try {
             await this.props.addUser({ username, password, fullname })
-            this.setState(
-                {
-                    signupCred: { username: '', password: '', fullname: '' },
-                }, () => { this.props.history.push('/gig') })
+            this.props.toggleLogin()
+            this.props.history.push('/gig')
         }
         catch (err) {
             console.log('ERR', err)
@@ -106,8 +114,7 @@ class _Login extends Component {
     render() {
 
         const loggedInUser = this.props.user //TODO pay attention later 
-        const { isSignUp: isNewUser } = this.state
-        console.log(loggedInUser)
+        const { isSignUp, msg } = this.state
 
         let signupSection = (
             <>
@@ -121,18 +128,18 @@ class _Login extends Component {
                         placeholder="Full name"
                     />
                     <input
-                        name="password"
-                        type="password"
-                        value={this.state.signupCred.password}
-                        onChange={this.signupHandleChange}
-                        placeholder="Password"
-                    />
-                    <input
                         type="text"
                         name="username"
                         value={this.state.signupCred.username}
                         onChange={this.signupHandleChange}
                         placeholder="Username"
+                    />
+                    <input
+                        name="password"
+                        type="password"
+                        value={this.state.signupCred.password}
+                        onChange={this.signupHandleChange}
+                        placeholder="Password"
                     />
                     <button>Continue</button>
                     <hr />
@@ -161,7 +168,7 @@ class _Login extends Component {
                         placeholder="Password"
                     />
                     <br />
-                    <button className="rounded" onClick={this.doLogin}>Continue</button>
+                    <button className="rounded">Continue</button>
                     <hr />
                     <h4>Not a member yet? <span onClick={this.toggleIsNewUser}>Join Now</span></h4>
                 </form>
@@ -171,19 +178,18 @@ class _Login extends Component {
 
         return (
             <div className="main-screen" onClick={this.props.toggleLogin}>
-                <div className="login main-layout shadow rounded">
-                    <p>{this.state.msg}</p>
-                    {loggedInUser && (
+                <div className="login main-layout shadow rounded" onClick={this.captureModalClick}>
+                    {msg && <p>{msg}</p>}
+                    {/* {loggedInUser && (
                         <div>
                             <h3>
                                 Welcome {loggedInUser.fullname}
                                 <button onClick={this.doLogout}>Logout</button>
                             </h3>
                         </div>
-                    )}
-                    {!isNewUser && loginSection}
-                    {isNewUser && signupSection}
-
+                    )} */}
+                    {isSignUp && signupSection}
+                    {!isSignUp && loginSection}
 
                 </div>
             </div>
