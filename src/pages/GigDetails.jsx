@@ -131,6 +131,7 @@ class _GigDetails extends React.Component {
         }, 0)
         const avg = Math.floor(sumRate / reviews.length)
         let stars = []
+        if(avg>5) avg=5
         for (var i = 0; i < avg; i++) {
             stars.push(<StarRateIcon className="seller-star" ></StarRateIcon>)
         }
@@ -230,12 +231,9 @@ class _GigDetails extends React.Component {
                                 {/* < EditIcon className="edit-icon" onClick={() => this.toggleIsDescEditble(isDescEditble)} /> */}
                             </div>
                         </div>
-                        {isDescEditble && <button onClick={this.onEdit}>Save</button>}
-
-                        {/* packagesList */}
+                        {/* {isDescEditble && <button onClick={this.onEdit}>Save</button>} */}
                         <SellerPreview seller={gig.owner} />
-                        <PackageList packages={gig.packages} />
-                        {/* sellerPreview */}
+                        {/* <PackageList packages={gig.packages} /> */}
                         <ReviewList gig={gig} user={user} />
                         {user && <GigAddReview gig={gig} user={user} onAddReview={this.onAddReview} />}
                         {/* reviews */}

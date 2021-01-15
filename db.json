@@ -127,7 +127,7 @@
     },
     {
       "_id": "s103",
-      "title": "I will design 2 modern minimalist logo design",
+      "title": "I will design 2 modern minimalist logo design!",
       "desc": "I am  Design, Web Banner, Facebook Fan Page, Business Cards, Letterhead, Cover, Box design and Icon. so If you need Please contact me before place your order,We do not copy from other websites. one of the best places when you can find talented logo designers, with a natural talent and ability to listen, to absorb and visualize the  needs of their clients. They give you the possibility to choose from 2 kind of logos, in different formats, different sizes a lifetime support and if you don’t like it you can take your money back with 100% guarantee.",
       "tags": [
         "graphic design",
@@ -163,6 +163,40 @@
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/a050fa8f59b4b759dee3f680bd784650-1596362953/47710_Space%20Turtles%20Studios_Logo_K_07/do-professional-and-unique-logo-design.jpg"
       ],
       "reviews": [
+        {
+          "id": "J1ETN",
+          "rating": "",
+          "txt": "I am very pleased with the out come. Only thing I would say is I wish I could speak with the designer directly. There are things I could not describe for changes or thoughts but could not get done. In the future I will write in more details for my needs. I am very happy with the designs you provided and will be back in the future, I am very pleased with the out come.",
+          "createdAt": 1610744443409,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "DqogL",
+          "rating": "5",
+          "txt": "I am very pleased with the out come. Only thing I would say is I wish I could speak with the designer directly. There are things I could not describe for changes or thoughts but could not get done. In the future I will write in more details for my needs. I am very happy with the designs you provided and will be back in the future",
+          "createdAt": 1610744253299,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
         {
           "id": "madeId",
           "rating": 5,
@@ -558,7 +592,7 @@
     {
       "_id": "s109",
       "title": "I will create architectural 3d modeling and do rendering",
-      "desc": "Hello everyone. Thanks for your interesting on this gig We are a team consist with well trained Architect, Mecanical Engineer,Electrical Engineer,Surveyor and a civil engineer. we will develop your plan or sketch in to 3D model using Autodesk Revit or Sketch up. - Will send you good quality images of architecture model in realistic rendering. - Will have unlimited revisions according to your needs until you are satisfied. - Will give you the source file and export your file in to any format as per your requirement. - Will do after work using photoshop. We can handle any scale of architecture project with the expert knowledge of every aspect.We have experience in apartments, hotels, restaurants, shops, offices, etc.Same time we handle interior designing and external designing with landscaping as per your requirement. Thank you very much. Best regards,Team Desman",
+      "desc": "Hello everyone. Thanks for your interesting on this gig We are a team consist with well trained Architect, Mecanical Engineer,Electrical Engineer,Surveyor and a civil engineer. we will develop your plan or sketch in to 3D model using Autodesk Revit or Sketch up. - Will send you good quality images of architecture model in realistic rendering. - Will have unlimited revisions according to your needs until you are satisfied. - Will give you the source file and export your file in to any format as per your requirement. - Will do after work using photoshop. ",
       "tags": [
         "3d",
         "design"
@@ -586,6 +620,23 @@
       ],
       "reviews": [
         {
+          "id": "Ph4kD",
+          "rating": "",
+          "txt": "best seler ever!\n",
+          "createdAt": 1610738199004,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
           "id": "madeId",
           "rating": 5,
           "txt": "Although at times it can be difficult to communicate a message regarding design, he was able to accomplish my requests in a timely manner",
@@ -601,12 +652,29 @@
             "fullname": "user2",
             "imgUrl": "/img/img2.jpg"
           }
+        },
+        {
+          "id": "0kP6B",
+          "rating": "",
+          "txt": "amazing seller",
+          "createdAt": 1610738144300,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
         }
       ]
     },
     {
       "_id": "s110",
-      "title": "I will design your garden, backyard,swimming pool patio, terrace and render images!!!",
+      "title": "I will design your garden, backyard,swimming pool patio, terrace and render images",
       "desc": "!I'm a Landscape Architect who professionally involved in architectural designing and visualization. I will provide outstanding quality renderings from your Architectural drawings. (Kindly check the gig images and video.Those are completely my own works and I'm passionate on that). There you can place any of your order without any doubt!!",
       "tags": [
         "3d",
@@ -877,7 +945,10 @@
         "s102",
         "G91yvoB",
         "nn8c8we",
-        "s106"
+        "s106",
+        "s107",
+        "s109",
+        "s108"
       ]
     },
     {
