@@ -1,5 +1,5 @@
 import React from 'react'
-import Avatar from '@material-ui/core/Avatar';
+// import Avatar from '@material-ui/core/Avatar';
 
 export function ReviewPreview({ review, user }) {
     console.log("ReviewPreview , user", user)
@@ -8,7 +8,7 @@ export function ReviewPreview({ review, user }) {
         <>
             <section className="review-card flex">
                 <div className="avatar-container">
-                    <Avatar src={review.by.imgUrl} />
+                    {/* <Avatar src={review.by.imgUrl} /> */}
                 </div>
                 <div className="review-info">
                     <h4>{review.by.fullname}</h4>

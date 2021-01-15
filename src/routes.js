@@ -1,7 +1,7 @@
 import {SixerrApp} from './pages/SixerrApp.jsx'
 import {GigDetails} from './pages/GigDetails.jsx'
 import {GigEdit} from './pages/GigEdit.jsx'
-import { Login } from './pages/Login.jsx'
+import { Profile } from './pages/Profile.jsx'
 
 export const routes = [
     {
@@ -21,7 +21,7 @@ export const routes = [
         component: GigEdit
     },
     {
-        path:'/login',
-        component: Login
+        path:'/profile',
+        component: Profile
     }
 ]
