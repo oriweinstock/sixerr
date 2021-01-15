@@ -2,8 +2,6 @@ import React from 'react'
 // import Avatar from '@material-ui/core/Avatar';
 
 export function ReviewPreview({ review, user }) {
-    console.log("ReviewPreview , user", user)
-    console.log("ReviewPreview , review", review)
     return (
         <>
             <section className="review-card flex">

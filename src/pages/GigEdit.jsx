@@ -2,6 +2,8 @@ import { loadGigs, addGig } from '../store/actions/gigActions.js';
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { gigService } from '../services/gigService.js'
+import { utilService } from '../services/utilService.js'
+
 
 
 class _GigEdit extends Component {
@@ -25,22 +27,18 @@ class _GigEdit extends Component {
             })
         }
         else {
-            const packages = this.createTemplatePackages()
+            // const packages = this.createTemplatePackages()
+            const gig = this.createGigTemplate()
+            console.log("componentDidMount , gig", gig)
+            this.setState({ gig })
             // todo call createGig from service and then setState
-            this.setState(prevState => {
-                return {
-                    gig: {
-                        ...prevState.gig,
-                        packages,
-                    }
-                }
-            })
         }
     }
     onSaveNewGig = (ev) => {
         console.log('on saved gig func :)');
         ev.preventDefault()
         const { gig } = this.state
+        console.log("gig on saved gig!", gig)
         this.props.addGig(gig).then(() => {
             console.log('one line before history');
             this.props.history.push('/gig');
@@ -48,16 +46,34 @@ class _GigEdit extends Component {
     }
 
     createTemplatePackages = () => {
-        return [{ type: 'basic', desc: '', price: null, revisionsCount: null, deliveryDays: null, features: [] }]
+        return [{ type: 'basic', desc: '', price: null, revisionCount: null, deliveryDays: null, features: [] }]
     }
 
-
-
+    createGigTemplate = () => {
+        const { user } = this.props
+        console.log("user", user)
+        const packages = this.createTemplatePackages()
+        const defaultImgUrl = "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
+        const gig = {
+            title: "",
+            desc: "",
+            tags: [],
+            packages,
+            owner: user,
+            imgUrls: [defaultImgUrl],
+            reviews: []
+        }
+        return gig
+    }
 
     handleInput = ({ target }) => {
         const field = target.name
         console.log("field", field)
-        const value = target.value
+        let value = target.value
+        if (field === 'tags') {
+            const tags = [value]
+            value = tags
+        }
         console.log("value", value)
         this.setState(prevState => {
             return {
@@ -90,11 +106,14 @@ class _GigEdit extends Component {
 
     }
     handlePackageFeatures = (value) => {
+        console.log("value", value)
         const { gig } = this.state
         const { features } = gig.packages[0]
+        console.log("features", features)
         if (!features.includes(value)) {
             features.push(value)
             gig.features = features
+            console.log("gig", gig)
             this.setState(prevState => {
                 return {
                     gig: {
@@ -108,7 +127,7 @@ class _GigEdit extends Component {
     render() {
         const { gig } = this.state
         const { packages } = gig
-        console.log("render , gig", gig)
+        console.log("render!!!! , gig", gig)
         console.log("render , packages", packages)
         if (!gig.packages) return <div>loading</div>
         return (
@@ -150,6 +169,7 @@ class _GigEdit extends Component {
 const mapStateToProps = (state) => {
     return {
         gigs: state.gigModule.gigs,
+        user: state.userModule.user
     }
 }
 

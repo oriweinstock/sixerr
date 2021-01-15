@@ -21,7 +21,7 @@ export class EditableElement extends React.Component {
             <ContentEditable
                 innerRef={this.contentEditable}
                 html={this.state.html} // innerHTML of the editable div
-                disabled={false}       // use true to disable editing
+                disabled={this.props.editable}       // use true to disable editing
                 onChange={this.handleChange} // handle innerHTML change
                 tagName= {this.props.type} // Use a custom HTML tag (uses a div by default)
             />

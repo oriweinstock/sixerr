@@ -1,3 +1,4 @@
+import Avatar from '@material-ui/core/Avatar';
 
 export function SellerPreview({ seller }) {
     console.log("SellerPreview , seller", seller)
@@ -7,6 +8,7 @@ export function SellerPreview({ seller }) {
             <div className="flex">
                 <div className="seller-img-container">
                     <img src={seller.imgUrl} />
+                    {/* <Avatar src={`${seller.imgUrl}`} /> */}
                 </div>
                 <div className="flex column">
                     <p>{seller.fullname}</p>
