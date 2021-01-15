@@ -2,7 +2,12 @@
     padding: 1.25rem;
     background-color: white;
     min-width: 400px;
-    max-height: 420px;
+    // max-height: 380px;
+    height: -webkit-fill-available;
+    padding-block-end:3rem ;
+    position: sticky;
+    border: 1px solid rgb(202, 202, 202);
+    top: 3rem;
     h3 {
         font-size: 16px;
         margin-block-end: 2rem;

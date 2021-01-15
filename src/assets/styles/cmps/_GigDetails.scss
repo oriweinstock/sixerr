@@ -2,8 +2,7 @@
     font: 400 16px/24px "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: grid;
     grid-template-columns: 8fr 2fr;
-    position: relative;
-
+    padding: 1rem;
     .main-details {
         // padding: 2rem;
         margin-right: 20px;
@@ -39,7 +38,7 @@
                 margin: 0 5px;
                 cursor: pointer;
                 opacity: 0.3;
-                &.active{
+                &.active {
                     opacity: 1;
                 }
                 img {
@@ -55,31 +54,64 @@
 .img-details-conatiner {
     // width: 34.375rem;
     height: 26.6rem;
+    position: relative;
+    .full-screen-icon{
+        position: absolute;
+        // top: 10px;
+        // right: 10px;
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.411);
+        box-sizing: content-box;
+        padding: 3px;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover{
+            background-color: rgb(34, 34, 34);
+            transform: scale(1.1);
+            transition: all 0.1s ease;
+        }
+        &::after{
+            content: "Full Screen";
+        }
+    }
+
 }
+
+
+
 .img-details-conatiner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.short-review {
-    margin-block-start: 3.5rem;
-    // border: 1px solid black;
-    h5 {
-        padding: none;
-        margin: none;
-    }
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.owner-img-container {
-    padding: 1rem;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+.short-review {
+    // margin-block-start: 3.5rem;
+    // background-color: yellow;
+    padding: 0.7rem 1rem;
+    border: 1px solid #e4e5e7;
+    border-radius: 4px;
 
-    img {
-        width: 100%;
-        height: 100%;
+    .content {
+        font: 400 16px/24px "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #62646a;
+        h6 {
+            padding: none !important;
+            margin: none  !important;
+        }
+    }
+    .avatar-container {
+        margin-block-start: 1rem;
+        margin-inline-end: 0.7rem;
     }
 }
 
@@ -98,4 +130,18 @@
     font-size: 24px;
     border: none;
     margin-block-end: 1rem;
+}
+
+.edit-icon {
+    align-self: center;
+    :hover {
+        cursor: pointer;
+    }
+}
+
+.short-review-header {
+    margin-block-start: 3.5rem;
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 25px;
 }
