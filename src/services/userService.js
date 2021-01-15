@@ -37,6 +37,7 @@ async function update(user) {
     user = await httpService.put(`user/${user._id}`, user)
     // Handle case in which admin updates other user's details
     if (getLoggedinUser()._id === user._id) _saveLocalUser(user)
+    return user
 }
 
 async function login(userCred) {

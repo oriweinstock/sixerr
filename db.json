@@ -2,7 +2,7 @@
   "gig": [
     {
       "_id": "s101",
-      "title": "I will turn your childrens book into a video with narration",
+      "title": "I will turn your children's book into a video with narration",
       "desc": "Turn your children’s picture book into a promotional powerhouse!",
       "tags": [
         "Graphic Design",
@@ -49,6 +49,23 @@
             "_id": "u102",
             "fullname": "user2",
             "imgUrl": "/img/img2.jpg"
+          }
+        },
+        {
+          "id": "nrRvX",
+          "rating": "",
+          "txt": "amazing seller , i would like to buy from him every day!",
+          "createdAt": 1610736399408,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u101",
+            "fullname": "David Abu Puki",
+            "imgUrl": "/img/img1.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
           }
         }
       ]
@@ -105,7 +122,8 @@
             "imgUrl": "/img/img2.jpg"
           }
         }
-      ]
+      ],
+      "field": "Our Studio will do a minimalist logo, business card and stationery!!!"
     },
     {
       "_id": "s103",
@@ -231,12 +249,29 @@
             "fullname": "user2",
             "imgUrl": "/img/img2.jpg"
           }
+        },
+        {
+          "id": "cbO51",
+          "rating": "",
+          "txt": "amazing seller",
+          "createdAt": 1610730404501,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
         }
       ]
     },
     {
       "_id": "s105",
-      "title": "I will create luxury geometric patterns, background for you",
+      "title": "I will create luxury geometric patterns, background for you ",
       "desc": "I will design INCREDIBLY BEAUTIFUL geometric line or dots pattern, for personal and commercial use starting from 5$ ONLY. As VECTOR files they will be editable for you. I want to make your product simple, but special and unforgettable.",
       "tags": [
         "graphic design",
@@ -282,12 +317,46 @@
             "fullname": "user2",
             "imgUrl": "/img/img2.jpg"
           }
+        },
+        {
+          "id": "lmHZ8",
+          "rating": "",
+          "txt": "amazing seller",
+          "createdAt": 1610730377664,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610715710/ry5pnjazunvdwsr7mcpl.jpg"
+          }
+        },
+        {
+          "id": "rit0x",
+          "rating": "",
+          "txt": "review3",
+          "createdAt": 1610733867722,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
         }
       ]
     },
     {
       "_id": "s106",
-      "title": "I will do book cover design, book cover",
+      "title": "I will do book cover design, book cover!",
       "desc": "I  am graphic designer, perfectly positioned to help you and your company to design book cover. Through experience gained over time, I can create from scratch or turn your existing book cover into a kindle cover /ingramspark/ createspace cover withing the shortest interval of time. I specialize in increasing your reputation and credibility, through book cover design that will grab your readers attention ",
       "tags": [
         "book",
@@ -399,6 +468,40 @@
             "fullname": "user2",
             "imgUrl": "/img/img2.jpg"
           }
+        },
+        {
+          "id": "F7otx",
+          "rating": "",
+          "txt": "review 2",
+          "createdAt": 1610725941708,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610715710/ry5pnjazunvdwsr7mcpl.jpg"
+          }
+        },
+        {
+          "id": "LiNm9",
+          "rating": "",
+          "txt": "review3\n",
+          "createdAt": 1610726630081,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610715710/ry5pnjazunvdwsr7mcpl.jpg"
+          }
         }
       ]
     },
@@ -455,7 +558,7 @@
     {
       "_id": "s109",
       "title": "I will create architectural 3d modeling and do rendering",
-      "desc": "Hello everyone. Thanks for your interesting on this gig We are a team consist with well trained Architect, Mecanical Engineer,Electrical Engineer,Surveyor and a civil engineer. we will develop your plan or sketch in to 3D model using Autodesk Revit or Sketch up. - Will send you good quality images of architecture model in realistic rendering. - Will have unlimited revisions according to your needs until you are satisfied. - Will give you the source file and export your file in to any format as per your requirement. - Will do after work using photoshop.   We can handle any scale of architecture project with the expert knowledge of every aspect.We have experience in apartments, hotels, restaurants, shops, offices, etc.Same time we handle interior designing and external designing with landscaping as per your requirement. Thank you very much. Best regards,Team Desman.",
+      "desc": "Hello everyone. Thanks for your interesting on this gig We are a team consist with well trained Architect, Mecanical Engineer,Electrical Engineer,Surveyor and a civil engineer. we will develop your plan or sketch in to 3D model using Autodesk Revit or Sketch up. - Will send you good quality images of architecture model in realistic rendering. - Will have unlimited revisions according to your needs until you are satisfied. - Will give you the source file and export your file in to any format as per your requirement. - Will do after work using photoshop. We can handle any scale of architecture project with the expert knowledge of every aspect.We have experience in apartments, hotels, restaurants, shops, offices, etc.Same time we handle interior designing and external designing with landscaping as per your requirement. Thank you very much. Best regards,Team Desman",
       "tags": [
         "3d",
         "design"
@@ -526,7 +629,7 @@
       "owner": {
         "_id": "u103",
         "fullname": "user3",
-        "imgUrl": "/img/img3.jpg"
+        "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/bfbeae94c8d79214b319d069330dcf0f-1604548107346/f89d300b-7a89-4083-8083-dc71ca507fc9.jpg"
       },
       "imgUrls": [
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/140466076/original/5818705d7e170235c29bed336fd23d988fed4a21/landscape-design-architecture-landscape-3d-3d-house-visualization-rendering.jpg",
@@ -552,21 +655,147 @@
           }
         }
       ]
-    }
-  ],
-  "order": [
+    },
     {
-      "_id": "o1225",
-      "createdAt": 9898989,
-      "buyer": "mini-user",
-      "totalPrice": 20,
-      "currency": "USD",
-      "gig": {
-        "_id": "v102",
-        "title": "I will turn your childrens book into a video with narration",
-        "imgUrl": ""
+      "title": "gig title",
+      "desc": "gig desc",
+      "tags": [
+        "minimalist"
+      ],
+      "packages": [
+        {
+          "type": "basic",
+          "desc": "package desc",
+          "price": 1,
+          "revisionCount": 1,
+          "deliveryDays": 1,
+          "features": []
+        }
+      ],
+      "owner": {
+        "username": "admin",
+        "password": "admin",
+        "fullname": "tomer maruani",
+        "imgUrl": "/img/img1.jpg",
+        "isAdmin": false,
+        "_id": "lfE5k8E",
+        "viewedGigIds": [
+          "s101",
+          "s103",
+          "3D6of6v",
+          "s110",
+          "s104",
+          "s102"
+        ]
       },
-      "status": "pending"
+      "imgUrls": [
+        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
+      ],
+      "reviews": [
+        {
+          "id": "Ew87q",
+          "rating": "",
+          "txt": "tomer",
+          "createdAt": 1610734880396,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "username": "admin",
+            "password": "admin",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg",
+            "isAdmin": false,
+            "_id": "lfE5k8E",
+            "viewedGigIds": [
+              "s101",
+              "s103",
+              "3D6of6v",
+              "s110",
+              "s104",
+              "s102"
+            ]
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "Ew87q",
+          "rating": "",
+          "txt": "ori\n",
+          "createdAt": 1610734888728,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "username": "admin",
+            "password": "admin",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg",
+            "isAdmin": false,
+            "_id": "lfE5k8E",
+            "viewedGigIds": [
+              "s101",
+              "s103",
+              "3D6of6v",
+              "s110",
+              "s104",
+              "s102"
+            ]
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
+        }
+      ],
+      "_id": "G91yvoB"
+    },
+    {
+      "title": "gig2",
+      "desc": "gig2",
+      "tags": [
+        "minimalist"
+      ],
+      "packages": [
+        {
+          "type": "basic",
+          "desc": "df",
+          "price": 50,
+          "revisionCount": 1,
+          "deliveryDays": 5,
+          "features": [
+            "Include Environment",
+            "3D Modeling"
+          ]
+        }
+      ],
+      "owner": {
+        "username": "admin",
+        "password": "admin",
+        "fullname": "tomer maruani",
+        "imgUrl": "/img/img1.jpg",
+        "isAdmin": false,
+        "_id": "lfE5k8E",
+        "viewedGigIds": [
+          "s101",
+          "s103",
+          "3D6of6v",
+          "s110",
+          "s104",
+          "s102",
+          "G91yvoB"
+        ]
+      },
+      "imgUrls": [
+        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
+      ],
+      "reviews": [],
+      "features": [
+        "Include Environment",
+        "3D Modeling"
+      ],
+      "_id": "nn8c8we"
     }
   ],
   "user": [
@@ -607,9 +836,16 @@
     },
     {
       "username": "kupersd",
+      "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610707693/z56f1yp74i8k4efbpyrc.jpg",
       "password": "123456",
-      "fullname": "David Kuperstein",
-      "_id": "olqIJNj"
+      "fullname": "David K",
+      "_id": "olqIJNj",
+      "viewedGigIds": [
+        "s102",
+        "s108",
+        "s104",
+        "s109"
+      ]
     },
     {
       "username": "oriw",
@@ -631,7 +867,18 @@
       "fullname": "tomer maruani",
       "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
-      "_id": "lfE5k8E"
+      "_id": "lfE5k8E",
+      "viewedGigIds": [
+        "s101",
+        "s103",
+        "3D6of6v",
+        "s110",
+        "s104",
+        "s102",
+        "G91yvoB",
+        "nn8c8we",
+        "s106"
+      ]
     },
     {
       "username": "puki",

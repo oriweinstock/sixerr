@@ -44,7 +44,9 @@ class _AppHeader extends React.Component {
                             <NavLink className="" to="#" onClick={this.onToggleLogin}>
                                 <li>Login</li>
                             </NavLink>}
-                        {user && <h3>{user.username}</h3>}
+                        <NavLink to="/profile">
+                            {user && <h3>{user.username}</h3>}
+                        </NavLink>
                     </ul>
 
                 </section>

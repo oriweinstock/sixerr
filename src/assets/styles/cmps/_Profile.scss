@@ -1,0 +1,11 @@
+.about-user {
+    align-items: center;
+    width: 200px;
+    img {
+        width: 80px;
+    }
+
+    > * {
+        outline: none;
+    }
+}

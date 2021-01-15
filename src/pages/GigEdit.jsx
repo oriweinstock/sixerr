@@ -27,22 +27,18 @@ class _GigEdit extends Component {
             })
         }
         else {
-            const packages = this.createTemplatePackages()
+            // const packages = this.createTemplatePackages()
+            const gig = this.createGigTemplate()
+            console.log("componentDidMount , gig", gig)
+            this.setState({ gig })
             // todo call createGig from service and then setState
-            this.setState(prevState => {
-                return {
-                    gig: {
-                        ...prevState.gig,
-                        packages,
-                    }
-                }
-            })
         }
     }
     onSaveNewGig = (ev) => {
         console.log('on saved gig func :)');
         ev.preventDefault()
         const { gig } = this.state
+        console.log("gig on saved gig!", gig)
         this.props.addGig(gig).then(() => {
             console.log('one line before history');
             this.props.history.push('/gig');
@@ -50,73 +46,34 @@ class _GigEdit extends Component {
     }
 
     createTemplatePackages = () => {
-        return [{ type: 'basic', desc: '', price: null, revisionsCount: null, deliveryDays: null, features: [] }]
+        return [{ type: 'basic', desc: '', price: null, revisionCount: null, deliveryDays: null, features: [] }]
     }
 
     createGigTemplate = () => {
-        const _id = utilService.makeId()
-        return { _id, title: "", desc: "", tags: [], packages: [{ type: "basic", desc: "", price: null, revisionsCount: null, deliveryDays: null, features: [], owner: {} }] }
+        const { user } = this.props
+        console.log("user", user)
+        const packages = this.createTemplatePackages()
+        const defaultImgUrl = "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
+        const gig = {
+            title: "",
+            desc: "",
+            tags: [],
+            packages,
+            owner: user,
+            imgUrls: [defaultImgUrl],
+            reviews: []
+        }
+        return gig
     }
-
-    // {
-    //     "_id": "s105",
-    //     "title": "I will create luxury geometric patterns, background for you",
-    //     "desc": "I will design INCREDIBLY BEAUTIFUL geometric line or dots pattern, for personal and commercial use starting from 5$ ONLY. As VECTOR files they will be editable for you. I want to make your product simple, but special and unforgettable.",
-    //     "tags": [
-    //       "graphic design",
-    //       "flat",
-    //       "modern"
-    //     ],
-    //     "packages": [
-    //       {
-    //         "type": "basic",
-    //         "desc": "",
-    //         "price": 20,
-    //         "revisionsCount": 2,
-    //         "deliveryDays": 1,
-    //         "features": [
-    //           "Source File"
-    //         ]
-    //       }
-    //     ],
-    //     "owner": {
-    //       "_id": "u103",
-    //       "fullname": "user3",
-    //       "imgUrl": "/img/img3.jpg"
-    //     },
-    //     "imgUrls": [
-    //       "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/156162379/original/9c48c36d227033912ad3098440e9a90f8503d9d4/create-luxury-geometric-patterns-and-background-for-you.png",
-    //       "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/b9d0a4a0fc3c4807eccc781ecfadc97c-1597784095/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202020-08-18%20%D0%B2%2023.51.35/cr",
-    //       "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/156162379/original/9087a56206fcc647d954fbe88c28fc61d673b936/create-luxury-geometric-patterns-and-background-for-you.png"
-    //     ],
-    //     "reviews": [
-    //       {
-    //         "id": "madeId",
-    //         "rating": 5,
-    //         "txt": "Thank you for a job well done. You exceeded my expectations. I will definitely work with this designer in the future.",
-    //         "createdAt": "timestamp",
-    //         "purchasedAt": "timestamp",
-    //         "seller": {
-    //           "communication": 5,
-    //           "recommend": 5,
-    //           "asDescribed": 5
-    //         },
-    //         "by": {
-    //           "_id": "u102",
-    //           "fullname": "user2",
-    //           "imgUrl": "/img/img2.jpg"
-    //         }
-    //       }
-    //     ]
-    //   },
-
-
-
 
     handleInput = ({ target }) => {
         const field = target.name
         console.log("field", field)
-        const value = target.value
+        let value = target.value
+        if (field === 'tags') {
+            const tags = [value]
+            value = tags
+        }
         console.log("value", value)
         this.setState(prevState => {
             return {
@@ -149,11 +106,14 @@ class _GigEdit extends Component {
 
     }
     handlePackageFeatures = (value) => {
+        console.log("value", value)
         const { gig } = this.state
         const { features } = gig.packages[0]
+        console.log("features", features)
         if (!features.includes(value)) {
             features.push(value)
             gig.features = features
+            console.log("gig", gig)
             this.setState(prevState => {
                 return {
                     gig: {
@@ -167,7 +127,7 @@ class _GigEdit extends Component {
     render() {
         const { gig } = this.state
         const { packages } = gig
-        console.log("render , gig", gig)
+        console.log("render!!!! , gig", gig)
         console.log("render , packages", packages)
         if (!gig.packages) return <div>loading</div>
         return (

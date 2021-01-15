@@ -1,7 +1,6 @@
 import React from 'react'
 
 export function PackagePreview({ pack }) {
-    console.log("PackagePreview , package", pack)
     return (
         <>
         <div>Package Preview</div>
