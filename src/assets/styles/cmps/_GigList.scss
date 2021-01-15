@@ -1,13 +1,7 @@
 .gig-list {
-    // color: aqua;
-    
-    ul {        
-        flex-wrap: wrap;
-        justify-content: space-around;
 
-        li {
-            width: 180px;
-            border: 1px solid $altColor;
-        }
+    .previews-wrap {
+        display: flex;
+        flex-wrap: wrap;
     }
 }

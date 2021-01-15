@@ -1,40 +1,89 @@
-.gig-preview {
-    
-    color: $darkColor;
+.preview-item {
+    width: 25%;
+    padding: 10px;
 
-    h2 {
-        padding-inline-start: 5px;
-        font-size: 1rem;
-        font-weight: normal;
-        line-height: 1.3em;
-        height: 2.8em;
-        overflow: hidden;
+    transition: .3s;
+    &:hover {
+        background: rgba(0, 0, 0, 0.15);
     }
 
-    .gig-preview-bottom {
-        border-top: 1px solid $altColor;
+    @media screen and (max-width: $mediumLayout) {
+        width: 33.3%;
+    }
+    @media screen and (max-width: $smallLayout) {
+        width: 50%;
+    }
+    @media screen and (max-width: $mobileLayout) {
+        width: 100%;
+    }
+    a, a:visited {
+        color: initial;
+        text-decoration: none;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        // display: block;
+    }
+
+    .preview-inner {
         background-color: #fff;
-        
-        h3 {
-            padding-inline-start: 5px;
-            font-weight: normal;
-            font-size: 0.9em;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+        .preview-top {
+            width: 100%;
+            height: 23vmin;
+            @media screen and (max-width: $smallLayout) {
+                height: 33vmin;
+            }
+            @media screen and (max-width: $mobileLayout) {
+                height: 60vmin;
+            }
+        }
+        .preview-center {
+            padding: 10px;
+            h2 {
+                font-size: 1rem;
+                font-weight: normal;
+                line-height: 1.3em;
+                height: 2.7em;
+                overflow: hidden;
+            }
+            .gig-owner {
+                p {
+                    margin: 0;
+                    font-size: 0.8em;
+
+                    &:first-of-type {
+                        font-weight: bold;
+                    }
+                }
+                
+            }
+        }
+        .preview-bottom {
+            border-top: $softColorBorder;
+            h3 {
+                margin: 0;
+                padding: 10px;
+                font-size: 0.9em;
+                font-weight: normal;
+            }
             span {
                 color: $boldColor;
                 font-weight: bold;
             }
-        }
-    }
-    
-    a {
-        text-decoration: none;
-    }
 
-    img {
-        width: 100%;
-        height: 50%;
-        object-fit: cover;
+            .heart {
+                color: $darkColor;
+                margin-top: 6px;
+                margin-inline-start: 10px;
+                transition: .2s;
+                &:hover {
+                    color: darken($darkColor, 10);
+                }
+            }
+        }
+    
+    
     }
 }

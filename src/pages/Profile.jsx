@@ -41,10 +41,10 @@ class _Profile extends React.Component {
     }
 
     onSave = (field, value) => {
-        const user  = {...this.props.user}
+        const user = { ...this.props.user }
         user[field] = value
         this.props.updateUser(user)
-    } 
+    }
 
 
     render() {
@@ -53,17 +53,25 @@ class _Profile extends React.Component {
         console.log(user)
         if (!user) return <div>Loading...</div>
         return (
-            <section className="profile">
-                <div className="about-user flex column">
-                    <label className="pointer" htmlFor="uploadImg"><img src={user.imgUrl} /></label>
-                    <input onChange={this.onUploadImg} type="file" id="uploadImg" hidden />
-                    <EditableElement field={'fullname'} save={this.onSave} type={'h1'} text={user.fullname}/>
-                    <p>From {from}</p>
-                    <p>Member since {memberSince}</p>
-                    <button>Contact Me</button>
+            <section className="profile main-layout mrg-top">
+                <div className="flex">
+                    <div className="about-user flex column">
+                        <label className="img-upload pointer" htmlFor="uploadImg">
+                            <img src={user.imgUrl} />
+                            <input onChange={this.onUploadImg} type="file" id="uploadImg" hidden />
+                        </label>
+                        <EditableElement field={'fullname'} save={this.onSave} type={'h1'} text={user.fullname} />
+
+                        <p>From {from}</p>
+                        <p>Member since {memberSince}</p>
+                        <button>Contact Me</button>
+                    </div>
+                {lastViewed.length !== 0 &&
+                    <div className="recently-viewed flex column">
+                        <h1>Last viewed</h1>
+                        <GigList gigs={lastViewed} onDelete={this.onDelete} onUserViewGig={() => { }} />
+                    </div>}
                 </div>
-                {lastViewed.length !== 0 &&<h1>Last viewed</h1>}
-                {lastViewed.length !== 0 && <GigList gigs={lastViewed} onDelete={this.onDelete} onUserViewGig={() => { }} />}
                 <h1>Suggested</h1>
                 <GigList gigs={suggestedGigs} onDelete={this.onDelete} onUserViewGig={() => { }} />
             </section>
@@ -80,7 +88,7 @@ const mapGlobalStateToProps = (state) => {
 }
 const mapDispatchToProps = {
     onImageChange,
-    updateUser, 
+    updateUser,
     loadGigs
 }
 
