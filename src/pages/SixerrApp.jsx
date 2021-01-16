@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { GigList } from '../cmps/GigList.jsx';
 import { Login } from './Login.jsx'
 import { loadGigs, setFilter, removeGig } from "../store/actions/gigActions.js";
-import { viewGig } from "../store/actions/userActions.js";
+import { updateUser } from "../store/actions/userActions.js";
 
 
 class _SixerrApp extends React.Component {
@@ -13,7 +13,11 @@ class _SixerrApp extends React.Component {
     }
 
     onUserViewGig = (gigId) => {
-        this.props.viewGig(gigId)
+        const user = {...this.props.user}
+        if (user.viewedGigIds) {
+            if (!user.viewedGigIds.find(viewedGigId => viewedGigId === gigId)) user.viewedGigIds.push(gigId)
+        } else user.viewedGigIds = [gigId]
+        this.props.updateUser(user)
     }
 
     onDelete = () => { }
@@ -43,7 +47,7 @@ const mapDispatchToProps = {
     loadGigs,
     setFilter,
     removeGig,
-    viewGig
+    updateUser
 }
 
 export const SixerrApp = connect(mapStateToProps, mapDispatchToProps)(_SixerrApp)
