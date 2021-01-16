@@ -180,9 +180,9 @@ class _GigDetails extends React.Component {
                         </div>
                         <SellerPreview seller={gig.owner} />
                         {/* <PackageList packages={gig.packages} /> */}
-                        <ReviewStats />
-                        <ReviewList gig={gig} user={user} />
+                        {/* <ReviewStats /> */}
                         {user && <GigAddReview gig={gig} user={user} onAddReview={this.onAddReview} />}
+                        <ReviewList gig={gig} user={user} />
                     </div>
                     <SideBar gig={gig} />
                 </section>
@@ -206,9 +206,3 @@ const mapDispatchToProps = {
 
 export const GigDetails = connect(mapStateToProps, mapDispatchToProps)(_GigDetails)
 
-
-{/* <div className="add-remove-btn-container">
-<Link className="edit-link" to={`/gig/edit/${gig._id}`}>Full Edit</Link>
-{user && <Link to='/gig/edit'  ><button className="add-btn">Add Gig</button></Link>}
-<button className="remove-btn" onClick={this.onRemoveGig}>Remove Gig</button>
-</div> */}

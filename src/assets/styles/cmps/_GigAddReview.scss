@@ -5,8 +5,11 @@
     }
 
 }
-
 .activeStar {
     color: yellow;
 
+}
+
+.add-review{
+    @include defButton
 }
