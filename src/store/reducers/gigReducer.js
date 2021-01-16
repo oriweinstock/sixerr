@@ -1,6 +1,6 @@
 const initialState = {
     gigs: [],
-    filterBy: { }
+    filterBy: {}
 }
 
 

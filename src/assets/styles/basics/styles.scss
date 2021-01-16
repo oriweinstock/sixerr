@@ -5,6 +5,7 @@
 // BASE
 @import 'helpers';
 @import 'base';
+@import 'mixins';
 
 // COMPONENTS
 @import '../cmps/AppHeader';
@@ -16,4 +17,11 @@
 @import '../cmps/SellerPreview';
 @import '../cmps/SideBar.scss';
 @import '../cmps/ReviewPreview.scss';
-@import '../cmps/Profile.scss';
+@import '../cmps/GigAddReview.scss';
+@import '../cmps/GigImgLightBox.scss';
+@import '../cmps/Profile';
+@import '../cmps//ShortReviewPreview.scss';
+@import '../cmps/SellerOverview';
+@import '../cmps/ImgGallery.scss';
+@import '../cmps/EditableElement';
+@import '../cmps/ReviewStats';

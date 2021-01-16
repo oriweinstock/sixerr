@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import StarRateIcon from '@material-ui/icons/StarRate';
+import { SixerrApp } from '../pages/SixerrApp.jsx';
 
 const heros = [
     {
@@ -67,7 +68,7 @@ class _Hero extends React.Component {
     heroInterval
 
     componentDidMount() {
-        this.heroInterval = setInterval(this.nextHero, 3000)
+        this.heroInterval = setInterval(this.nextHero, 6000)
     }
 
     componentWillUnmount() {
@@ -91,14 +92,16 @@ class _Hero extends React.Component {
                     <h1 className="main-layout">Find the perfect {whoAmI} for your perfect business</h1>
                     <img src={hero.imgUrl} alt="" />
                     <div className="hero-snippet">
-                        <div>
-                            {/* <StarRateIcon />
+                        <div className="stars">
                             <StarRateIcon />
                             <StarRateIcon />
-                            <StarRateIcon /> */}
+                            <StarRateIcon />
+                            <StarRateIcon />
+                            <StarRateIcon />
                         </div>
                         <span>{hero.username}</span>, {hero.occupation}
                     </div>
+                    <SixerrApp />
                 </section>
             </>
         )

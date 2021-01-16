@@ -1,0 +1,14 @@
+@mixin defButton() {
+    margin-top: 20px;
+    background-color: $boldColor;
+    color: $lightColor;
+    font-weight: bold;
+    height: 2.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: .2s;
+
+    &:hover {
+        background-color: darken($boldColor, 10);
+    }
+}

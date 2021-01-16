@@ -54,17 +54,7 @@
         }
 
         button {
-            margin-top: 30px;
-            background-color: $boldColor;
-            color: $lightColor;
-            font-weight: bold;
-            height: 2.5rem;
-            font-size: 1rem;
-            transition: .2s;
-
-            &:hover {
-                background-color: darken($boldColor, 10);
-            }
+            @include defButton;
         }
         
         h4 {
