@@ -8,13 +8,80 @@
     }
     .review-info {
         margin-block-start: 1.2rem;
-        h4 {
+        h5 {
             margin: 0;
+            font-size: 16px;
+            line-height: 120%;
+            margin-right: 10px;
+        }
+        .icons {
+            outline: none !important;
+            span {
+                margin-inline-end: 1rem;
+            }
+            padding: 0.8rem;
+            padding-inline-start: 0;
+            .helpful {
+                color: rgb(146, 146, 146);
+            }
+
+            .thumb-down {
+                color: rgb(146, 146, 146);
+            }
         }
     }
-    p{
-        margin: 0;
-        margin-block-start:0.5rem ;
-        margin-block-end:2rem ;
+    p {
+        margin: 0 !important;
+        margin-block-start: 0.5rem;
+        // margin-block-end: 2rem;
+        line-height: 22px;
+        font-size: 14px;
+        // padding:8px 0px;
+        color: #404145;
+        font: 400 16px/24px "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
+    .published-at {
+        margin-block-start: 1rem !important;
+        margin-block-end: 1rem !important;
+        color: #95979d;
+        font-size: 14px;
+        line-height: 21px;
+        font: 400 16px/24px "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .country {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-block-start: 0.3rem;
+        margin-block-end: 0.6rem;
+        padding: 0, 0, 3rem, 3rem;
+        span {
+            // margin: 0;
+            margin-inline-start: 10px;
+            color: #95979d;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .rating {
+            margin: 0;
+            font-size: 1.2rem;
+            color: $starsColor;
+        }
+        > * {
+            padding: none !important;
+        }
+        .country-icon {
+            color: #95979d;
+            font-size: 14px;
+            font-weight: 600;
+            margin: auto;
+            padding: none !important;
+        }
+    }
+}
+
+.star {
+    margin-inline-start: 0.4rem;
+    color: $starsColor;
+    font-size: 1.65rem !important;
 }

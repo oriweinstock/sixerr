@@ -55,11 +55,13 @@ class _GigAddReview extends Component {
         reviewToAdd.createdAt = date
         reviewToAdd.purchasedAt = purchasedAt
         console.log("reviewToAdd", reviewToAdd)
-        gig.reviews.push(reviewToAdd)
+        gig.reviews.unshift(reviewToAdd)
+        console.log("gig", gig)
         this.props.updateGig(gig).then(() => {
             console.log('review added succefully');
         })
     }
+
 
     render() {
         const { user, gig, review } = this.state
@@ -73,9 +75,9 @@ class _GigAddReview extends Component {
                     <StarIcon className="star" onClick={() => this.handleRate('4')} ></StarIcon>
                     <StarIcon className="star" onClick={() => this.handleRate('5')} ></StarIcon>
                 </div>
-                {/* <form onSubmit={this.onAddReview()} className="flex column justify-center"> */}
                 <textarea type="text" name="txt" placeholder='enter review...' onChange={this.handleChange} required />
                 <button onClick={() => this.onAddReview()}>Add Review</button>
+                {/* <form onSubmit={this.onAddReview()} className="flex column justify-center"> */}
                 {/* </form> */}
 
             </>

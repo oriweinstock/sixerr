@@ -16,7 +16,7 @@ import FullscreenIcon from '@material-ui/icons/Fullscreen';
 import { gigEdit } from '../pages/GigEdit'
 import { Link } from 'react-router-dom'
 import { EditableElement } from '../cmps/EditableElement.jsx'
-import { ThreeSixty } from '@material-ui/icons'
+// import { ThreeSixty } from '@material-ui/icons'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 
@@ -129,8 +129,9 @@ class _GigDetails extends React.Component {
         const sumRate = reviews.reduce((acc, review) => {
             return acc += review.rating
         }, 0)
-        const avg = Math.floor(sumRate / reviews.length)
+        let avg = Math.floor(sumRate / reviews.length)
         let stars = []
+        if(avg>5) avg=5
         for (var i = 0; i < avg; i++) {
             stars.push(<StarRateIcon className="seller-star" ></StarRateIcon>)
         }
@@ -165,11 +166,11 @@ class _GigDetails extends React.Component {
         if (!gig) return <div>No gig...</div>
         return (
             <>
-                {/* <div className="add-remove-btn-container">
+                <div className="add-remove-btn-container">
                     <Link className="edit-link" to={`/gig/edit/${gig._id}`}>Full Edit</Link>
                     {user && <Link to='/gig/edit'  ><button className="add-btn">Add Gig</button></Link>}
                     <button className="remove-btn" onClick={this.onRemoveGig}>Remove Gig</button>
-                </div> */}
+                </div>
                 {isLightBoxOpen && <GigImgLightBox onToggleImgLightbox={this.onToggleImgLightbox} currImg={currImg} onNextPageLightBox={this.onNextPageLightBox} onPrevPageLightBox={this.onPrevPageLightBox} />}
                 <section className="gig-details main-layout">
                     <div className="main-details">
@@ -214,8 +215,12 @@ class _GigDetails extends React.Component {
                             </div>
                              <div className="content">
                                 <h6>{gig.owner.fullname}</h6>
-                                {gig.reviews.length > 0 && <p>{gig.reviews[reviewChoosenIdx].txt}</p>}
+                                {gig.reviews.length > 0 && <span>{gig.reviews[reviewChoosenIdx].txt}</span>}
                             </div>
+                             {/* <div className="content">
+                                <h6>{gig.owner.fullname}</h6>
+                                {gig.reviews.length > 0 && <p>{gig.reviews[reviewChoosenIdx].txt}</p>}
+                            </div> */}
                             {gig.reviews.length > 1 && <ChevronLeftIcon className="slide-left-review" onClick={() => this.onNextReview(reviewChoosenIdx)} />}
                             {gig.reviews.length > 1 && <ChevronRightIcon className="slide-right-review" onClick={() => this.onPrevReview(reviewChoosenIdx)} />}
                         </div>}
@@ -230,12 +235,9 @@ class _GigDetails extends React.Component {
                                 {/* < EditIcon className="edit-icon" onClick={() => this.toggleIsDescEditble(isDescEditble)} /> */}
                             </div>
                         </div>
-                        {isDescEditble && <button onClick={this.onEdit}>Save</button>}
-
-                        {/* packagesList */}
+                        {/* {isDescEditble && <button onClick={this.onEdit}>Save</button>} */}
                         <SellerPreview seller={gig.owner} />
-                        <PackageList packages={gig.packages} />
-                        {/* sellerPreview */}
+                        {/* <PackageList packages={gig.packages} /> */}
                         <ReviewList gig={gig} user={user} />
                         {user && <GigAddReview gig={gig} user={user} onAddReview={this.onAddReview} />}
                         {/* reviews */}
