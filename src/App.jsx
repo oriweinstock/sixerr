@@ -12,7 +12,7 @@ export function App() {
         <header className="">
           <AppHeader />
         </header>
-        {/* <Hero /> */}
+        <Hero />
         <main>
           
           <Switch>
