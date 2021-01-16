@@ -35,7 +35,7 @@ export function ReviewPreview({ review, user }) {
                         <span className="rating">{review.rating}</span>
                     </div>
                     {/* todo : add country and flags */}
-                    <p>{review.txt},  {review.txt}</p>
+                    <p>{review.txt}</p>
                     <p className="published-at">Published 20 Days Ago</p>
                     <div className="icons flex">
                         <ThumbUpAltIcon className="helpful" />

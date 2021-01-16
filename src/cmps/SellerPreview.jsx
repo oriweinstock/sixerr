@@ -2,7 +2,6 @@ import Avatar from '@material-ui/core/Avatar';
 import StarRateIcon from '@material-ui/icons/StarRate';
 
 export function SellerPreview({ seller }) {
-    console.log("SellerPreview , seller", seller)
     return (
         <>
             <section className="about-seller-container flex column">

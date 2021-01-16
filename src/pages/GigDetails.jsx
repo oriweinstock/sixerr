@@ -73,14 +73,18 @@ class _GigDetails extends React.Component {
         this.setState({ numImgChoosen: imgIdx })
     }
 
-    onNextReview = () => {
+    onNextShortReview = () => {
         let { currShortReviewIdx } = this.state
+        const { reviews } = this.state.gig
+        if (currShortReviewIdx == 0) currShortReviewIdx = -reviews.length
         currShortReviewIdx++
         this.setState({ currShortReviewIdx })
     }
 
-    onPrevReview = () => {
+    onPrevShortReview = () => {
         let { currShortReviewIdx } = this.state
+        const { reviews } = this.state.gig
+        if (currShortReviewIdx === -(reviews.length - 1)) currShortReviewIdx = 1
         currShortReviewIdx--
         this.setState({ currShortReviewIdx })
     }
@@ -146,6 +150,11 @@ class _GigDetails extends React.Component {
         if (!gig) return <div>No gig...</div>
         return (
             <>
+                <div className="add-remove-btn-container">
+                    <Link className="edit-link" to={`/gig/edit/${gig._id}`}><button>Edit Gig</button></Link>
+                    {user && <Link to='/gig/edit'  ><button className="add-btn">Add Gig</button></Link>}
+                    <button className="remove-btn" onClick={this.onRemoveGig}>Remove Gig</button>
+                </div>
                 {isLightBoxOpen && <GigImgLightBox onToggleImgLightbox={this.onToggleImgLightbox} currImg={currImg} onNextPageLightBox={this.onNextPageLightBox} onPrevPageLightBox={this.onPrevPageLightBox} />}
                 <section className="gig-details main-layout">
                     <div className="main-details">
@@ -154,12 +163,14 @@ class _GigDetails extends React.Component {
                         <SellerOverview gig={gig} htmlStars={htmlStars} />
                         <ImgGallery gig={gig} numImgChoosen={numImgChoosen} onChooseImg={this.onChooseImg} onToggleImgLightbox={this.onToggleImgLightbox} />
                         <h2 className="short-review-header">What people loved about this seller</h2>
-                        {gig.reviews && <div className="short-review-main" >
-                            <div className="txt flex" style={{ transform: `translateX(${this.state.currShortReviewIdx * 750}px)` }}>
-                                <ShortReviewList gig={gig} reviews={gig.reviews} />
+                        {gig.reviews && <div className="short-review-main">
+                            <div className="slide flex" style={{ transform: `translateX(${this.state.currShortReviewIdx * 750}px)` }}>
+                                <div className="list">
+                                    <ShortReviewList gig={gig} reviews={gig.reviews} />
+                                </div>
                             </div>
-                            {gig.reviews.length > 1 && <ChevronLeftIcon className="slide-left-review" onClick={() => this.onPrevReview()} />}
-                            {gig.reviews.length > 1 && <ChevronRightIcon className="slide-right-review" onClick={() => this.onNextReview()} />}
+                            {gig.reviews.length > 1 && <ChevronLeftIcon className="slide-left-review" onClick={() => this.onNextShortReview()} />}
+                            {gig.reviews.length > 1 && <ChevronRightIcon className="slide-right-review" onClick={() => this.onPrevShortReview()} />}
                         </div>}
                         <div className="desc">
                             <h2>About This Gig</h2>

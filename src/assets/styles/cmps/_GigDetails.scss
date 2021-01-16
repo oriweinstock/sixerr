@@ -21,36 +21,6 @@
     }
     ::selection {
         background: $altColor;
-      }
-}
-
-.short-review {
-    position: relative;
-    //check here to fix short review problem
-    padding: 0.7rem 1rem;
-    margin-inline-end: 1rem;
-    border: 1px solid #e4e5e7;
-    border-radius: 4px;
-    .content {
-        margin-block-start: 0.8rem;
-        p {
-            padding-inline-end: 1.2rem;
-            margin: 0;
-        }
-        .country-icon {
-            margin-inline-end: 0.5rem;
-        }
-    }
-    h5 {
-        margin: 0;
-        margin-inline-end: 0.5rem;
-    }
-    .avatar-container {
-        margin-block-start: 1rem;
-        margin-inline-end: 0.7rem;
-    }
-    span {
-        margin-block-end: 1rem;
     }
 }
 
@@ -96,10 +66,64 @@
 }
 
 .short-review-main {
+    position: relative;
     // width: 750px;
     overflow: hidden;
-    .txt {
+    .slide-left-review {
+        position: absolute;
+        left: -5px;
+        top: 50%;
+    }
+    .slide-right-review {
+        position: absolute;
+        right: -5px;
+        top: 50%;
+    }
+    .slide {
         width: 750px;
         transition: ease 0.8s;
+        .short-review {
+            position: relative;
+            h5 {
+                margin: 0;
+                margin-inline-end: 0.5rem;
+            }
+            .avatar-container {
+                margin-block-start: 1rem;
+                margin-inline-end: 0.7rem;
+            }
+            span {
+                margin-block-end: 1rem;
+            }
+        }
+    }
+}
+
+.add-remove-btn-container {
+    padding: 1rem;
+    button {
+        margin-inline-end: 0.5rem;
+        background-color: $boldColor;
+        color: $lightColor;
+        width: 20%;
+        display: inline-block;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+        padding: 12px 24px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        -webkit-transition: 0.15s ease-in-out;
+        -o-transition: 0.15s ease-in-out;
+        transition: 0.15s ease-in-out;
+        &:hover {
+            background-color: $darkColor;
+        }
     }
 }
