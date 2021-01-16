@@ -97,7 +97,6 @@ class _Login extends Component {
         try {
             await this.props.addUser({ username, password, fullname })
             this.props.toggleLogin()
-            this.props.history.push('/gig')
         }
         catch (err) {
             console.log('ERR', err)

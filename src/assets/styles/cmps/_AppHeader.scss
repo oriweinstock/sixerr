@@ -6,6 +6,9 @@ header {
     .app-header {
         height: 100%;
 
+        a {
+            color: inherit;
+        }
         h1 {
             font-size: 2rem;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -31,12 +34,27 @@ header {
                 text-decoration: none;
                 color: $lightColor;
                 &:hover {
-                    background-color: $lightColor;
+                    // background-color: $lightColor;
                     color: $darkColor;
                 }
             }
+
             li {
                 padding: 0px 5px;
+            }
+
+            img {
+                margin-inline-start: 20px;
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+
+                display: inline-block;
+                border-radius: 50%;
+                overflow: hidden;
+                opacity: 1;
+                
+                transition: .3s;
             }
         }
     }
