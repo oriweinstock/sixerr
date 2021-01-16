@@ -1159,26 +1159,13 @@
     {
       "username": "admin",
       "password": "admin",
-      "fullname": "tomer maruani",
-      "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610747938/pxi2tc9frwpqudq12dk6.jpg",
+      "fullname": "tomer M",
+      "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
       "_id": "lfE5k8E",
       "viewedGigIds": [
-        "s101",
         "s103",
-        "3D6of6v",
-        "s110",
-        "s104",
-        "s102",
-        "G91yvoB",
-        "nn8c8we",
-        "s106",
-        "s107",
-        "s109",
-        "s108",
-        "s105",
-        "YLUCCS2",
-        "BTlid80"
+        "s106"
       ]
     },
     {
