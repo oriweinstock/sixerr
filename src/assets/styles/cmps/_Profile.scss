@@ -1,11 +1,35 @@
-.about-user {
-    align-items: center;
-    width: 200px;
-    img {
-        width: 80px;
-    }
+.profile {
+    margin-top: 20px;
+    
+    .about-user {
+        text-align: center;
+        border: $softColorBorder;
+        background-color: #fff;
+        width: 30%;
+        min-width: 200px;
 
-    > * {
-        outline: none;
+        .img-upload {
+            display: block;
+            margin: 20px auto;
+            background-color: red;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+
+        }
+        img {
+            width: 120px;
+        }
+    
+        > * {
+            outline: none;
+        }
+    }
+    .recently-viewed {
+        margin-inline-start: 30px;
+        h1 {
+            margin-top: 0;
+            text-align: left;
+        }
     }
 }

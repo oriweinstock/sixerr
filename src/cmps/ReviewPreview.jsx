@@ -27,6 +27,8 @@ export function ReviewPreview({ review, user }) {
     //     }
     // }
     // return stars
+    console.log('review', review);
+    if (!review) return <div>Loading</div>
     return (
         <>
             <section className="review-card flex">

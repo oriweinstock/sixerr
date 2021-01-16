@@ -56,8 +56,8 @@ class _GigAddReview extends Component {
         reviewToAdd.purchasedAt = purchasedAt
         console.log("reviewToAdd", reviewToAdd)
         gig.reviews.unshift(reviewToAdd)
+        console.log("gig", gig)
         this.props.updateGig(gig).then(() => {
-            this.setState({review:''})
             console.log('review added succefully');
         })
     }

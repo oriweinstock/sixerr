@@ -2,11 +2,14 @@
     font: 400 16px/24px "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: grid;
     grid-template-columns: 8fr 2fr;
+    // grid-template-columns: 8fr 6fr;
+    color :#404145;
     padding: 1rem;
     .main-details {
         // padding: 2rem;
         margin-right: 20px;
-        width: 70%;
+        // width: 70%;
+        width: 80%;
         display: flex;
         flex-direction: column;
         > * {
@@ -118,9 +121,9 @@ video {
     .content {
         font: 400 16px/24px "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif;
         color: #62646a;
-        h6 {
-            padding: none !important;
-            margin: none !important;
+
+        p{
+            padding-inline-end: 1rem;
         }
     }
     .avatar-container {

@@ -1,4 +1,5 @@
 import Avatar from '@material-ui/core/Avatar';
+import StarRateIcon from '@material-ui/icons/StarRate';
 
 export function SellerPreview({ seller }) {
     console.log("SellerPreview , seller", seller)
@@ -17,12 +18,6 @@ export function SellerPreview({ seller }) {
                         <p>Rate *****</p>
                         <button>Contact Me</button>
                     </div>
-                </div>
-                <div className="flex column">
-                    {/* <div className="flex space-between">
-                    <p>From</p>
-                    <p>Member since</p>
-                </div> */}
                 </div>
             </section>
             <section className="seller-stats flex column">
