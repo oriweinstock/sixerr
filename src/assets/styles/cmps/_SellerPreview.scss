@@ -1,16 +1,12 @@
 .seller-img-container {
-    width: 160px;
     margin-inline-end: 3rem;
+    width: 130px;
     img {
-        width: 64%;
-        height: 55%;
+        width: 100%;
+        height: 70%;
         object-fit: cover;
         border-radius: 50%;
     }
-}
-
-.seller-avatar {
-    // font-size: 5rem !important;
 }
 
 .seller-stats {

@@ -1,0 +1,20 @@
+.seller-overview {
+    display: flex;
+    // max-width: 450px;
+    // justify-content: space-between;
+    > * {
+        // padding-inline-end:1rem ;
+        margin-inline-end: 0.3rem;
+    }
+    small {
+        font-weight: bold;
+        font: 400 16px/24px "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: bold;
+    }
+    align-items: center;
+    // padding: 20px;
+    margin-block-end: 1.2rem;
+    .order-count {
+        color: rgb(192, 192, 192);
+    }
+}

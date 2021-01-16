@@ -15,20 +15,8 @@ import {
 
 
 export function ReviewPreview({ review, user }) {
-    const currTime = new Date()
-    const { createdAt } = review
-    const TimeAgo = (currTime - createdAt)
-    // console.log("ReviewPreview , TimeAgo", TimeAgo)
-    // function getStars() {
-    //     if (!review.stars || !review.stars.length) return
-    //     let stars = []
-    //     for (var i = 0; i < review.stars; i++) {
-    //         stars.push(<StarRateIcon className="seller-star" ></StarRateIcon>)
-    //     }
-    // }
-    // return stars
-    console.log('review', review);
-    if (!review) return <div>Loading</div>
+    if (!review || !review.by) return <div>Loading</div>
+    // if (!review) return <div>Loading</div>
     return (
         <>
             <section className="review-card flex">
@@ -47,7 +35,7 @@ export function ReviewPreview({ review, user }) {
                         <span className="rating">{review.rating}</span>
                     </div>
                     {/* todo : add country and flags */}
-                    <p>{review.txt},  {review.txt}</p>
+                    <p>{review.txt}</p>
                     <p className="published-at">Published 20 Days Ago</p>
                     <div className="icons flex">
                         <ThumbUpAltIcon className="helpful" />

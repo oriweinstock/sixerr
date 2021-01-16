@@ -79,7 +79,6 @@ class _GigAddReview extends Component {
                 <button onClick={() => this.onAddReview()}>Add Review</button>
                 {/* <form onSubmit={this.onAddReview()} className="flex column justify-center"> */}
                 {/* </form> */}
-
             </>
         )
     }
