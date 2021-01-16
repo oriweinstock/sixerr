@@ -5,6 +5,7 @@ import { updateUser, onImageChange } from "../store/actions/userActions.js";
 import { loadGigs, loadGig } from "../store/actions/gigActions.js";
 import { GigList } from '../cmps/GigList.jsx';
 import { EditableElement } from '../cmps/EditableElement.jsx';
+import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
 
 class _Profile extends React.Component {
 
@@ -59,12 +60,13 @@ class _Profile extends React.Component {
                         <label className="img-upload pointer" htmlFor="uploadImg">
                             <img src={user.imgUrl} />
                             <input onChange={this.onUploadImg} type="file" id="uploadImg" hidden />
+                            <PhotoCameraIcon className="camera-icon"/>
                         </label>
                         <EditableElement field={'fullname'} save={this.onSave} type={'h1'} text={user.fullname} />
 
                         <p>From {from}</p>
                         <p>Member since {memberSince}</p>
-                        <button>Contact Me</button>
+                        <button>Send Message</button>
                     </div>
                 {lastViewed.length !== 0 &&
                     <div className="recently-viewed flex column">
