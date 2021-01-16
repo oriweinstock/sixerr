@@ -1,0 +1,26 @@
+.gig-edit {
+
+    .gig-save {
+        width: 150px;
+        margin-bottom: 20px;
+        @include defButton()
+    }
+
+    form {
+        width: 50vw;
+
+        h4 {
+            color: $darkColor;
+            margin-bottom: 5px;
+        }
+    }
+
+
+    textarea, select, input {
+        padding: 10px;
+    }
+
+    input {
+        margin-bottom: 20px;
+    }
+}
