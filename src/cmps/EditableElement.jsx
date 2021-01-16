@@ -14,7 +14,7 @@ export class EditableElement extends React.Component {
         console.log(this.props)
     }
 
-     handleChange = evt => {
+    handleChange = evt => {
         this.setState({ ...this.state, html: evt.target.value });
     };
 
@@ -43,17 +43,12 @@ export class EditableElement extends React.Component {
                     onChange={this.handleChange} // handle innerHTML change
                     tagName={this.props.type} // Use a custom HTML tag (uses a div by default)
                     className="content-editable"
-                    autoFocus
                     style={editableStyle}
                 />
                 <div className="action-buttons">
                     {!editable && <EditIcon className="action-button" onClick={this.onStartEdit} />}
                     {editable && <DoneIcon className="action-button" onClick={this.onSaveElement} />}
                 </div>
-                {/* <button onClick={this.toggleEditable}>
-                    Make {this.state.editable ? "readonly" : "editable"}
-                </button>
-                <button onClick={() => { this.props.save(this.props.field, this.contentEditable.current.innerText) }}>save</button> */}
             </div>
         )
     }
