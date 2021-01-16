@@ -46,6 +46,9 @@
         -webkit-transition: 0.15s ease-in-out;
         -o-transition: 0.15s ease-in-out;
         transition: 0.15s ease-in-out;
+        &:hover{
+            background-color: $darkColor;
+        }
     }
 }
 

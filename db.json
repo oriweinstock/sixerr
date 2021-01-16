@@ -2,7 +2,7 @@
   "gig": [
     {
       "_id": "s101",
-      "title": "I will turn your children's book into a video with narration",
+      "title": "I will turn your children's book into a video with narration!",
       "desc": "Turn your children’s picture book into a promotional powerhouse!",
       "tags": [
         "Graphic Design",
@@ -34,6 +34,40 @@
         "slide2.jpg"
       ],
       "reviews": [
+        {
+          "id": "zb1VK",
+          "rating": "5",
+          "txt": "Bojan was able to deliver exactly what I was looking for and make changes perfectly based on my feedback. Very fast and beautiful work.",
+          "createdAt": 1610788860441,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u101",
+            "fullname": "David Abu Puki",
+            "imgUrl": "/img/img1.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer M",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "vMYqE",
+          "rating": "",
+          "txt": "Working with Bojan was a dream. He is very professional, responsive and talented. I'm hoping to work with him again in the future.",
+          "createdAt": 1610788848543,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u101",
+            "fullname": "David Abu Puki",
+            "imgUrl": "/img/img1.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer M",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
         {
           "id": "madeId",
           "rating": 4,
@@ -72,8 +106,8 @@
     },
     {
       "_id": "s102",
-      "title": "Our Studio will do a minimalist logo, business card and stationery",
-      "desc": "Hello We are a team of professionals who have experience in the field of Logo Design, Business card and other stationery designs for more than 9 years.",
+      "title": "Our Studio will do a minimalist logo, business card and stationery.",
+      "desc": "Hello We are a team of professionals who have experience in the field of Logo Design, Business card and other stationery designs for more than 9 years..\n\n",
       "tags": [
         "minimalist",
         "stationery",
@@ -105,6 +139,40 @@
         "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/d91dab5d590614ec0c36060db1ba1c67-1606486728/Stationery%202/do-a-minimalist-logo-business-card-and-stationery.jpg"
       ],
       "reviews": [
+        {
+          "id": "jmlct",
+          "rating": "5",
+          "txt": "I worked with lot of designer but she is one of the best i worked with. She understand your work and implement it as fast as possible. i would work with her again, for sure. :)) very nice and kind desinger. THANK YOU \"design_expert89\":)\n\n",
+          "createdAt": 1610789133804,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u102",
+            "fullname": "user2",
+            "imgUrl": "/img/img2.jpg"
+          },
+          "by": {
+            "_id": "vdv5JG9",
+            "fullname": "dave Bay",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "UmU00",
+          "rating": "5",
+          "txt": "Fantastic job!! I initially did not know what I wanted, but this seller walked me through and made everything effortless. After he created everything it ended up being exactly what I needed, it was like he read my mind. I would definitely choose this seller.",
+          "createdAt": 1610789095399,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u102",
+            "fullname": "user2",
+            "imgUrl": "/img/img2.jpg"
+          },
+          "by": {
+            "_id": "vdv5JG9",
+            "fullname": "dave Bay",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
         {
           "id": "WTGuF",
           "rating": "",
@@ -319,6 +387,40 @@
       ],
       "reviews": [
         {
+          "id": "u4Cvb",
+          "rating": "4",
+          "txt": "First time customer of Bojantemunovic, I was looking for a scene of a movie theater and Bojan was able to deliver exactly what I was looking for, but even better than I expected. Bojan is quick with responses, easy to speak to and efficient with work, providing excellent quality. I'd highly recommend Bojan for illustrations. I'll certainly be back myself for any future projects.",
+          "createdAt": 1610788835917,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer M",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "u4Cvb",
+          "rating": "",
+          "txt": "",
+          "createdAt": 1610788708041,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer M",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
           "id": "Q6c4U",
           "rating": "",
           "txt": "fsdfsff",
@@ -459,7 +561,7 @@
     {
       "_id": "s106",
       "title": "I will do book cover design, book cover! ",
-      "desc": "I  am graphic designer, perfectly positioned to help you and your company to design book cover. Through experience gained over time, I can create from scratch or turn your existing book cover into a kindle cover /ingramspark/ createspace cover withing the shortest interval of time. I specialize in increasing your reputation and credibility, through book cover design that will grab your readers attention ",
+      "desc": "I am graphic designer, perfectly positioned to help you and your company to design book cover. Through experience gained over time, I can create from scratch or turn your existing book cover into a kindle cover /ingramspark/ createspace cover withing the shortest interval of time. I specialize in increasing your reputation and credibility, through book cover design that will grab your readers attention.",
       "tags": [
         "book",
         "cover",
@@ -488,6 +590,40 @@
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/108194896/original/77edb388f1aff5efbf13109e666de0b0e1db7f2a/design-the-ultimate-createspace-cover-and-kindle-book-cover.jpg"
       ],
       "reviews": [
+        {
+          "id": "RAnq9",
+          "rating": "5",
+          "txt": "Faith knows what is needed for the project and creates the perfect fit for your site. We are going to order more pages as we are very satisfied. Also, she knows how to use the keywords without stuffing too much in the content.",
+          "createdAt": 1610789419216,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "mmB3X5P",
+            "fullname": "suzan hertz",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "wwu3o",
+          "rating": "4",
+          "txt": "I want to thank my designer for her work. This is the second order and she didn't disappoint. She simplify but made the cards look professional. I would 100% refer her to others.",
+          "createdAt": 1610789212900,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "vdv5JG9",
+            "fullname": "dave Bay",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
         {
           "id": "madeId",
           "rating": 5,
@@ -554,6 +690,23 @@
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/172622641/original/8e42a2552f44e4a92c2f2be51eeceda842e5c1b1/design-every-space-in-your-house.jpg"
       ],
       "reviews": [
+        {
+          "id": "6861d",
+          "rating": "4",
+          "txt": "INCREDIBLE !!! Let me just say this this guy is awesome and TALENTED! He went above and beyond what I expected! Very nice and customer service is even more amazing. You’d be crazy if you don’t let him bring your vision to life! Thanks !!",
+          "createdAt": 1610789375531,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "mmB3X5P",
+            "fullname": "suzan hertz",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
         {
           "id": "madeId",
           "rating": 5,
@@ -716,8 +869,8 @@
     },
     {
       "_id": "s109",
-      "title": "I will create architectural 3d modeling and do rendering",
-      "desc": "Hello everyone. Thanks for your interesting on this gig We are a team consist with well trained Architect, Mecanical Engineer,Electrical Engineer,Surveyor and a civil engineer. we will develop your plan or sketch in to 3D model using Autodesk Revit or Sketch up. - Will send you good quality images of architecture model in realistic rendering. - Will have unlimited revisions according to your needs until you are satisfied. - Will give you the source file and export your file in to any format as per your requirement. - Will do after work using photoshop. ",
+      "title": "I will create architectural 3d modeling and do rendering..",
+      "desc": "Hello everyone. Thanks for your interesting on this gig We are a team consist with well trained Architect, Mecanical Engineer,Electrical Engineer,Surveyor and a civil engineer. we will develop your plan or sketch in to 3D model using Autodesk Revit or Sketch up. - Will send you good quality images of architecture model in realistic rendering. - Will have unlimited revisions according to your needs until you are satisfied. - Will give you the source file and export your file in to any format as per your requirement. - Will do after work using photoshop.",
       "tags": [
         "3d",
         "design"
@@ -830,6 +983,40 @@
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/140466076/original/cde20081881a21050c4aa1685cf157e10c3d9777/landscape-design-architecture-landscape-3d-3d-house-visualization-rendering.jpg"
       ],
       "reviews": [
+        {
+          "id": "ffu1I",
+          "rating": "4",
+          "txt": "A_kumar07 did such a wonderful job on my business cards that I went back to him and requested a flyer to be made. He is AMAZING! I was pretty picky and requested many changes and he always returned the new draft to me very quickly (sometimes within 15 minutes). I will continue using him for anything I need made for my business!",
+          "createdAt": 1610789306246,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/bfbeae94c8d79214b319d069330dcf0f-1604548107346/f89d300b-7a89-4083-8083-dc71ca507fc9.jpg"
+          },
+          "by": {
+            "_id": "mmB3X5P",
+            "fullname": "suzan hertz",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "qgA0S",
+          "rating": "",
+          "txt": "Bojan was able to deliver exactly what I was looking for and make changes perfectly based on my feedback. Very fast and beautiful work.",
+          "createdAt": 1610789061702,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/bfbeae94c8d79214b319d069330dcf0f-1604548107346/f89d300b-7a89-4083-8083-dc71ca507fc9.jpg"
+          },
+          "by": {
+            "_id": "vdv5JG9",
+            "fullname": "dave Bay",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
         {
           "id": "madeId",
           "rating": 5,
@@ -1165,7 +1352,12 @@
       "_id": "lfE5k8E",
       "viewedGigIds": [
         "s103",
-        "s106"
+        "s106",
+        "s101",
+        "nn8c8we",
+        "s107",
+        "s104",
+        "s110"
       ]
     },
     {
@@ -1191,6 +1383,47 @@
       "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
       "_id": "6Bw5T68"
+    },
+    {
+      "username": "lzygmr",
+      "password": "123456",
+      "fullname": "dave Bay",
+      "imgUrl": "/img/img1.jpg",
+      "isAdmin": false,
+      "_id": "vdv5JG9",
+      "viewedGigIds": [
+        "s102",
+        "s101",
+        "s103",
+        "s104",
+        "s105",
+        "s106",
+        "s107",
+        "nn8c8we",
+        "BTlid80",
+        "s110"
+      ]
+    },
+    {
+      "username": "susan_pinksky",
+      "password": "123456",
+      "fullname": "suzan hertz",
+      "imgUrl": "/img/img1.jpg",
+      "isAdmin": false,
+      "_id": "mmB3X5P",
+      "viewedGigIds": [
+        "s107",
+        "s104",
+        "s101",
+        "s106",
+        "s108",
+        "nn8c8we",
+        "G91yvoB",
+        "s110",
+        "s109",
+        "s105",
+        "s102"
+      ]
     }
   ]
 }
