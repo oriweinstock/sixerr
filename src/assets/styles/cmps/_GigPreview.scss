@@ -105,6 +105,13 @@
                     color: darken($darkColor, 10);
                 }
             }
+
+            .liked {
+                color: rgb(245, 41, 75);
+                &:hover {
+                    color: darken(rgb(245, 41, 75), 10);
+                }
+            }
         }
     
     
