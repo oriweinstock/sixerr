@@ -14,6 +14,23 @@
             color: $darkColor;
             margin: 5px 0 5px;
         }
+
+        .package-features {
+
+            ul {
+                margin-inline-start: 20px;
+            }
+            li {
+                background-color: $altColor;
+                color: $darkColor;
+                font-size: 0.8rem;
+                padding: 5px 8px;
+                border-radius: 0.55em ;
+                margin-inline-end: 10px;
+                margin-bottom: 20px;
+                align-self: baseline;
+            }
+        }
     }
 
 
@@ -21,9 +38,13 @@
         padding: 10px;
         margin-bottom: 20px;
     }
-
+    textarea {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        outline: none;
+        resize: none;
+    }
     input, select {
         margin-bottom: 20px;
-        width: 30vw;
+        width: 25vw;
     }
 }
