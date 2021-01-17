@@ -1487,82 +1487,291 @@
       ]
     },
     {
-      "title": "I will add feature rendering to your site",
-      "desc": "Adding features with 2-way data binding can be a pain in the behind. My man DUDI will do the job for you",
-      "tags": [],
+      "title": "gig title",
+      "desc": "gig desc",
+      "tags": [
+        "minimalist"
+      ],
       "packages": [
         {
           "type": "basic",
-          "desc": "Form managment",
-          "price": 25,
-          "revisionCount": 2,
-          "deliveryDays": -3,
+          "desc": "package desc",
+          "price": 1,
+          "revisionCount": 1,
+          "deliveryDays": 1,
+          "features": []
+        }
+      ],
+      "owner": {
+        "username": "admin",
+        "password": "admin",
+        "fullname": "tomer maruani",
+        "imgUrl": "/img/img1.jpg",
+        "isAdmin": false,
+        "_id": "lfE5k8E",
+        "viewedGigIds": [
+          "s101",
+          "s103",
+          "3D6of6v",
+          "s110",
+          "s104",
+          "s102"
+        ]
+      },
+      "imgUrls": [
+        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
+      ],
+      "reviews": [
+        {
+          "id": "Ew87q",
+          "rating": "",
+          "txt": "tomer",
+          "createdAt": 1610734880396,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "username": "admin",
+            "password": "admin",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg",
+            "isAdmin": false,
+            "_id": "lfE5k8E",
+            "viewedGigIds": [
+              "s101",
+              "s103",
+              "3D6of6v",
+              "s110",
+              "s104",
+              "s102"
+            ]
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "Ew87q",
+          "rating": "",
+          "txt": "ori\n",
+          "createdAt": 1610734888728,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "username": "admin",
+            "password": "admin",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg",
+            "isAdmin": false,
+            "_id": "lfE5k8E",
+            "viewedGigIds": [
+              "s101",
+              "s103",
+              "3D6of6v",
+              "s110",
+              "s104",
+              "s102"
+            ]
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
+        }
+      ],
+      "_id": "G91yvoB"
+    },
+    {
+      "title": "gig2",
+      "desc": "gig2",
+      "tags": [
+        "minimalist"
+      ],
+      "packages": [
+        {
+          "type": "basic",
+          "desc": "df",
+          "price": 50,
+          "revisionCount": 1,
+          "deliveryDays": 5,
           "features": [
-            "feat 1",
-            "feat 2",
-            "feat 3",
-            "binding"
+            "Include Environment",
+            "3D Modeling"
           ]
         }
       ],
       "owner": {
-        "username": "oriw",
-        "password": "123456",
-        "fullname": "Ori Weinstock!",
-        "_id": "h8mW4vL",
+        "username": "admin",
+        "password": "admin",
+        "fullname": "tomer maruani",
+        "imgUrl": "/img/img1.jpg",
+        "isAdmin": false,
+        "_id": "lfE5k8E",
         "viewedGigIds": [
-          "s105",
-          "s107",
+          "s101",
           "s103",
+          "3D6of6v",
+          "s110",
+          "s104",
           "s102",
-          "s110"
-        ],
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
+          "G91yvoB"
+        ]
       },
       "imgUrls": [
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
       ],
       "reviews": [],
-      "_id": "QBZuluo"
+      "features": [
+        "Include Environment",
+        "3D Modeling"
+      ],
+      "_id": "nn8c8we"
     },
     {
-      "title": "We will make a great form",
-      "desc": "With data binding solutions",
-      "tags": [],
+      "title": "sadfsadf",
+      "desc": "\n\nI loved working with Gabtoanone! She delivered exactly what I was looking for and I look forward to working with her again in the future.I loved working with Gabtoanone! She delivered exactly what I was looking for and I look forward to working with her again in the future.I loved working with Gabtoanone! She delivered exactly what I was looking for and I look forward to working with her again in the future.I loved working with Gabtoanone! She delivered exactly what I was looking for and I look forward to working with her again in the future.I loved working with Gabtoanone! She delivered exactly what I was looking for and I look forward to working with her again in the future.I loved working with Gabtoanone! She delivered exactly what I was looking for and I look forward to working with her again in the future.",
+      "tags": [
+        "flat"
+      ],
       "packages": [
         {
           "type": "basic",
-          "desc": "Form design",
-          "price": 30,
+          "desc": "asdfasf",
+          "price": 5,
           "revisionCount": 2,
           "deliveryDays": 3,
           "features": [
-            "Dudi",
-            "Ori",
-            ""
+            "Include Environment"
           ]
         }
       ],
       "owner": {
-        "username": "oriw",
-        "password": "123456",
-        "fullname": "Ori Weinstock!",
-        "_id": "h8mW4vL",
+        "username": "admin",
+        "password": "admin",
+        "fullname": "tomer maruani",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610747938/pxi2tc9frwpqudq12dk6.jpg",
+        "isAdmin": false,
+        "_id": "lfE5k8E",
         "viewedGigIds": [
-          "s105",
-          "s107",
+          "s101",
           "s103",
-          "s102",
+          "3D6of6v",
           "s110",
-          "QBZuluo"
-        ],
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
+          "s104",
+          "s102",
+          "G91yvoB",
+          "nn8c8we",
+          "s106",
+          "s107",
+          "s109",
+          "s108",
+          "s105"
+        ]
       },
       "imgUrls": [
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
       ],
       "reviews": [],
-      "_id": "4nqpfji"
+      "features": [
+        "Include Environment"
+      ],
+      "_id": "YLUCCS2"
+    },
+    {
+      "title": "hjghjhgj",
+      "desc": "fdssfdsf",
+      "tags": [
+        "minimalist"
+      ],
+      "packages": [
+        {
+          "type": "basic",
+          "desc": "fdgdfgdfg",
+          "price": 2,
+          "revisionCount": 2,
+          "deliveryDays": 1,
+          "features": []
+        }
+      ],
+      "owner": {
+        "username": "admin",
+        "password": "admin",
+        "fullname": "tomer maruani",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610747938/pxi2tc9frwpqudq12dk6.jpg",
+        "isAdmin": false,
+        "_id": "lfE5k8E",
+        "viewedGigIds": [
+          "s101",
+          "s103",
+          "3D6of6v",
+          "s110",
+          "s104",
+          "s102",
+          "G91yvoB",
+          "nn8c8we",
+          "s106",
+          "s107",
+          "s109",
+          "s108",
+          "s105",
+          "YLUCCS2"
+        ]
+      },
+      "imgUrls": [
+        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
+      ],
+      "reviews": [],
+      "_id": "BTlid80"
+    },
+    {
+      "title": "sdfdsfgfdgfd",
+      "desc": "sdfsdfdf",
+      "tags": [
+        "flat"
+      ],
+      "packages": [
+        {
+          "type": "basic",
+          "desc": "dsffdf",
+          "price": 5,
+          "revisionCount": 5,
+          "deliveryDays": 5,
+          "features": [
+            "Include Environment"
+          ]
+        }
+      ],
+      "owner": {
+        "username": "admin",
+        "password": "admin",
+        "fullname": "tomer maruani",
+        "imgUrl": "/img/img1.jpg",
+        "isAdmin": false,
+        "_id": "lfE5k8E",
+        "viewedGigIds": [
+          "s103",
+          "s106",
+          "s101",
+          "nn8c8we",
+          "s107",
+          "s104",
+          "s110",
+          "MWAYi0x",
+          "s108",
+          "s102",
+          "G91yvoB",
+          "s109",
+          "s105"
+        ]
+      },
+      "imgUrls": [
+        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
+      ],
+      "reviews": [],
+      "features": [
+        "Include Environment"
+      ],
+      "_id": "nvDftH4"
     }
   ],
   "user": [
@@ -1634,7 +1843,7 @@
     {
       "username": "oriw",
       "password": "123456",
-      "fullname": "Ori Weinstock!",
+      "fullname": "Ori Weinstock",
       "_id": "h8mW4vL",
       "viewedGigIds": [
         "s105",
@@ -1798,7 +2007,6 @@
       "_id": "N-SYLBg",
       "favoriteIds": [
         "s104",
-        "s110",
         "YLUCCS2"
       ]
     }
