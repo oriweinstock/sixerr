@@ -1628,120 +1628,6 @@
         "Include Environment"
       ],
       "_id": "nvDftH4"
-    },
-    {
-      "title": "",
-      "desc": "",
-      "tags": [],
-      "packages": [
-        {
-          "type": "basic",
-          "desc": "",
-          "price": null,
-          "revisionCount": null,
-          "deliveryDays": null,
-          "features": [
-            "Feature #1"
-          ]
-        }
-      ],
-      "owner": {
-        "username": "oriw",
-        "password": "123456",
-        "fullname": "Ori Weinstock!",
-        "_id": "h8mW4vL",
-        "viewedGigIds": [
-          "s105",
-          "s107",
-          "s103",
-          "s102",
-          "s110"
-        ],
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
-      },
-      "imgUrls": [
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
-      ],
-      "reviews": [],
-      "_id": "v6GlySQ"
-    },
-    {
-      "title": "I will add feature rendering to your site",
-      "desc": "Adding features with 2-way data binding can be a pain in the behind. My man DUDI will do the job for you",
-      "tags": [],
-      "packages": [
-        {
-          "type": "basic",
-          "desc": "Form managment",
-          "price": 25,
-          "revisionCount": 2,
-          "deliveryDays": -3,
-          "features": [
-            "feat 1",
-            "feat 2",
-            "feat 3",
-            "binding"
-          ]
-        }
-      ],
-      "owner": {
-        "username": "oriw",
-        "password": "123456",
-        "fullname": "Ori Weinstock!",
-        "_id": "h8mW4vL",
-        "viewedGigIds": [
-          "s105",
-          "s107",
-          "s103",
-          "s102",
-          "s110"
-        ],
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
-      },
-      "imgUrls": [
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
-      ],
-      "reviews": [],
-      "_id": "QBZuluo"
-    },
-    {
-      "title": "We will make a great form",
-      "desc": "With data binding solutions",
-      "tags": [],
-      "packages": [
-        {
-          "type": "basic",
-          "desc": "Form design",
-          "price": 30,
-          "revisionCount": 2,
-          "deliveryDays": 3,
-          "features": [
-            "Dudi",
-            "Ori",
-            ""
-          ]
-        }
-      ],
-      "owner": {
-        "username": "oriw",
-        "password": "123456",
-        "fullname": "Ori Weinstock!",
-        "_id": "h8mW4vL",
-        "viewedGigIds": [
-          "s105",
-          "s107",
-          "s103",
-          "s102",
-          "s110",
-          "QBZuluo"
-        ],
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
-      },
-      "imgUrls": [
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
-      ],
-      "reviews": [],
-      "_id": "4nqpfji"
     }
   ],
   "user": [
@@ -1812,16 +1698,14 @@
     {
       "username": "oriw",
       "password": "123456",
-      "fullname": "Ori Weinstock!",
+      "fullname": "Ori Weinstock",
       "_id": "h8mW4vL",
       "viewedGigIds": [
         "s105",
         "s107",
         "s103",
         "s102",
-        "s110",
-        "QBZuluo",
-        "4nqpfji"
+        "s110"
       ],
       "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
     },
@@ -1959,7 +1843,6 @@
       "_id": "N-SYLBg",
       "favoriteIds": [
         "s104",
-        "s110",
         "YLUCCS2"
       ]
     }
