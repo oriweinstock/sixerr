@@ -23,13 +23,22 @@ const useStyles = makeStyles({
     width: 200,
     display: 'flex',
     alignItems: 'center',
+    margin: '10px 0px'
   },
 });
 
-export default function HoverRating() {
-  const [value, setValue] = React.useState(0);
-  const [hover, setHover] = React.useState(-1);
+export function HoverRating(props) {
+  const [value] = React.useState(0);
+  const [hover] = React.useState(-1);
   const classes = useStyles();
+
+  function setValue(newValue) {
+    console.log("HoverRating , newValue", newValue)
+    props.handleRate(newValue)
+  }
+  function setHover(newHover) {
+    console.log("HoverRating , setHover", newHover)
+  }
 
   return (
     <div className={classes.root}>
@@ -44,7 +53,10 @@ export default function HoverRating() {
           setHover(newHover);
         }}
       />
-      {/* {value !== null && <Box ml={2}>{labels[hover !== -1 ? hover : value]}</Box>} */}
+      {value !== null && <Box ml={2}>{labels[hover !== -1 ? hover : value]}</Box>}
     </div>
   );
 }
+
+
+

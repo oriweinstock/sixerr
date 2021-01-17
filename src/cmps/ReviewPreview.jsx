@@ -15,8 +15,7 @@ import {
 
 
 export function ReviewPreview({ review, user }) {
-    if (!review || !review.by) return <div>Loading</div>
-    // if (!review) return <div>Loading</div>
+    if (!review || !review.by) return <div></div>
     return (
         <>
             <section className="review-card flex">
@@ -49,20 +48,3 @@ export function ReviewPreview({ review, user }) {
         </>
     )
 }
-
-// return (
-//     <>
-//         <section className="review-card flex">
-//             <div className="avatar-container">
-//                 <Avatar src={review.by.imgUrl} />
-//             </div>
-//             <div className="review-info">
-//                 <h4>{review.by.fullname}</h4>
-//                 {/* todo : add country and flags */}
-//                 <p>{review.txt}</p>
-//             </div>
-//                 <p>Published 20 Days Ago</p>
-//         </section>
-//         {/* <p className="review-published-date">Published 2 Days Ago</p> */}
-//     </>
-// )

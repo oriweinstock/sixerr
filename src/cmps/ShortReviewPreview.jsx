@@ -6,7 +6,7 @@ import {
     from 'material-ui-flags';
 
 export function ShortReviewPreview({reviews, idx }) {
-    if(!reviews) return <div>Loading...</div>
+    if(!reviews[idx].by) return <div></div>
     return (
         <>
             <div className="short-content flex">
