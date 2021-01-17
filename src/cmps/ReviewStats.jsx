@@ -22,7 +22,7 @@ export function ReviewStats() {
                         <span>5 Stars</span>
                         <StarRateIcon />
                         <div className="progress-bar-container">
-                            <div class="fit-progressbar-background" style={{ backgroundColor: 'orange', width:`${90}%`}} > 
+                            <div className="fit-progressbar-background" style={{ backgroundColor: 'orange', width:`${90}%`}} > 
                             <span></span>
                             </div>
                         </div>

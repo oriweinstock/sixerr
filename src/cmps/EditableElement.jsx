@@ -19,7 +19,12 @@ export class EditableElement extends React.Component {
     };
 
     toggleEditable = () => {
-        this.setState({ ...this.state, editable: !this.state.editable })
+        this.setState({
+            ...this.state, editable: !this.state.editable
+        },
+            () => {
+                if (this.state.editable) this.contentEditable.current.focus()
+            })
     }
 
     onStartEdit = () => {

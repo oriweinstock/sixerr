@@ -11,7 +11,7 @@ export function gigReducer(state = initialState, action) {
         case 'SAVE_GIG':
             return {
                 ...state,
-                gigs: state.gigs.map(gig => (gig._id === action.gig._id) ? action.savedGig : gig)
+                gigs: state.gigs.map(gig => (gig._id === action.savedGig._id) ? action.savedGig : gig)
             }
         case 'ADD_GIG':
             return {
