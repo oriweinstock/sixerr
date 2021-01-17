@@ -14,8 +14,11 @@ class _GigEdit extends Component {
             desc: '',
             packages: null,
             tags: '',
-        }
+        },
+        currFeature: ''
     }
+
+    featureIdx = 0
 
     componentDidMount() {
         const gigId = this.props.match.params.gigId
@@ -103,8 +106,8 @@ class _GigEdit extends Component {
                 }
             }
         })
-
     }
+
     handlePackageFeatures = (value) => {
         console.log("value", value)
         const { gig } = this.state
@@ -124,6 +127,33 @@ class _GigEdit extends Component {
         }
     }
 
+    addFeature = (ev) => {
+        ev.preventDefault()
+        const packages = [...this.state.gig.packages]
+        const currFeature = ev.target.value
+        if (ev.keyCode == 13) {
+            packages[0].features[this.featureIdx] = currFeature
+            this.setState(prevState => {
+                return {
+                    gig: {
+                        ...prevState.gig,
+                        packages
+                    },
+                    currFeature: ''
+                }
+            })
+            this.featureIdx += 1
+            this.state.gig.packages[0].features[this.featureIdx] = ''
+
+            return
+        }
+        this.setState(prevState => {
+            return {
+                ...prevState, currFeature
+            }
+        })
+    }
+
     render() {
         const { gig } = this.state
         const { packages } = gig
@@ -132,12 +162,12 @@ class _GigEdit extends Component {
         if (!gig.packages) return <div>loading</div>
         return (
             <section className="gig-edit main-layout">
-                <form onSubmit={this.onSaveNewGig} className="flex column justify-center">
-                    <h4>Edit Title</h4>
+                <form className="flex column justify-center">
+                    <h4>Edit title</h4>
                     <textarea name="title" autoFocus rows="2" cols="60" type="text" placeholder="Enter Gig Title..." value={gig.title} onChange={this.handleInput} required autoComplete="off" />
-                    <h4>Edit Desc</h4>
+                    <h4>Edit description</h4>
                     <textarea name="desc" rows="5" cols="60" type="text" placeholder="Enter Gig Desc..." value={gig.desc} onChange={this.handleInput} required autoComplete="off" />
-                    <h4>Choose Tag</h4>
+                    <h4>Add label</h4>
                     <select onChange={this.handleInput} name="tags" required>
                         <option value="graphic design">Graphic design</option>
                         <option value="minimalist">Minimalist</option>
@@ -148,18 +178,36 @@ class _GigEdit extends Component {
                         <option value="cover">Cover</option>
                     </select>
                     <h4>Package</h4>
-                    <textarea name="desc" rows="3" cols="60" value={gig.packages[0].desc} type="text" placeholder="Enter package Desc..." onChange={this.handlePackagesInputs} required autoComplete="off" />
-                    <input type="number" name="price" placeholder="Package price" value={gig.packages[0].price} onChange={this.handlePackagesInputs} required autoComplete="off" />
-                    <input type="number" name="revisionCount" placeholder="Revision Count..." value={gig.packages[0].revisionCount} onChange={this.handlePackagesInputs} required autoComplete="off" />
-                    <input type="number" name="deliveryDays" placeholder="Days to deliver..." value={gig.packages[0].deliveryDays} onChange={this.handlePackagesInputs} required autoComplete="off" />
-                    <div>
+                    <textarea name="desc" rows="3" cols="60"
+                        value={gig.packages[0].desc}
+                        type="text" placeholder="Enter package Desc..."
+                        onChange={this.handlePackagesInputs}
+                        required autoComplete="off" />
+                    <h4>Add some package features</h4>
+                    <div className="package-features flex">
+                        <input type="text" name="feature" placeholder="ex: responsive design, multi-language"
+                            value={this.state.currFeature} onChange={this.addFeature} onKeyUp={this.addFeature} />
+                        <ul className="clean-list flex">
+                            {gig.packages[0].features.map(feature => {
+                                if (feature.length > 0) return <li key={feature}>{feature}</li>
+                            })}
+                        </ul>
+                    </div>
+                    <h4>Package additional details</h4>
+                    <input type="number" name="price" placeholder="Package price"
+                        value={gig.packages[0].price} onChange={this.handlePackagesInputs} required autoComplete="off" />
+                    <input type="number" name="revisionCount" placeholder="Revision Count..."
+                        value={gig.packages[0].revisionCount} onChange={this.handlePackagesInputs} required autoComplete="off" />
+                    <input type="number" name="deliveryDays" placeholder="Days to deliver..."
+                        value={gig.packages[0].deliveryDays} onChange={this.handlePackagesInputs} required autoComplete="off" />
+                    {/* <div>
                         <button type="button" onClick={() => this.handlePackageFeatures("3D Modeling")}>3D Modeling</button>
                         <button type="button" onClick={() => this.handlePackageFeatures("Include Environment")}>Include Environment</button>
-                    </div>
-                    <div>
-                        <button className="gig-save">Save</button>
-                    </div>
+                    </div> */}
                 </form>
+                <div>
+                    <button className="gig-save" onClick={this.onSaveNewGig} >Save</button>
+                </div>
             </section>
         )
     }
