@@ -17,4 +17,23 @@
     .order-count {
         color: rgb(192, 192, 192);
     }
+
+}
+
+.stars-container {
+    margin-block-start: 1rem;
+    margin: 0;
+    > * {
+        margin: none !important;
+        padding: none !important;
+    }
+    span{
+        padding-inline-start: 0.5rem
+    }
+}
+
+button{
+    @include defButton;
+    width:130px;
+    margin-block-start: 0.5rem;
 }

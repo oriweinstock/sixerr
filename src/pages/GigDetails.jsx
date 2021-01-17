@@ -150,7 +150,7 @@ class _GigDetails extends React.Component {
         if (!gig) return <div>Loading...</div>
         return (
             <>
-                <div className="add-remove-btn-container">
+                <div className="add-remove-btn-container main-layout">
                     <Link className="edit-link" to={`/gig/edit/${gig._id}`}><button>Edit Gig</button></Link>
                     {user && <Link to='/gig/edit'  ><button className="add-btn">Add Gig</button></Link>}
                     <button className="remove-btn" onClick={this.onRemoveGig}>Remove Gig</button>
@@ -164,11 +164,16 @@ class _GigDetails extends React.Component {
                         <ImgGallery gig={gig} numImgChoosen={numImgChoosen} onChooseImg={this.onChooseImg} onToggleImgLightbox={this.onToggleImgLightbox} />
                         <h2 className="short-review-header">What people loved about this seller</h2>
                         {gig.reviews && <div className="short-review-main">
-                            <div className="slide flex" style={{ transform: `translateX(${this.state.currShortReviewIdx * 750}px)` }}>
+                            <div className="slide flex" style={{ transform: `translateX(${this.state.currShortReviewIdx * 38.381275}rem)` }}>
                                 <div className="list">
                                     <ShortReviewList gig={gig} reviews={gig.reviews} />
                                 </div>
                             </div>
+                            {/* <div className="slide flex" style={{ transform: `translateX(${this.state.currShortReviewIdx * 616.188}px)` }}>
+                                <div className="list">
+                                    <ShortReviewList gig={gig} reviews={gig.reviews} />
+                                </div>
+                            </div> */}
                             {gig.reviews.length > 1 && <ChevronLeftIcon className="slide-left-review" onClick={() => this.onNextShortReview()} />}
                             {gig.reviews.length > 1 && <ChevronRightIcon className="slide-right-review" onClick={() => this.onPrevShortReview()} />}
                         </div>}
