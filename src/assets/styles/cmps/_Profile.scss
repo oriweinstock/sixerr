@@ -1,6 +1,9 @@
 .profile {
     margin-top: 20px;
     
+    h1 {
+        color: $darkColor;
+    }
     .about-user {
         text-align: center;
         border: $softColorBorder;
