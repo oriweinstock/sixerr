@@ -1,7 +1,9 @@
 import Avatar from '@material-ui/core/Avatar';
 import StarRateIcon from '@material-ui/icons/StarRate';
 
+
 export function SellerPreview({ seller }) {
+    console.log("SellerPreview , seller", seller)
     return (
         <>
             <section className="about-seller-container flex column">
@@ -12,9 +14,15 @@ export function SellerPreview({ seller }) {
                         {/* <Avatar src={`${seller.imgUrl}`} /> */}
                     </div>
                     <div className="flex column">
-                        <p>{seller.fullname}</p>
-                        <p>Creator of AR filters</p>
-                        <p>Rate *****</p>
+                        <span>{seller.fullname}</span>
+                        <span>Creator of AR filters</span>
+                        <div className="stars-container flex justify-center align center">
+                            <StarRateIcon className="star" />
+                            <StarRateIcon className="star" />
+                            <StarRateIcon className="star" />
+                            <StarRateIcon className="star" />
+                            <span>5.0 (40 reviews)</span>
+                        </div>
                         <button>Contact Me</button>
                     </div>
                 </div>

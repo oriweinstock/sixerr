@@ -53,7 +53,7 @@
 .cut-text {
     text-overflow: ellipsis;
     overflow: hidden;
-    width: 42rem;
+    max-width: 42rem;
     white-space: nowrap;
 }
 
@@ -69,18 +69,21 @@
     position: relative;
     // width: 750px;
     overflow: hidden;
+    .slide{
+        max-width: rem(750px);
+    }
     .slide-left-review {
         position: absolute;
-        left: -5px;
+        left: -8px;
         top: 50%;
     }
     .slide-right-review {
         position: absolute;
-        right: -5px;
+        right: -7.8px;
         top: 50%;
     }
     .slide {
-        width: 750px;
+        max-width: 35.9rem;
         transition: ease 0.8s;
         .short-review {
             position: relative;
@@ -100,8 +103,7 @@
 }
 
 .add-remove-btn-container {
-    padding: 1rem;
-    margin-inline-start:4rem ;
+    // margin-inline-start:1rem ;
     button {
         @include defButton;
         width:250px;

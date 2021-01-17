@@ -3,9 +3,11 @@ import { connect } from 'react-redux'
 import { utilService } from '../services/utilService.js'
 import { addGig, updateGig, loadGig } from '../store/actions/gigActions'
 import StarIcon from '@material-ui/icons/Star';
-import Rating from '../cmps/HoverRating.jsx'
-import HoverRating from '../cmps/HoverRating.jsx'
+// import Rating from '../cmps/HoverRating.jsx'
+import { HoverRating } from '../cmps/HoverRating.jsx'
 import setValue from '../cmps/HoverRating.jsx'
+import Rating from '@material-ui/lab/Rating';
+import {HalfRating} from './HoverRating.jsx'
 
 class _GigAddReview extends Component {
 
@@ -13,7 +15,7 @@ class _GigAddReview extends Component {
     state = {
         gig: null,
         user: null,
-        review: null,
+        review: '',
         value: '0',
     }
 
@@ -46,9 +48,9 @@ class _GigAddReview extends Component {
     handleRate = (rate) => {
         console.log("rate", rate)
         const { review } = { ...this.state }
-        // review.rating = rate
-        // console.log("review", review)
-        // this.setState({ review })
+        review.rating = rate
+        console.log("review", review)
+        this.setState({ review })
     }
 
     onAddReview = () => {
@@ -63,8 +65,10 @@ class _GigAddReview extends Component {
         console.log("reviewToAdd", reviewToAdd)
         gig.reviews.unshift(reviewToAdd)
         this.props.updateGig(gig).then(() => {
+            this.setState({review:null})
             console.log('review added succefully')
         })
+
     }
     logValue = (value) => {
         console.log('value!!!', value);
@@ -78,25 +82,16 @@ class _GigAddReview extends Component {
 
     render() {
         const { user, gig, review } = this.state
-        const { value } = 5
+        console.log("render , review", review)
+        console.log("render , review", review)
         // console.log("render , value", value)
+        if(!review) return <div></div>
         return (
             <>
-                {/* Require on Button....  */}
-                {/* <div className="flex">
-                    <StarIcon className="star" onClick={() => this.handleRate('1')} ></StarIcon>
-                    <StarIcon className="star" onClick={() => this.handleRate('2')} ></StarIcon>
-                    <StarIcon className="star" onClick={() => this.handleRate('3')} ></StarIcon>
-                    <StarIcon className="star" onClick={() => this.handleRate('4')} ></StarIcon>
-                    <StarIcon className="star" onClick={() => this.handleRate('5')} ></StarIcon>
-                </div> */}
-                <Rating onChange={this.handleRate()} name="half-rating" defaultValue={2.5} precision={0.5} size="large" name="size-large" />
-                {/* <HoverRating value={value}  onChange={this.onSave()} onClick={this.handleRate,value}/> */}
-                {/* <HoverRating onChange={(ev) => this.onSave(ev, value)} /> */}
-                <textarea rows="6" cols="60" type="text" name="txt" placeholder='enter review...' onChange={this.handleChange} required />
+                 <HoverRating className="stars-rate" handleRate={this.handleRate} newHover={this.state.value} />
+                {/* <Rating name="half-rating" defaultValue={2.5} precision={0.5} handleRate={this.handleRate}  /> */}
+                <textarea rows="6" cols="60" type="text" name="txt" placeholder='enter review...' value={review.txt}  onChange={this.handleChange} required />
                 <button className="add-review" onClick={() => this.onAddReview()}>Add Review</button>
-                {/* <form onSubmit={this.onAddReview()} className="flex column justify-center"> */}
-                {/* </form> */}
             </>
         )
     }
