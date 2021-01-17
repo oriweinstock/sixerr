@@ -147,7 +147,7 @@ class _GigDetails extends React.Component {
         const { user } = this.props
         const { currImg } = this.state
         const htmlStars = this.getAvgRate()
-        if (!gig) return <div>No gig...</div>
+        if (!gig) return <div>Loading...</div>
         return (
             <>
                 <div className="add-remove-btn-container">

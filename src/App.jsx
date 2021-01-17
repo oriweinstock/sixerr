@@ -12,9 +12,7 @@ export function App() {
         <header className="">
           <AppHeader />
         </header>
-        <Hero />
         <main>
-          
           <Switch>
             {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}
           </Switch>
