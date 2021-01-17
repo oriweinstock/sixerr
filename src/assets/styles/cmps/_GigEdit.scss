@@ -1,5 +1,6 @@
 .gig-edit {
 
+    margin-top: 20px;
     .gig-save {
         width: 150px;
         margin-bottom: 20px;
@@ -11,16 +12,18 @@
 
         h4 {
             color: $darkColor;
-            margin-bottom: 5px;
+            margin: 5px 0 5px;
         }
     }
 
 
     textarea, select, input {
         padding: 10px;
+        margin-bottom: 20px;
     }
 
-    input {
+    input, select {
         margin-bottom: 20px;
+        width: 30vw;
     }
 }

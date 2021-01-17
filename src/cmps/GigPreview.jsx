@@ -25,7 +25,7 @@ export function GigPreview({ gig, onUserViewGig }) {
                     </div>
                 </Link>
                 <div className="preview-bottom flex space-between">
-                    <Favorite className="heart pointer" />
+                    <Favorite className={`heart pointer ${_getRandomLike()}`} />
                     <h3>Starting at <span>{gig.packages[0].price}$</span></h3>
                 </div>
             </div>
@@ -35,4 +35,8 @@ export function GigPreview({ gig, onUserViewGig }) {
 
 function _getRandomRating() {
     return Math.round(Math.random() * 30 + 20) /10
+}
+
+function _getRandomLike() {
+    return (Math.random()  > 0.75) ? 'liked' : ''
 }
