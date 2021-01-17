@@ -1794,7 +1794,19 @@
         "s101",
         "s107",
         "s103",
-        "s106"
+        "s106",
+        "s102",
+        "s104",
+        "s103",
+        "s109",
+        "s109",
+        "s109"
+      ],
+      "favoriteIds": [
+        "s102",
+        "s103",
+        "s101",
+        "s109"
       ]
     },
     {
@@ -1937,6 +1949,19 @@
         "s109",
         "s110",
         "s106"
+      ]
+    },
+    {
+      "username": "avital",
+      "password": "123456",
+      "fullname": "David Kuperstein",
+      "imgUrl": "/img/img1.jpg",
+      "isAdmin": false,
+      "_id": "N-SYLBg",
+      "favoriteIds": [
+        "s104",
+        "s110",
+        "YLUCCS2"
       ]
     }
   ]

@@ -21,14 +21,27 @@ class _SixerrApp extends React.Component {
     }
 
     onDelete = () => { }
+    
+    onFavoriteToggle = (ev, gigId) => { 
+        ev.stopPropagation()
+        const user = {...this.props.user}
+        if (user.favoriteIds) {
+            if (user.favoriteIds.find(favoriteId => favoriteId === gigId)) user.favoriteIds = user.favoriteIds.filter(favoriteId => favoriteId !== gigId)
+            else user.favoriteIds.push(gigId)
+        } else user.favoriteIds = [gigId]
+        console.log('user.favoriteIds',user.favoriteIds)
+        this.props.updateUser(user)
+    }
 
     render() {
+        const {user} = this.props
+        if (user) console.log('user favorites', user.favoriteIds)
         return (
             <section className="sixerr-app main-layout">
                 <div className="flex space-around align-center mrg-top mrg-bottom">
                     {/* <GigFilter /> */}
                 </div>
-                <GigList gigs={this.props.gigs} onUserViewGig={this.onUserViewGig} onDelete={this.onDelete} />
+                <GigList gigs={this.props.gigs} onUserViewGig={this.onUserViewGig} onFavoriteToggle={this.onFavoriteToggle} user={this.props.user} onDelete={this.onDelete} />
             </section>
 
         )

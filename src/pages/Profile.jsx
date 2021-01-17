@@ -13,22 +13,30 @@ class _Profile extends React.Component {
         from: 'IL',
         memberSince: '2021',
         lastViewed: [],
-        suggestedGigs: []
+        suggestedGigs: [],
+        favoriteGigs: []
 
     }
 
     async componentDidMount() {
         await this.props.loadGigs()
-        let lastViewed
+        let lastViewed 
+        console.log(this.props.user)
         if (this.props.user.viewedGigIds) {
-            const prmGigs = this.props.user.viewedGigIds.map(viewedGigId => loadGig(viewedGigId))
-            lastViewed = await Promise.all(prmGigs)
+            const prmGigsViewed = this.props.user.viewedGigIds.map(viewedGigId => loadGig(viewedGigId))
+            lastViewed = await Promise.all(prmGigsViewed)
         } else lastViewed = []
+        let favoriteGigs
+        if (this.props.user.favoriteIds) {
+            const prmGigsFav = this.props.user.favoriteIds.map(favoriteId => loadGig(favoriteId))
+            favoriteGigs = await Promise.all(prmGigsFav)
+        } else favoriteGigs = []
         this.setState(prevState =>
         ({
             ...prevState,
             suggestedGigs: this.props.gigs.filter((gig, idx) => !(idx % 3)),
-            lastViewed
+            lastViewed,
+            favoriteGigs
         }))
     }
 
@@ -47,9 +55,21 @@ class _Profile extends React.Component {
         this.props.updateUser(user)
     }
 
+    onFavoriteToggle = (ev, gigId) => { 
+        ev.stopPropagation()
+        const user = {...this.props.user}
+        if (user.favoriteIds) {
+            if (user.favoriteIds.find(favoriteId => favoriteId === gigId)) user.favoriteIds = user.favoriteIds.filter(favoriteId => favoriteId !== gigId)
+            else user.favoriteIds.push(gigId)
+        } else user.favoriteIds = [gigId]
+        console.log('user.favoriteIds profile',user.favoriteIds)
+        this.props.updateUser(user)
+    }
+
+
 
     render() {
-        const { from, memberSince, lastViewed, suggestedGigs } = this.state
+        const { from, memberSince, lastViewed, suggestedGigs, favoriteGigs } = this.state
         const { user } = this.props
         console.log(user)
         if (!user) return <div>Loading...</div>
@@ -71,11 +91,13 @@ class _Profile extends React.Component {
                 {lastViewed.length !== 0 &&
                     <div className="recently-viewed flex column">
                         <h1>Last viewed</h1>
-                        <GigList gigs={lastViewed} onDelete={this.onDelete} onUserViewGig={() => { }} />
+                        <GigList gigs={lastViewed} onDelete={this.onDelete} onUserViewGig={() => { }} onFavoriteToggle={this.onFavoriteToggle} user={user}/>
                     </div>}
                 </div>
+                <h1>Favorites</h1>
+                <GigList gigs={favoriteGigs} onDelete={this.onDelete} onUserViewGig={() => { }} onFavoriteToggle={this.onFavoriteToggle} user={user}/>
                 <h1>Suggested</h1>
-                <GigList gigs={suggestedGigs} onDelete={this.onDelete} onUserViewGig={() => { }} />
+                <GigList gigs={suggestedGigs} onDelete={this.onDelete} onUserViewGig={() => { }} onFavoriteToggle={this.onFavoriteToggle} user={user} />
             </section>
         )
     }
