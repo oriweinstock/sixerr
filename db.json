@@ -140,6 +140,176 @@
       ],
       "reviews": [
         {
+          "id": "qCMpz",
+          "rating": "",
+          "txt": "She is amazing and super talented. Delivered everything on time and exactly as I had asked. I will definitely be using this service again! Thank you :)",
+          "createdAt": 1610834894754,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u102",
+            "fullname": "user2",
+            "imgUrl": "/img/img2.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "WGmfk",
+          "rating": "",
+          "txt": "She was able to envision the design that I was looking for and created the design in a way that it is easy to make changes if needed.",
+          "createdAt": 1610827941782,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u102",
+            "fullname": "user2",
+            "imgUrl": "/img/img2.jpg"
+          },
+          "by": {
+            "_id": "C4c3QKw",
+            "fullname": "dor itzhak",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "xXj2Q",
+          "rating": "",
+          "txt": "The seller was great to work with. The final art was even better than I imagined it to be. 10/10 recommend.",
+          "createdAt": 1610827867277,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u102",
+            "fullname": "user2",
+            "imgUrl": "/img/img2.jpg"
+          },
+          "by": {
+            "_id": "C4c3QKw",
+            "fullname": "dor itzhak",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "KEvGZ",
+          "rating": "",
+          "txt": "She communicated clearly and service is as described. Very professional and catered to my needs. I'm very happy with my design would definitely buy again!",
+          "createdAt": 1610827678270,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u102",
+            "fullname": "user2",
+            "imgUrl": "/img/img2.jpg"
+          },
+          "by": {
+            "_id": "C4c3QKw",
+            "fullname": "dor itzhak",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "ketU2",
+          "rating": "",
+          "txt": "I have done a decent amount of fiverr gigs and this one was very quick, concise and exactly what I was looking for. If you are on the fence for this gig, go for it because I have no regrets on this. It came out exactly as I imagined it would. Thanks alot!!\n\n",
+          "createdAt": 1610827596783,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u102",
+            "fullname": "user2",
+            "imgUrl": "/img/img2.jpg"
+          },
+          "by": {
+            "_id": "C4c3QKw",
+            "fullname": "dor itzhak",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "ODIR5",
+          "rating": "",
+          "txt": "I have done a decent amount of fiverr gigs and this one was very quick, concise and exactly what I was looking for. If you are on the fence for this gig, go for it because I have no regrets on this. It came out exactly as I imagined it would. Thanks alot!!",
+          "createdAt": 1610826811500,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u102",
+            "fullname": "user2",
+            "imgUrl": "/img/img2.jpg"
+          },
+          "by": {
+            "_id": "WuaYmXW",
+            "fullname": "amit",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "ODIR5",
+          "rating": "",
+          "txt": "I have done a decent amount of fiverr gigs and this one was very quick, concise and exactly what I was looking for. If you are on the fence for this gig, go for it because I have no regrets on this. It came out exactly as I imagined it would. Thanks alot!!",
+          "createdAt": 1610826807679,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u102",
+            "fullname": "user2",
+            "imgUrl": "/img/img2.jpg"
+          },
+          "by": {
+            "_id": "WuaYmXW",
+            "fullname": "amit",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "ODIR5",
+          "rating": "",
+          "txt": "I have done a decent amount of fiverr gigs and this one was very quick, concise and exactly what I was looking for. If you are on the fence for this gig, go for it because I have no regrets on this. It came out exactly as I imagined it would. Thanks alot!!",
+          "createdAt": 1610826797861,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u102",
+            "fullname": "user2",
+            "imgUrl": "/img/img2.jpg"
+          },
+          "by": {
+            "_id": "WuaYmXW",
+            "fullname": "amit",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "ODIR5",
+          "rating": "",
+          "txt": "I have done a decent amount of fiverr gigs and this one was very quick, concise and exactly what I was looking for. If you are on the fence for this gig, go for it because I have no regrets on this. It came out exactly as I imagined it would. Thanks alot!!",
+          "createdAt": 1610826789821,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u102",
+            "fullname": "user2",
+            "imgUrl": "/img/img2.jpg"
+          },
+          "by": {
+            "_id": "WuaYmXW",
+            "fullname": "amit",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "ODIR5",
+          "rating": "",
+          "txt": "I have done a decent amount of fiverr gigs and this one was very quick, concise and exactly what I was looking for. If you are on the fence for this gig, go for it because I have no regrets on this. It came out exactly as I imagined it would. Thanks alot!!",
+          "createdAt": 1610826780514,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u102",
+            "fullname": "user2",
+            "imgUrl": "/img/img2.jpg"
+          },
+          "by": {
+            "_id": "WuaYmXW",
+            "fullname": "amit",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
           "id": "jmlct",
           "rating": "5",
           "txt": "I worked with lot of designer but she is one of the best i worked with. She understand your work and implement it as fast as possible. i would work with her again, for sure. :)) very nice and kind desinger. THANK YOU \"design_expert89\":)\n\n",
@@ -438,6 +608,23 @@
       ],
       "reviews": [
         {
+          "id": "iPtyM",
+          "rating": "",
+          "txt": "She communicated clearly and service is as described. Very professional and catered to my needs. I'm very happy with my design would definitely buy again!",
+          "createdAt": 1610829447318,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "C4c3QKw",
+            "fullname": "dor itzhak",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
           "id": "u4Cvb",
           "rating": "4",
           "txt": "First time customer of Bojantemunovic, I was looking for a scene of a movie theater and Bojan was able to deliver exactly what I was looking for, but even better than I expected. Bojan is quick with responses, easy to speak to and efficient with work, providing excellent quality. I'd highly recommend Bojan for illustrations. I'll certainly be back myself for any future projects.",
@@ -641,6 +828,74 @@
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/108194896/original/77edb388f1aff5efbf13109e666de0b0e1db7f2a/design-the-ultimate-createspace-cover-and-kindle-book-cover.jpg"
       ],
       "reviews": [
+        {
+          "id": "XemoY",
+          "rating": "",
+          "txt": "Great. Sometimes our own idea's aren't the best. Having someone who does this regularly made this so much easier for me. I felt so bad with every revision I sent ( I can be picky)...but he was so patient, I never felt like I was bothering him. Super professional. Will definitely use again. Thank you.",
+          "createdAt": 1610834832218,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "A0TPE",
+          "rating": "",
+          "txt": "Faith knows what is needed for the project and creates the perfect fit for your site. We are going to order more pages as we are very satisfied. Also, she knows how to use the keywords without stuffing too much in the content.",
+          "createdAt": 1610834814221,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "xZoBe",
+          "rating": "",
+          "txt": "tomer\n",
+          "createdAt": 1610834801242,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "qjYqN",
+          "rating": "",
+          "txt": "tomer maruani",
+          "createdAt": 1610832480748,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "C4c3QKw",
+            "fullname": "dor itzhak",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
         {
           "id": "RAnq9",
           "rating": "5",
@@ -1437,7 +1692,8 @@
         "s105",
         "s107",
         "s103",
-        "s102"
+        "s102",
+        "s110"
       ],
       "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
     },
@@ -1470,7 +1726,8 @@
         "G91yvoB",
         "s109",
         "s105",
-        "nvDftH4"
+        "nvDftH4",
+        "YLUCCS2"
       ]
     },
     {
@@ -1536,6 +1793,33 @@
         "s109",
         "s105",
         "s102"
+      ]
+    },
+    {
+      "username": "weiss",
+      "password": "123456",
+      "fullname": "amit",
+      "imgUrl": "/img/img1.jpg",
+      "isAdmin": false,
+      "_id": "WuaYmXW",
+      "viewedGigIds": [
+        "s101",
+        "s102",
+        "s105"
+      ]
+    },
+    {
+      "username": "dori17",
+      "password": "123456",
+      "fullname": "dor itzhak",
+      "imgUrl": "/img/img1.jpg",
+      "isAdmin": false,
+      "_id": "C4c3QKw",
+      "viewedGigIds": [
+        "s102",
+        "s109",
+        "s110",
+        "s106"
       ]
     }
   ]

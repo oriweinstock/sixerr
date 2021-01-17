@@ -30,13 +30,15 @@ class _AppHeader extends React.Component {
         return (
             <>
                 <section className="app-header flex space-between align-center main-layout">
+                    <NavLink to="/">
                     <h1>Sixerr<span>.</span></h1>
+                    </NavLink>
                     <ul className="header-nav clean-list flex align-center bold">
 
                         <NavLink className="fast-trans" to="/"><li>Home</li></NavLink>
                         <NavLink className="fast-trans" to="/gig"><li>Explore</li></NavLink>
-                        <NavLink className="fast-trans" to="/chat"><li>Messages</li></NavLink>
-                        <NavLink className="fast-trans" to="/order"><li>Orders</li></NavLink>
+                        {/* <NavLink className="fast-trans" to="/chat"><li>Messages</li></NavLink> */}
+                        {/* <NavLink className="fast-trans" to="/order"><li>Orders</li></NavLink> */}
                         {user && <NavLink className="fast-trans" to="#" onClick={this.props.logout}>
                             <li>Logout</li>
                         </NavLink>}
@@ -45,7 +47,8 @@ class _AppHeader extends React.Component {
                                 <li>Login</li>
                             </NavLink>}
                         <NavLink to="/profile">
-                            {user && <h3>{user.username}</h3>}
+                            {/* {user && <h3>{user.username}</h3>} */}
+                            {user && <li><img src={user.imgUrl} /></li>}
                         </NavLink>
                     </ul>
 

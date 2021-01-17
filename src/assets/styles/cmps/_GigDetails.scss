@@ -101,29 +101,10 @@
 
 .add-remove-btn-container {
     padding: 1rem;
+    margin-inline-start:4rem ;
     button {
-        margin-inline-end: 0.5rem;
-        background-color: $boldColor;
-        color: $lightColor;
-        width: 20%;
-        display: inline-block;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        position: relative;
-        padding: 12px 24px;
-        border: 1px solid transparent;
-        border-radius: 4px;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 100%;
-        text-decoration: none;
-        text-align: center;
-        cursor: pointer;
-        -webkit-transition: 0.15s ease-in-out;
-        -o-transition: 0.15s ease-in-out;
-        transition: 0.15s ease-in-out;
-        &:hover {
-            background-color: $darkColor;
-        }
+        @include defButton;
+        width:250px;
+        margin-inline-end:1rem ;
     }
 }

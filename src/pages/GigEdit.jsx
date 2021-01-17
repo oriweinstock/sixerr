@@ -131,36 +131,36 @@ class _GigEdit extends Component {
         console.log("render , packages", packages)
         if (!gig.packages) return <div>loading</div>
         return (
-            <>
+            <section className="gig-edit main-layout">
                 <form onSubmit={this.onSaveNewGig} className="flex column justify-center">
                     <h4>Edit Title</h4>
-                    <textarea name="title" autoFocus rows="3" cols="60" type="text" placeholder="Enter Gig Title..." value={gig.title} onChange={this.handleInput} required autoComplete="off" />
+                    <textarea name="title" autoFocus rows="2" cols="60" type="text" placeholder="Enter Gig Title..." value={gig.title} onChange={this.handleInput} required autoComplete="off" />
                     <h4>Edit Desc</h4>
-                    <textarea name="desc" rows="3" cols="60" type="text" placeholder="Enter Gig Desc..." value={gig.desc} onChange={this.handleInput} required autoComplete="off" />
+                    <textarea name="desc" rows="5" cols="60" type="text" placeholder="Enter Gig Desc..." value={gig.desc} onChange={this.handleInput} required autoComplete="off" />
                     <h4>Choose Tag</h4>
                     <select onChange={this.handleInput} name="tags" required>
-                        <option value="graphic design">graphic design </option>
-                        <option value="minimalist">minimalist</option>
-                        <option value="flat">flat</option>
-                        <option value="modern">modern</option>
-                        <option value="book">book</option>
-                        <option value="logo design">logo design</option>
-                        <option value="cover">cover</option>
+                        <option value="graphic design">Graphic design</option>
+                        <option value="minimalist">Minimalist</option>
+                        <option value="flat">Flat</option>
+                        <option value="modern">Modern</option>
+                        <option value="book">Book</option>
+                        <option value="logo design">Logo design</option>
+                        <option value="cover">Cover</option>
                     </select>
                     <h4>Package</h4>
                     <textarea name="desc" rows="3" cols="60" value={gig.packages[0].desc} type="text" placeholder="Enter package Desc..." onChange={this.handlePackagesInputs} required autoComplete="off" />
-                    <input type="number" name="price" placeholder="enter packPrice" value={gig.packages[0].price} onChange={this.handlePackagesInputs} required autoComplete="off" />
-                    <input type="number" name="revisionCount" placeholder="enter Revision Count..." value={gig.packages[0].revisionCount} onChange={this.handlePackagesInputs} required autoComplete="off" />
-                    <input type="number" name="deliveryDays" placeholder="enter Revision Count..." value={gig.packages[0].deliveryDays} onChange={this.handlePackagesInputs} required autoComplete="off" />
+                    <input type="number" name="price" placeholder="Package price" value={gig.packages[0].price} onChange={this.handlePackagesInputs} required autoComplete="off" />
+                    <input type="number" name="revisionCount" placeholder="Revision Count..." value={gig.packages[0].revisionCount} onChange={this.handlePackagesInputs} required autoComplete="off" />
+                    <input type="number" name="deliveryDays" placeholder="Days to deliver..." value={gig.packages[0].deliveryDays} onChange={this.handlePackagesInputs} required autoComplete="off" />
                     <div>
                         <button type="button" onClick={() => this.handlePackageFeatures("3D Modeling")}>3D Modeling</button>
                         <button type="button" onClick={() => this.handlePackageFeatures("Include Environment")}>Include Environment</button>
                     </div>
                     <div>
-                        <button>Save</button>
+                        <button className="gig-save">Save</button>
                     </div>
                 </form>
-            </>
+            </section>
         )
     }
 }
