@@ -1824,7 +1824,10 @@
         "4nqpfji",
         "s104"
       ],
-      "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
+      "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg",
+      "favoriteIds": [
+        "s103"
+      ]
     },
     {
       "username": "123456",
