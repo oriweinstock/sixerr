@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import Favorite from '@material-ui/icons/Favorite';
 import StarIcon from '@material-ui/icons/Star';
 
-export function GigPreview({ gig, onUserViewGig }) {
+export function GigPreview({ gig, onUserViewGig, onFavoriteToggle, user}) {
     return (
         <li onClick={() => { onUserViewGig(gig._id) }} className="preview-item mrg-bottom">
             <div className="preview-inner">
@@ -25,7 +25,7 @@ export function GigPreview({ gig, onUserViewGig }) {
                     </div>
                 </Link>
                 <div className="preview-bottom flex space-between">
-                    <Favorite className={`heart pointer ${_getRandomLike()}`} />
+                    <Favorite onClick={(ev)=>{onFavoriteToggle(ev, gig._id)}} className={`heart pointer ${_isLiked(user?.favoriteIds, gig._id)}`} />
                     <h3>Starting at <span>{gig.packages[0].price}$</span></h3>
                 </div>
             </div>
@@ -39,4 +39,9 @@ function _getRandomRating() {
 
 function _getRandomLike() {
     return (Math.random()  > 0.75) ? 'liked' : ''
+}
+
+function _isLiked (favoriteIds, gigId) {
+    if (!favoriteIds) return ''
+    return favoriteIds.find(favoriteId => favoriteId === gigId)? 'liked' : ''
 }
