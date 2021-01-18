@@ -1,0 +1,14 @@
+.gig-strip {
+
+    overflow: hidden;
+
+    ul {
+        transition: 1s ease-out;
+
+        display: flex;
+
+        li {
+            flex: 0 0 25%;
+        }
+    }
+}
