@@ -1,8 +1,7 @@
 .preview-item {
     width: 25%;
-    padding: 10px;
-
-
+    padding: 1.125rem;
+    
     @media screen and (max-width: $mediumLayout) {
         width: 33.3%;
     }
@@ -23,13 +22,16 @@
         opacity: 1;
         transition: .2s;
     }
-
+    
     .preview-inner {
-        background-color: #fdfdfd;
-        .preview-top {
+        border: $border;
+
+        .preview-img {
             background: #000;
             width: 100%;
             height: 23vmin;
+            margin-bottom: 0.75rem;
+
             @media screen and (max-width: $smallLayout) {
                 height: 33vmin;
             }
@@ -40,69 +42,84 @@
                 opacity: 0.7;
             }
         }
-        .preview-center {
-            padding: 15px;
-            h2 {
+
+        .gig-owner {
+            padding: 0rem 0.75rem 1rem;
+
+            p {
+                margin: 0;
                 color: $darkColor;
+                font-size: 0.8em;
+
+                &:first-of-type {
+                    font-weight: bold;
+                }
+            }
+
+        }
+
+        .preview-title {
+
+            padding: 0rem 0.75rem 1rem;
+            h2 {
+                color: $titleColor;
                 font-size: 1.1rem;
                 font-weight: normal;
                 line-height: 1.3em;
                 height: 2.7em;
-                margin-bottom: 0px;
+                margin: 0px;
                 overflow: hidden;
                 transition: .15s;
         
 
                 &:hover {
-                    color: lighten($boldColor, 10);
+                    color: $greenColor;
                 }
             }
-            .gig-rating {
-                padding: 0;
-                margin: 0 0 25px -5px;
-                color: $starsColor;
-                span {
-                    display: inline-block;
-                    margin-top: 2px;
-                    margin-inline-start: 5px;
-                    font-size: 0.8rem;
-                    font-weight: bold;
-                }
+            
+        }
+
+        .gig-rating {
+            align-items: center;
+            padding: 0rem 0.75rem 0.75rem;
+            margin-inline-start: -0.15rem;
+            color: $starsColor;
+            span {
+                display: inline-block;
+                margin-top: 2px;
+                margin-inline-start: 5px;
+                font-size: 0.875rem;
+                font-weight: bold;
             }
-            .gig-owner {
-                p {
-                    color: $darkColor;
-                    margin: 5px 0px;
-                    font-size: 0.8em;
-
-                    &:first-of-type {
-                        font-weight: bold;
-                    }
-                }
-
+            .gig-voters {
+                margin-inline-start: 0.125rem;
+                color: $iconsColor;
+                font-weight: normal;
+                font-size: 0.875rem;
             }
         }
+
         .preview-bottom {
-            border-top: $softColorBorder;
+            padding: 0.625rem 0.75rem;
+            border-top: $border;
+
             h3 {
-                color: $darkColor;
+                color: $priceColor;
                 margin: 0;
-                padding: 10px;
-                font-size: 0.9em;
+                font-size: 0.85rem;
+                text-transform: uppercase;
                 font-weight: normal;
             }
             span {
-                color: $boldColor;
-                font-weight: bold;
+                font-size: 1.1rem;
             }
 
             .heart {
-                color: $darkColor;
-                margin-top: 6px;
-                margin-inline-start: 10px;
+                color: $iconsColor;
+                // margin-inline-start: 10px;
                 transition: .2s;
                 &:hover {
-                    color: darken($darkColor, 10);
+                    color: darken($iconsColor, 10);
                 }
             }
 

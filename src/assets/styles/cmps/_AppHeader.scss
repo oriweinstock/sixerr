@@ -1,7 +1,8 @@
 header {
-    background-color: $boldColor;
-    color: $darkColor;
+    background-color: $lightColor;
+    color: $headerColor;
     height: 10vh;
+    border-bottom: $border;
     
     .app-header {
         height: 100%;
@@ -10,16 +11,15 @@ header {
             color: inherit;
         }
         h1 {
+            color: $ctgColor;
             font-size: 2rem;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            letter-spacing: 2px;
+            // font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: -1px;
+            font-weight: 900;
             display: inline-block;
             transition: .8s;
             span {
-                color: $altColor;
-            }
-            &:hover {
-                color: $altColor;
+                color: $greenColor;
             }
         }
         
@@ -32,10 +32,9 @@ header {
                 align-items: center;
                 height: 100%;
                 text-decoration: none;
-                color: $lightColor;
                 &:hover {
                     // background-color: $lightColor;
-                    color: $darkColor;
+                    color: $greenColor;
                 }
             }
 
