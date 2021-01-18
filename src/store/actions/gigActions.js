@@ -15,6 +15,11 @@ export function loadGigs() {
 export function loadGig(gigId) {
     return gigService.getById(gigId)
 }
+export async function getGigs(gigIds) {
+    const prmGigs = gigIds.map(gigId => loadGig(gigId))
+    const gigs = await Promise.all(prmGigs)
+    return gigs
+}
 
 export function removeGig(gigId) {
     return async (dispatch) => {

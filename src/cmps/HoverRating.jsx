@@ -16,7 +16,6 @@ const labels = {
 };
 
 export class HoverRating extends React.Component {
-  // const classes = useStyles();
 
   state = {
     value: 0,
@@ -25,6 +24,9 @@ export class HoverRating extends React.Component {
 
   setValue = (newValue) => {
     this.setState({ value: newValue }, () => { this.props.handleRate(newValue) })
+  }
+  setHover = (newHover) => {
+    console.log("HoverRating , setHover", newHover)
   }
   render() {
     return (
@@ -40,6 +42,9 @@ export class HoverRating extends React.Component {
           precision={0.5}
           onChange={(event, newValue) => {
             this.setValue(newValue);
+          }}
+          onChangeActive={(newHover) => {
+            this.setHover(newHover);
           }}
         />
         {this.value !== null && <Box ml={2}>{labels[this.hover !== -1 ? this.hover : this.value]}</Box>}

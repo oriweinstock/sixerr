@@ -140,40 +140,6 @@
       ],
       "reviews": [
         {
-          "id": "NBjR2",
-          "rating": "",
-          "txt": "She is amazing and super talented. Delivered everything on time and exactly as I had asked. I will definitely be using this service again! Thank you :)\n\n",
-          "createdAt": 1610887009016,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u102",
-            "fullname": "user2",
-            "imgUrl": "/img/img2.jpg"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610876025/wpgoyraiknoyhwbsknum.jpg"
-          }
-        },
-        {
-          "id": "HgiPh",
-          "rating": 4,
-          "txt": "The seller was great to work with. The final art was even better than I imagined it to be. 10/10 recommend.",
-          "createdAt": 1610885928441,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u102",
-            "fullname": "user2",
-            "imgUrl": "/img/img2.jpg"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610876025/wpgoyraiknoyhwbsknum.jpg"
-          }
-        },
-        {
           "id": "qCMpz",
           "rating": "",
           "txt": "She is amazing and super talented. Delivered everything on time and exactly as I had asked. I will definitely be using this service again! Thank you :)",
@@ -795,40 +761,6 @@
       ],
       "reviews": [
         {
-          "id": "ccruW",
-          "rating": 2.5,
-          "txt": "thank you so much ill buy from you again for sure!!",
-          "createdAt": 1610873717750,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u103",
-            "fullname": "user3",
-            "imgUrl": "/img/img3.jpg"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "/img/img1.jpg"
-          }
-        },
-        {
-          "id": "ccruW",
-          "rating": 5,
-          "txt": "thank you so much ill buy from you again for sure!",
-          "createdAt": 1610873709484,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u103",
-            "fullname": "user3",
-            "imgUrl": "/img/img3.jpg"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "/img/img1.jpg"
-          }
-        },
-        {
           "id": "madeId",
           "rating": 5,
           "txt": "Thank you for a job well done. You exceeded my expectations. I will definitely work with this designer in the future.",
@@ -913,31 +845,6 @@
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/108194896/original/77edb388f1aff5efbf13109e666de0b0e1db7f2a/design-the-ultimate-createspace-cover-and-kindle-book-cover.jpg"
       ],
       "reviews": [
-        {
-          "createdAt": 1610884643177,
-          "purchasedAt": "purchase At"
-        },
-        {
-          "createdAt": 1610884642906,
-          "purchasedAt": "purchase At"
-        },
-        {
-          "id": "3eFnN",
-          "rating": 4.5,
-          "txt": "",
-          "createdAt": 1610884618831,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u103",
-            "fullname": "user3",
-            "imgUrl": "/img/img3.jpg"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610876025/wpgoyraiknoyhwbsknum.jpg"
-          }
-        },
         {
           "id": "XemoY",
           "rating": "",
@@ -1107,10 +1014,10 @@
       ],
       "reviews": [
         {
-          "id": "BPMR4",
-          "rating": 4,
-          "txt": "Very fast delivery and beautiful montage. I had one change request which was implemented fast and as requested. I like the design and I guess he will get to do the design of the other side of the room too!",
-          "createdAt": 1610895027250,
+          "id": "EG582",
+          "rating": 3,
+          "txt": "Trying the star rating ",
+          "createdAt": 1610892642409,
           "purchasedAt": "purchase At",
           "seller": {
             "_id": "u103",
@@ -1118,60 +1025,9 @@
             "imgUrl": "/img/img3.jpg"
           },
           "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610876025/wpgoyraiknoyhwbsknum.jpg"
-          }
-        },
-        {
-          "id": "mwk9Y",
-          "rating": "",
-          "txt": "Just a wonderful person to work with. Very professional and talented. I will very much work with him again",
-          "createdAt": 1610895002325,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u103",
-            "fullname": "user3",
-            "imgUrl": "/img/img3.jpg"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610876025/wpgoyraiknoyhwbsknum.jpg"
-          }
-        },
-        {
-          "id": "xBPdl",
-          "rating": 3.5,
-          "txt": "ruangsore design met all of my specifications and when I decided to change something slightly they did it immediately and exactly like I asked. I will certainly be ordering again and would highly recommend to others.",
-          "createdAt": 1610894988856,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u103",
-            "fullname": "user3",
-            "imgUrl": "/img/img3.jpg"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610876025/wpgoyraiknoyhwbsknum.jpg"
-          }
-        },
-        {
-          "id": "pCck5",
-          "rating": 5,
-          "txt": "Just a wonderful person to work with. Very professional and talented. I will very much work with him again.",
-          "createdAt": 1610876054356,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u103",
-            "fullname": "user3",
-            "imgUrl": "/img/img3.jpg"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610876025/wpgoyraiknoyhwbsknum.jpg"
+            "_id": "N-SYLBg",
+            "fullname": "David Kuperstein",
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -1381,40 +1237,6 @@
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/157536980/original/d7411fe67086a183a78e81950000dde20ee5b689/create-3d-model-and-render-your-sketch-or-2d-plan.jpg"
       ],
       "reviews": [
-        {
-          "id": "IqnMn",
-          "rating": 5,
-          "txt": "Awesome job again! This is my second time using him. I will continue to use him whenever I need work done.",
-          "createdAt": 1610875791056,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u103",
-            "fullname": "user3",
-            "imgUrl": "/img/img3.jpg"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "/img/img1.jpg"
-          }
-        },
-        {
-          "id": "A6HaK",
-          "rating": 4.5,
-          "txt": "Did a phenomenal job. I received five great concepts within 24 hours. One of the best designers I have ever worked with.\n\n",
-          "createdAt": 1610875774959,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u103",
-            "fullname": "user3",
-            "imgUrl": "/img/img3.jpg"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "/img/img1.jpg"
-          }
-        },
         {
           "id": "Ph4kD",
           "rating": "",
@@ -1822,154 +1644,11 @@
       "imgUrls": [
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
       ],
-      "reviews": [
-        {
-          "id": "16H1W",
-          "rating": 2.5,
-          "txt": "sdfsdfsdf",
-          "createdAt": 1610902101350,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "username": "itay",
-            "password": "123456",
-            "fullname": "itay! ",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610902039/ohq9wwecxmuzrs8xrd8t.jpg",
-            "isAdmin": false,
-            "_id": "tvDPqKx",
-            "viewedGigIds": [
-              "s105",
-              "s109"
-            ]
-          },
-          "by": {
-            "_id": "tvDPqKx",
-            "fullname": "itay! ",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610902039/ohq9wwecxmuzrs8xrd8t.jpg"
-          }
-        },
-        {
-          "id": "1G7US",
-          "rating": "",
-          "txt": "itay raview!!",
-          "createdAt": 1610902092607,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "username": "itay",
-            "password": "123456",
-            "fullname": "itay! ",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610902039/ohq9wwecxmuzrs8xrd8t.jpg",
-            "isAdmin": false,
-            "_id": "tvDPqKx",
-            "viewedGigIds": [
-              "s105",
-              "s109"
-            ]
-          },
-          "by": {
-            "_id": "tvDPqKx",
-            "fullname": "itay! ",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610902039/ohq9wwecxmuzrs8xrd8t.jpg"
-          }
-        },
-        {
-          "id": "c2Siz",
-          "rating": 4,
-          "txt": "itay review!",
-          "createdAt": 1610902078887,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "username": "itay",
-            "password": "123456",
-            "fullname": "itay! ",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610902039/ohq9wwecxmuzrs8xrd8t.jpg",
-            "isAdmin": false,
-            "_id": "tvDPqKx",
-            "viewedGigIds": [
-              "s105",
-              "s109"
-            ]
-          },
-          "by": {
-            "_id": "tvDPqKx",
-            "fullname": "itay! ",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610902039/ohq9wwecxmuzrs8xrd8t.jpg"
-          }
-        }
-      ],
-      "_id": "9FJux2p"
-    },
-    {
-      "title": "sdfds",
-      "desc": "sasdf",
-      "tags": [
-        "minimalist"
-      ],
-      "packages": [
-        {
-          "type": "basic",
-          "desc": "sdfsdfq",
-          "price": -2,
-          "revisionCount": -2,
-          "deliveryDays": -2,
-          "features": []
-        }
-      ],
-      "owner": {
-        "username": "admin",
-        "password": "admin",
-        "fullname": "tomer maruani",
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610895097/xhuw1faknzednct0gsmf.jpg",
-        "isAdmin": false,
-        "_id": "lfE5k8E",
-        "viewedGigIds": [
-          "s103",
-          "s106",
-          "s101",
-          "nn8c8we",
-          "s107",
-          "s104",
-          "s110",
-          "MWAYi0x",
-          "s108",
-          "s102",
-          "G91yvoB",
-          "s109",
-          "s105",
-          "nvDftH4",
-          "YLUCCS2",
-          "dC_DH0G",
-          "BTlid80",
-          "v6GlySQ",
-          "MHImEq0",
-          "4nqpfji",
-          "QBZuluo",
-          "9FJux2p"
-        ],
-        "favoriteIds": [
-          "s101",
-          "s107",
-          "s104",
-          "s102",
-          "s103"
-        ]
-      },
-      "imgUrls": [
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg",
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/152151716/original/bad3092487d7ebd55a1323c8114851ca679d8e5d/design-your-custom-album-cover-art.jpg",
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/152151716/original/6d89c13a4520aa5e96eae6247c80502b3b422ccc/design-your-custom-album-cover-art.jpg",
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/182120221/original/e081b424e641ba90661dec7d7d30cce4e931036d/squarespace-squarespace-website-website-design-squarespace-design.jpg",
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg",
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/181009792/original/47cef6ccbc085dbc3aeb097e9bb0545e399322d8/do-squarespace-website-design-or-squarespace-customization.jpg",
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/144053905/original/c1fdfa7e63aa876e4e4ddb032be3e299b5d1a7d0/do-web-scrapping-for-6k-records-of-any-website.jpg",
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/152151716/original/bad3092487d7ebd55a1323c8114851ca679d8e5d/design-your-custom-album-cover-art.jpg",
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/152151716/original/6d89c13a4520aa5e96eae6247c80502b3b422ccc/design-your-custom-album-cover-art.jpg",
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/182120221/original/e081b424e641ba90661dec7d7d30cce4e931036d/squarespace-squarespace-website-website-design-squarespace-design.jpg",
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg",
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/181009792/original/47cef6ccbc085dbc3aeb097e9bb0545e399322d8/do-squarespace-website-design-or-squarespace-customization.jpg",
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/144053905/original/c1fdfa7e63aa876e4e4ddb032be3e299b5d1a7d0/do-web-scrapping-for-6k-records-of-any-website.jpg"
-      ],
       "reviews": [],
-      "_id": "ax883fK"
+      "features": [
+        "Include Environment"
+      ],
+      "_id": "nvDftH4"
     }
   ],
   "user": [
@@ -2041,17 +1720,14 @@
     {
       "username": "oriw",
       "password": "123456",
-      "fullname": "Ori Weinstock!",
+      "fullname": "Ori Weinstock",
       "_id": "h8mW4vL",
       "viewedGigIds": [
         "s105",
         "s107",
         "s103",
         "s102",
-        "s110",
-        "QBZuluo",
-        "4nqpfji",
-        "s104"
+        "s110"
       ],
       "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
     },
@@ -2067,7 +1743,7 @@
       "username": "admin",
       "password": "admin",
       "fullname": "tomer maruani",
-      "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610895097/xhuw1faknzednct0gsmf.jpg",
+      "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
       "_id": "lfE5k8E",
       "viewedGigIds": [
@@ -2085,22 +1761,7 @@
         "s109",
         "s105",
         "nvDftH4",
-        "YLUCCS2",
-        "dC_DH0G",
-        "BTlid80",
-        "v6GlySQ",
-        "MHImEq0",
-        "4nqpfji",
-        "QBZuluo",
-        "9FJux2p",
-        "ax883fK"
-      ],
-      "favoriteIds": [
-        "s101",
-        "s107",
-        "s104",
-        "s102",
-        "s103"
+        "YLUCCS2"
       ]
     },
     {
@@ -2204,8 +1865,13 @@
       "_id": "N-SYLBg",
       "favoriteIds": [
         "s104",
+        "s102"
+      ],
+      "viewedGigIds": [
         "s110",
-        "YLUCCS2"
+        "s108",
+        "s106",
+        "nn8c8we"
       ]
     },
     {
