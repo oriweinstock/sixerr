@@ -28,10 +28,8 @@ class _GigEdit extends Component {
     }
 
     onSaveNewGig = (ev) => {
-        console.log('on saved gig func :)');
         ev.preventDefault()
         const { gig } = this.state
-        console.log("gig on saved gig!", gig)
         this.props.addGig(gig).then(() => {
             console.log('one line before history');
             this.props.history.push('/gig');
@@ -44,7 +42,6 @@ class _GigEdit extends Component {
 
     createGigTemplate = () => {
         const { user } = this.props
-        console.log("user", user)
         const packages = this.createTemplatePackages()
         const gig = {
             title: "",
@@ -66,13 +63,11 @@ class _GigEdit extends Component {
 
     handleInput = ({ target }) => {
         const field = target.name
-        console.log("field", field)
         let value = target.value
         if (field === 'tags') {
             const tags = [value]
             value = tags
         }
-        console.log("value", value)
         this.setState(prevState => {
             return {
                 gig: {
@@ -91,7 +86,6 @@ class _GigEdit extends Component {
         const pack = { ...packages[0] }
         pack[field] = value
         packages[0] = { ...pack }
-        console.log("packages", packages)
         this.setState(prevState => {
             return {
                 gig: {

@@ -1,6 +1,5 @@
 .review-card {
-    margin-block-start: 2rem;
-    border-top: 1px solid #dadbdd;
+        margin-block-start: 2rem;
     border-bottom: 1px solid #dadbdd;
     .avatar-container {
         margin-block-start: 1.2rem;
@@ -16,6 +15,7 @@
         }
         .icons {
             outline: none !important;
+            margin-block-end:1rem ;
             span {
                 margin-inline-end: 1rem;
             }

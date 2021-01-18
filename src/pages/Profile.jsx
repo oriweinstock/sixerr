@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 
 import { updateUser, onImageChange } from "../store/actions/userActions.js";
-import { loadGigs, loadGig } from "../store/actions/gigActions.js";
+import { loadGigs, getGigs } from "../store/actions/gigActions.js";
 import { GigList } from '../cmps/GigList.jsx';
 import { EditableElement } from '../cmps/EditableElement.jsx';
 import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
@@ -19,18 +19,10 @@ class _Profile extends React.Component {
     }
 
     async componentDidMount() {
-        await this.props.loadGigs()
-        let lastViewed 
-        console.log(this.props.user)
-        if (this.props.user.viewedGigIds) {
-            const prmGigsViewed = this.props.user.viewedGigIds.map(viewedGigId => loadGig(viewedGigId))
-            lastViewed = await Promise.all(prmGigsViewed)
-        } else lastViewed = []
-        let favoriteGigs
-        if (this.props.user.favoriteIds) {
-            const prmGigsFav = this.props.user.favoriteIds.map(favoriteId => loadGig(favoriteId))
-            favoriteGigs = await Promise.all(prmGigsFav)
-        } else favoriteGigs = []
+        await this.props.loadGigs() // TODO: REMOVE FROM HERE WHEN IMPLEMENTING BETTER MECHANISM FOR SUGGESTED
+        const {user} = this.props
+        const lastViewed = user.viewedGigIds? await getGigs(user.viewedGigIds): []          
+        const favoriteGigs = user.favoriteIds? await getGigs(user.favoriteIds): []          
         this.setState(prevState =>
         ({
             ...prevState,
@@ -62,8 +54,15 @@ class _Profile extends React.Component {
             if (user.favoriteIds.find(favoriteId => favoriteId === gigId)) user.favoriteIds = user.favoriteIds.filter(favoriteId => favoriteId !== gigId)
             else user.favoriteIds.push(gigId)
         } else user.favoriteIds = [gigId]
-        console.log('user.favoriteIds profile',user.favoriteIds)
         this.props.updateUser(user)
+    }
+
+    onRemoveViewed = (gigId) => {
+        const user = { ...this.props.user }
+        user.viewedGigIds = user.viewedGigIds.filter(viewedGigId => viewedGigId !==gigId)
+        this.props.updateUser(user)
+        const lastViewed = this.state.lastViewed.filter(gig => gig._id !==gigId)
+        this.setState({lastViewed})
     }
 
 
@@ -91,7 +90,7 @@ class _Profile extends React.Component {
                 {lastViewed.length !== 0 &&
                     <div className="recently-viewed flex column">
                         <h1>Last viewed</h1>
-                        <GigList gigs={lastViewed} onDelete={this.onDelete} onUserViewGig={() => { }} onFavoriteToggle={this.onFavoriteToggle} user={user}/>
+                        <GigList gigs={lastViewed} onDelete={this.onDelete} onUserViewGig={() => { }} onFavoriteToggle={this.onFavoriteToggle} user={user} removeViewed={this.onRemoveViewed}/>
                     </div>}
                 </div>
                 <h1>Favorites</h1>

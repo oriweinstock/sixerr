@@ -5,9 +5,9 @@ import { addGig, updateGig, loadGig } from '../store/actions/gigActions'
 import StarIcon from '@material-ui/icons/Star';
 // import Rating from '../cmps/HoverRating.jsx'
 import { HoverRating } from '../cmps/HoverRating.jsx'
-import setValue from '../cmps/HoverRating.jsx'
-import Rating from '@material-ui/lab/Rating';
-import {HalfRating} from './HoverRating.jsx'
+// import setValue from '../cmps/HoverRating.jsx'
+// import Rating from '@material-ui/lab/Rating';
+// import {HalfRating} from './HoverRating.jsx'
 
 class _GigAddReview extends Component {
 
@@ -16,7 +16,6 @@ class _GigAddReview extends Component {
         gig: null,
         user: null,
         review: '',
-        value: '0',
     }
 
     componentDidMount() {
@@ -46,23 +45,20 @@ class _GigAddReview extends Component {
         })
     }
     handleRate = (rate) => {
-        console.log("rate", rate)
         const { review } = { ...this.state }
         review.rating = rate
-        console.log("review", review)
         this.setState({ review })
     }
 
     onAddReview = () => {
         const { review } = this.state
         const { gig } = this.state
-        const { user } = this.state
         let reviewToAdd = { ...review }
+        // todo: add purchase date when we have data
         const purchasedAt = "purchase At"
         const date = Date.now()
         reviewToAdd.createdAt = date
         reviewToAdd.purchasedAt = purchasedAt
-        console.log("reviewToAdd", reviewToAdd)
         gig.reviews.unshift(reviewToAdd)
         this.props.updateGig(gig).then(() => {
             this.setState({review:null})
@@ -70,26 +66,13 @@ class _GigAddReview extends Component {
         })
 
     }
-    logValue = (value) => {
-        console.log('value!!!', value);
-    }
-
-    onSave = (ev, value) => {
-        console.log("value", value)
-        console.log("ev", ev)
-        console.log('hey');
-    }
 
     render() {
-        const { user, gig, review } = this.state
-        console.log("render , review", review)
-        console.log("render , review", review)
-        // console.log("render , value", value)
+        const {review } = this.state
         if(!review) return <div></div>
         return (
             <>
-                 <HoverRating className="stars-rate" handleRate={this.handleRate} newHover={this.state.value} />
-                {/* <Rating name="half-rating" defaultValue={2.5} precision={0.5} handleRate={this.handleRate}  /> */}
+                 <HoverRating className="stars-rate" handleRate={this.handleRate} val={review.rating} />
                 <textarea rows="6" cols="60" type="text" name="txt" placeholder='enter review...' value={review.txt}  onChange={this.handleChange} required />
                 <button className="add-review" onClick={() => this.onAddReview()}>Add Review</button>
             </>

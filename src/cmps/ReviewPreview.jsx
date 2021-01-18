@@ -4,6 +4,8 @@ import IconButton from '@material-ui/core/IconButton';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 import StarRateIcon from '@material-ui/icons/StarRate';
+// var FontAwesome = require('react-fontawesome')
+
 
 import {
     IconFlagTR,
@@ -18,6 +20,7 @@ export function ReviewPreview({ review, user }) {
     if (!review || !review.by) return <div></div>
     return (
         <>
+        
             <section className="review-card flex">
                 <div>
                     <div className="avatar-container">
@@ -37,9 +40,12 @@ export function ReviewPreview({ review, user }) {
                     <p>{review.txt}</p>
                     <p className="published-at">Published 20 Days Ago</p>
                     <div className="icons flex">
-                        <ThumbUpAltIcon className="helpful" />
+                        {/* <ThumbUpAltIcon className="helpful" /> */}
+                        <i class="far fa-thumbs-up"></i>
+
                         <span>Helpful</span>
-                        <ThumbDownIcon className="thumb-down" />
+                        {/* <ThumbDownIcon className="thumb-down" /> */}
+                        <i class="far fa-thumbs-down"></i>
                         <span>Thumb Down</span>
                     </div>
                 </div>

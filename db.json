@@ -26,12 +26,12 @@
       "owner": {
         "_id": "u101",
         "fullname": "David Abu Puki",
-        "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+        "imgUrl": "/img/img1.jpg"
       },
       "imgUrls": [
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/157536980/original/d7411fe67086a183a78e81950000dde20ee5b689/create-3d-model-and-render-your-sketch-or-2d-plan.jpg",
-        "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/d91dab5d590614ec0c36060db1ba1c67-1606486728/Stationery%202/do-a-minimalist-logo-business-card-and-stationery.jpg",
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/156162379/original/9087a56206fcc647d954fbe88c28fc61d673b936/create-luxury-geometric-patterns-and-background-for-you.png"
+        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/156162379/original/9087a56206fcc647d954fbe88c28fc61d673b936/create-luxury-geometric-patterns-and-background-for-you.png",
+        "slide1.jpg",
+        "slide2.jpg"
       ],
       "reviews": [
         {
@@ -43,12 +43,12 @@
           "seller": {
             "_id": "u101",
             "fullname": "David Abu Puki",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           },
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer M",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -60,12 +60,12 @@
           "seller": {
             "_id": "u101",
             "fullname": "David Abu Puki",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           },
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer M",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -82,7 +82,7 @@
           "by": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           }
         },
         {
@@ -94,12 +94,12 @@
           "seller": {
             "_id": "u101",
             "fullname": "David Abu Puki",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           },
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         }
       ]
@@ -107,7 +107,7 @@
     {
       "_id": "s102",
       "title": "Our Studio will do a minimalist logo, business card and stationery.",
-      "desc": "Hello We are a team of professionals who have experience in the field of Logo Design, Business card and other stationery designs for more than 9 years..",
+      "desc": "Hello We are a team of professionals who have experience in the field of Logo Design, Business card and other stationery designs for more than 9 years..\n\n",
       "tags": [
         "minimalist",
         "stationery",
@@ -130,7 +130,7 @@
       "owner": {
         "_id": "u102",
         "fullname": "user2",
-        "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+        "imgUrl": "/img/img2.jpg"
       },
       "imgUrls": [
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/133456867/original/35fab1d0bbf2bc7bf1a53d53f7559ab2931cd225/do-a-minimalist-logo-business-card-and-stationery.jpg",
@@ -140,74 +140,6 @@
       ],
       "reviews": [
         {
-          "id": "aPSCK",
-          "rating": 3.5,
-          "txt": "I think this gig is 3.5 stars worth!",
-          "createdAt": 1610904870446,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u102",
-            "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-          },
-          "by": {
-            "_id": "h8mW4vL",
-            "fullname": "Ori Weinstock",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
-          }
-        },
-        {
-          "id": "2Q0ld",
-          "rating": 3.5,
-          "txt": "asdasd",
-          "createdAt": 1610895519572,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u102",
-            "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610876025/wpgoyraiknoyhwbsknum.jpg"
-          }
-        },
-        {
-          "id": "NBjR2",
-          "rating": "",
-          "txt": "She is amazing and super talented. Delivered everything on time and exactly as I had asked. I will definitely be using this service again! Thank you :)\n\n",
-          "createdAt": 1610887009016,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u102",
-            "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610876025/wpgoyraiknoyhwbsknum.jpg"
-          }
-        },
-        {
-          "id": "HgiPh",
-          "rating": 4,
-          "txt": "The seller was great to work with. The final art was even better than I imagined it to be. 10/10 recommend.",
-          "createdAt": 1610885928441,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u102",
-            "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610876025/wpgoyraiknoyhwbsknum.jpg"
-          }
-        },
-        {
           "id": "qCMpz",
           "rating": "",
           "txt": "She is amazing and super talented. Delivered everything on time and exactly as I had asked. I will definitely be using this service again! Thank you :)",
@@ -216,12 +148,12 @@
           "seller": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           },
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -233,12 +165,12 @@
           "seller": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           },
           "by": {
             "_id": "C4c3QKw",
             "fullname": "dor itzhak",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -250,12 +182,12 @@
           "seller": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           },
           "by": {
             "_id": "C4c3QKw",
             "fullname": "dor itzhak",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -267,12 +199,12 @@
           "seller": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           },
           "by": {
             "_id": "C4c3QKw",
             "fullname": "dor itzhak",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -284,12 +216,12 @@
           "seller": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           },
           "by": {
             "_id": "C4c3QKw",
             "fullname": "dor itzhak",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -301,12 +233,12 @@
           "seller": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           },
           "by": {
             "_id": "WuaYmXW",
             "fullname": "amit",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -318,12 +250,12 @@
           "seller": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           },
           "by": {
             "_id": "WuaYmXW",
             "fullname": "amit",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -335,12 +267,12 @@
           "seller": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           },
           "by": {
             "_id": "WuaYmXW",
             "fullname": "amit",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -352,12 +284,12 @@
           "seller": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           },
           "by": {
             "_id": "WuaYmXW",
             "fullname": "amit",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -369,12 +301,12 @@
           "seller": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           },
           "by": {
             "_id": "WuaYmXW",
             "fullname": "amit",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -386,12 +318,12 @@
           "seller": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           },
           "by": {
             "_id": "vdv5JG9",
             "fullname": "dave Bay",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -403,12 +335,12 @@
           "seller": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           },
           "by": {
             "_id": "vdv5JG9",
             "fullname": "dave Bay",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -420,7 +352,7 @@
           "seller": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           },
           "by": {
             "_id": "lfE5k8E",
@@ -442,7 +374,7 @@
           "by": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           }
         }
       ],
@@ -486,6 +418,23 @@
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/a050fa8f59b4b759dee3f680bd784650-1596362953/47710_Space%20Turtles%20Studios_Logo_K_07/do-professional-and-unique-logo-design.jpg"
       ],
       "reviews": [
+        {
+          "id": "WlN1Z",
+          "rating": 3.5,
+          "txt": "nice seller, will buy for him again for sure!",
+          "createdAt": 1610902001121,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "_id": "u103",
+            "fullname": "user3",
+            "imgUrl": "/img/img3.jpg"
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610895097/xhuw1faknzednct0gsmf.jpg"
+          }
+        },
         {
           "id": "m8MLx",
           "rating": "",
@@ -585,7 +534,7 @@
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -602,7 +551,7 @@
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -619,7 +568,7 @@
           "by": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           }
         },
         {
@@ -636,7 +585,7 @@
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         }
       ]
@@ -676,23 +625,6 @@
       ],
       "reviews": [
         {
-          "id": "NtUt7",
-          "rating": 4.5,
-          "txt": "I really like this gig. I know this is a fake review, but it Is a real person typing it",
-          "createdAt": 1610890194410,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u103",
-            "fullname": "user3",
-            "imgUrl": "/img/img3.jpg"
-          },
-          "by": {
-            "_id": "h8mW4vL",
-            "fullname": "Ori Weinstock!",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
-          }
-        },
-        {
           "id": "iPtyM",
           "rating": "",
           "txt": "She communicated clearly and service is as described. Very professional and catered to my needs. I'm very happy with my design would definitely buy again!",
@@ -706,7 +638,7 @@
           "by": {
             "_id": "C4c3QKw",
             "fullname": "dor itzhak",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -723,7 +655,7 @@
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer M",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -740,7 +672,7 @@
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer M",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -774,7 +706,7 @@
           "by": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           }
         },
         {
@@ -791,7 +723,7 @@
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         }
       ]
@@ -829,40 +761,6 @@
       ],
       "reviews": [
         {
-          "id": "ccruW",
-          "rating": 2.5,
-          "txt": "thank you so much ill buy from you again for sure!!",
-          "createdAt": 1610873717750,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u103",
-            "fullname": "user3",
-            "imgUrl": "/img/img3.jpg"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-          }
-        },
-        {
-          "id": "ccruW",
-          "rating": 5,
-          "txt": "thank you so much ill buy from you again for sure!",
-          "createdAt": 1610873709484,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u103",
-            "fullname": "user3",
-            "imgUrl": "/img/img3.jpg"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-          }
-        },
-        {
           "id": "madeId",
           "rating": 5,
           "txt": "Thank you for a job well done. You exceeded my expectations. I will definitely work with this designer in the future.",
@@ -876,7 +774,7 @@
           "by": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           }
         },
         {
@@ -910,7 +808,7 @@
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         }
       ]
@@ -948,31 +846,6 @@
       ],
       "reviews": [
         {
-          "createdAt": 1610884643177,
-          "purchasedAt": "purchase At"
-        },
-        {
-          "createdAt": 1610884642906,
-          "purchasedAt": "purchase At"
-        },
-        {
-          "id": "3eFnN",
-          "rating": 4.5,
-          "txt": "",
-          "createdAt": 1610884618831,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u103",
-            "fullname": "user3",
-            "imgUrl": "/img/img3.jpg"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610876025/wpgoyraiknoyhwbsknum.jpg"
-          }
-        },
-        {
           "id": "XemoY",
           "rating": "",
           "txt": "Great. Sometimes our own idea's aren't the best. Having someone who does this regularly made this so much easier for me. I felt so bad with every revision I sent ( I can be picky)...but he was so patient, I never felt like I was bothering him. Super professional. Will definitely use again. Thank you.",
@@ -986,7 +859,7 @@
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -1003,7 +876,7 @@
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -1020,7 +893,7 @@
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -1037,7 +910,7 @@
           "by": {
             "_id": "C4c3QKw",
             "fullname": "dor itzhak",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -1054,7 +927,7 @@
           "by": {
             "_id": "mmB3X5P",
             "fullname": "suzan hertz",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -1071,7 +944,7 @@
           "by": {
             "_id": "vdv5JG9",
             "fullname": "dave Bay",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -1088,7 +961,7 @@
           "by": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           }
         },
         {
@@ -1105,7 +978,7 @@
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         }
       ]
@@ -1141,10 +1014,10 @@
       ],
       "reviews": [
         {
-          "id": "pCck5",
-          "rating": 5,
-          "txt": "Just a wonderful person to work with. Very professional and talented. I will very much work with him again.",
-          "createdAt": 1610876054356,
+          "id": "EG582",
+          "rating": 3,
+          "txt": "Trying the star rating ",
+          "createdAt": 1610892642409,
           "purchasedAt": "purchase At",
           "seller": {
             "_id": "u103",
@@ -1152,9 +1025,9 @@
             "imgUrl": "/img/img3.jpg"
           },
           "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610876025/wpgoyraiknoyhwbsknum.jpg"
+            "_id": "N-SYLBg",
+            "fullname": "David Kuperstein",
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -1171,7 +1044,7 @@
           "by": {
             "_id": "mmB3X5P",
             "fullname": "suzan hertz",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -1188,7 +1061,7 @@
           "by": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           }
         },
         {
@@ -1329,7 +1202,7 @@
           "by": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           }
         }
       ]
@@ -1365,40 +1238,6 @@
       ],
       "reviews": [
         {
-          "id": "IqnMn",
-          "rating": 5,
-          "txt": "Awesome job again! This is my second time using him. I will continue to use him whenever I need work done.",
-          "createdAt": 1610875791056,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u103",
-            "fullname": "user3",
-            "imgUrl": "/img/img3.jpg"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-          }
-        },
-        {
-          "id": "A6HaK",
-          "rating": 4.5,
-          "txt": "Did a phenomenal job. I received five great concepts within 24 hours. One of the best designers I have ever worked with.\n\n",
-          "createdAt": 1610875774959,
-          "purchasedAt": "purchase At",
-          "seller": {
-            "_id": "u103",
-            "fullname": "user3",
-            "imgUrl": "/img/img3.jpg"
-          },
-          "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
-          }
-        },
-        {
           "id": "Ph4kD",
           "rating": "",
           "txt": "best seler ever!\n",
@@ -1412,7 +1251,7 @@
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -1429,7 +1268,7 @@
           "by": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           }
         },
         {
@@ -1446,7 +1285,7 @@
           "by": {
             "_id": "lfE5k8E",
             "fullname": "tomer maruani",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         }
       ]
@@ -1498,7 +1337,7 @@
           "by": {
             "_id": "mmB3X5P",
             "fullname": "suzan hertz",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -1515,7 +1354,7 @@
           "by": {
             "_id": "vdv5JG9",
             "fullname": "dave Bay",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -1532,95 +1371,291 @@
           "by": {
             "_id": "u102",
             "fullname": "user2",
-            "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+            "imgUrl": "/img/img2.jpg"
           }
         }
       ]
     },
     {
-      "title": "I will add feature rendering to anyone",
-      "desc": "Adding features with 2-way data binding can be a pain in the behind. My man DUDI will do the job for you",
-      "tags": [],
+      "title": "gig title",
+      "desc": "gig desc",
+      "tags": [
+        "minimalist"
+      ],
       "packages": [
         {
           "type": "basic",
-          "desc": "Form managment",
-          "price": 25,
-          "revisionCount": 2,
-          "deliveryDays": -3,
+          "desc": "package desc",
+          "price": 1,
+          "revisionCount": 1,
+          "deliveryDays": 1,
+          "features": []
+        }
+      ],
+      "owner": {
+        "username": "admin",
+        "password": "admin",
+        "fullname": "tomer maruani",
+        "imgUrl": "/img/img1.jpg",
+        "isAdmin": false,
+        "_id": "lfE5k8E",
+        "viewedGigIds": [
+          "s101",
+          "s103",
+          "3D6of6v",
+          "s110",
+          "s104",
+          "s102"
+        ]
+      },
+      "imgUrls": [
+        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
+      ],
+      "reviews": [
+        {
+          "id": "Ew87q",
+          "rating": "",
+          "txt": "tomer",
+          "createdAt": 1610734880396,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "username": "admin",
+            "password": "admin",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg",
+            "isAdmin": false,
+            "_id": "lfE5k8E",
+            "viewedGigIds": [
+              "s101",
+              "s103",
+              "3D6of6v",
+              "s110",
+              "s104",
+              "s102"
+            ]
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
+        },
+        {
+          "id": "Ew87q",
+          "rating": "",
+          "txt": "ori\n",
+          "createdAt": 1610734888728,
+          "purchasedAt": "purchase At",
+          "seller": {
+            "username": "admin",
+            "password": "admin",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg",
+            "isAdmin": false,
+            "_id": "lfE5k8E",
+            "viewedGigIds": [
+              "s101",
+              "s103",
+              "3D6of6v",
+              "s110",
+              "s104",
+              "s102"
+            ]
+          },
+          "by": {
+            "_id": "lfE5k8E",
+            "fullname": "tomer maruani",
+            "imgUrl": "/img/img1.jpg"
+          }
+        }
+      ],
+      "_id": "G91yvoB"
+    },
+    {
+      "title": "gig2",
+      "desc": "gig2",
+      "tags": [
+        "minimalist"
+      ],
+      "packages": [
+        {
+          "type": "basic",
+          "desc": "df",
+          "price": 50,
+          "revisionCount": 1,
+          "deliveryDays": 5,
           "features": [
-            "feat 1",
-            "feat 2",
-            "feat 3",
-            "binding"
+            "Include Environment",
+            "3D Modeling"
           ]
         }
       ],
       "owner": {
-        "username": "oriw",
-        "password": "123456",
-        "fullname": "Ori Weinstock!",
-        "_id": "h8mW4vL",
+        "username": "admin",
+        "password": "admin",
+        "fullname": "tomer maruani",
+        "imgUrl": "/img/img1.jpg",
+        "isAdmin": false,
+        "_id": "lfE5k8E",
         "viewedGigIds": [
-          "s105",
-          "s107",
+          "s101",
           "s103",
+          "3D6of6v",
+          "s110",
+          "s104",
           "s102",
-          "s110"
-        ],
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
+          "G91yvoB"
+        ]
       },
       "imgUrls": [
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
       ],
       "reviews": [],
-      "_id": "QBZuluo"
+      "features": [
+        "Include Environment",
+        "3D Modeling"
+      ],
+      "_id": "nn8c8we"
     },
     {
-      "title": "We will make a great form",
-      "desc": "With data binding solutions",
-      "tags": [],
+      "title": "sadfsadf",
+      "desc": "\n\nI loved working with Gabtoanone! She delivered exactly what I was looking for and I look forward to working with her again in the future.I loved working with Gabtoanone! She delivered exactly what I was looking for and I look forward to working with her again in the future.I loved working with Gabtoanone! She delivered exactly what I was looking for and I look forward to working with her again in the future.I loved working with Gabtoanone! She delivered exactly what I was looking for and I look forward to working with her again in the future.I loved working with Gabtoanone! She delivered exactly what I was looking for and I look forward to working with her again in the future.I loved working with Gabtoanone! She delivered exactly what I was looking for and I look forward to working with her again in the future.",
+      "tags": [
+        "flat"
+      ],
       "packages": [
         {
           "type": "basic",
-          "desc": "Form design",
-          "price": 30,
+          "desc": "asdfasf",
+          "price": 5,
           "revisionCount": 2,
           "deliveryDays": 3,
           "features": [
-            "Dudi",
-            "Ori",
-            ""
+            "Include Environment"
           ]
         }
       ],
       "owner": {
-        "username": "oriw",
-        "password": "123456",
-        "fullname": "Ori Weinstock!",
-        "_id": "h8mW4vL",
+        "username": "admin",
+        "password": "admin",
+        "fullname": "tomer maruani",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610747938/pxi2tc9frwpqudq12dk6.jpg",
+        "isAdmin": false,
+        "_id": "lfE5k8E",
         "viewedGigIds": [
-          "s105",
-          "s107",
+          "s101",
           "s103",
-          "s102",
+          "3D6of6v",
           "s110",
-          "QBZuluo"
-        ],
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
+          "s104",
+          "s102",
+          "G91yvoB",
+          "nn8c8we",
+          "s106",
+          "s107",
+          "s109",
+          "s108",
+          "s105"
+        ]
       },
       "imgUrls": [
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
       ],
       "reviews": [],
-      "_id": "4nqpfji"
+      "features": [
+        "Include Environment"
+      ],
+      "_id": "YLUCCS2"
+    },
+    {
+      "title": "hjghjhgj",
+      "desc": "fdssfdsf",
+      "tags": [
+        "minimalist"
+      ],
+      "packages": [
+        {
+          "type": "basic",
+          "desc": "fdgdfgdfg",
+          "price": 2,
+          "revisionCount": 2,
+          "deliveryDays": 1,
+          "features": []
+        }
+      ],
+      "owner": {
+        "username": "admin",
+        "password": "admin",
+        "fullname": "tomer maruani",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610747938/pxi2tc9frwpqudq12dk6.jpg",
+        "isAdmin": false,
+        "_id": "lfE5k8E",
+        "viewedGigIds": [
+          "s101",
+          "s103",
+          "3D6of6v",
+          "s110",
+          "s104",
+          "s102",
+          "G91yvoB",
+          "nn8c8we",
+          "s106",
+          "s107",
+          "s109",
+          "s108",
+          "s105",
+          "YLUCCS2"
+        ]
+      },
+      "imgUrls": [
+        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
+      ],
+      "reviews": [],
+      "_id": "BTlid80"
+    },
+    {
+      "title": "sadsd",
+      "desc": "fsdfsdf",
+      "tags": [
+        "modern"
+      ],
+      "packages": [
+        {
+          "type": "basic",
+          "desc": "dsfsdf",
+          "price": 5,
+          "revisionCount": 5,
+          "deliveryDays": 5,
+          "features": []
+        }
+      ],
+      "owner": {
+        "username": "itay",
+        "password": "123456",
+        "fullname": "itay! ",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610902039/ohq9wwecxmuzrs8xrd8t.jpg",
+        "isAdmin": false,
+        "_id": "tvDPqKx",
+        "viewedGigIds": [
+          "s105",
+          "s109"
+        ]
+      },
+      "imgUrls": [
+        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
+      ],
+      "reviews": [],
+      "features": [
+        "Include Environment"
+      ],
+      "_id": "nvDftH4"
     }
   ],
   "user": [
     {
       "_id": "u101",
       "fullname": "User 1",
-      "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
       "username": "user1",
       "password": "secret"
@@ -1628,7 +1663,7 @@
     {
       "_id": "u102",
       "fullname": "User 2",
-      "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "imgUrl": "/img/img2.jpg",
       "isAdmin": false,
       "username": "user2",
       "password": "secret",
@@ -1672,14 +1707,14 @@
         "s103",
         "s109",
         "s109",
-        "s109"
+        "s109",
+        "nn8c8we"
       ],
       "favoriteIds": [
         "s102",
-        "s101",
-        "s109",
         "s103",
-        "s104"
+        "s101",
+        "s109"
       ]
     },
     {
@@ -1688,24 +1723,19 @@
       "fullname": "Ori Weinstock",
       "_id": "h8mW4vL",
       "viewedGigIds": [
-        "s102",
-        "s104",
-        "s108",
-        "s103"
-      ],
-      "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg",
-      "favoriteIds": [
-        "s106",
+        "s105",
         "s107",
+        "s103",
         "s102",
-        "s104"
-      ]
+        "s110"
+      ],
+      "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
     },
     {
       "username": "123456",
       "password": "admin",
       "fullname": "admin",
-      "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
       "_id": "wXRfYat"
     },
@@ -1713,7 +1743,7 @@
       "username": "admin",
       "password": "admin",
       "fullname": "tomer maruani",
-      "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610876025/wpgoyraiknoyhwbsknum.jpg",
+      "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
       "_id": "lfE5k8E",
       "viewedGigIds": [
@@ -1731,16 +1761,14 @@
         "s109",
         "s105",
         "nvDftH4",
-        "YLUCCS2",
-        "dC_DH0G",
-        "BTlid80"
+        "YLUCCS2"
       ]
     },
     {
       "username": "puki",
       "password": "baba",
       "fullname": "Puki Ben David",
-      "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
       "_id": "q2bgD8N"
     },
@@ -1748,7 +1776,7 @@
       "username": "baba",
       "password": "baba",
       "fullname": "Baba",
-      "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
       "_id": "HKG9eC5"
     },
@@ -1756,7 +1784,7 @@
       "username": "eyal",
       "password": "123456",
       "fullname": "eyal",
-      "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
       "_id": "6Bw5T68"
     },
@@ -1764,7 +1792,7 @@
       "username": "lzygmr",
       "password": "123456",
       "fullname": "dave Bay",
-      "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
       "_id": "vdv5JG9",
       "viewedGigIds": [
@@ -1784,7 +1812,7 @@
       "username": "susan_pinksky",
       "password": "123456",
       "fullname": "suzan hertz",
-      "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
       "_id": "mmB3X5P",
       "viewedGigIds": [
@@ -1805,7 +1833,7 @@
       "username": "weiss",
       "password": "123456",
       "fullname": "amit",
-      "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
       "_id": "WuaYmXW",
       "viewedGigIds": [
@@ -1818,7 +1846,7 @@
       "username": "dori17",
       "password": "123456",
       "fullname": "dor itzhak",
-      "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
       "_id": "C4c3QKw",
       "viewedGigIds": [
@@ -1832,13 +1860,31 @@
       "username": "avital",
       "password": "123456",
       "fullname": "David Kuperstein",
-      "imgUrl": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
       "_id": "N-SYLBg",
       "favoriteIds": [
         "s104",
+        "s102"
+      ],
+      "viewedGigIds": [
         "s110",
-        "YLUCCS2"
+        "s108",
+        "s106",
+        "nn8c8we"
+      ]
+    },
+    {
+      "username": "itay",
+      "password": "123456",
+      "fullname": "itay! ",
+      "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610902039/ohq9wwecxmuzrs8xrd8t.jpg",
+      "isAdmin": false,
+      "_id": "tvDPqKx",
+      "viewedGigIds": [
+        "s105",
+        "s109",
+        "9FJux2p"
       ]
     }
   ]

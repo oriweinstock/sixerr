@@ -53,6 +53,3 @@ export class HoverRating extends React.Component {
 
   }
 }
-
-
-

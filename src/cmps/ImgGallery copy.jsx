@@ -1,6 +1,5 @@
 import React from 'react'
 import FullscreenIcon from '@material-ui/icons/Fullscreen';
-import { CarouselImgs } from '../cmps/Carousel.jsx'
 
 
 export function ImgGallery({ gig, numImgChoosen, onChooseImg, onToggleImgLightbox }) {
@@ -9,10 +8,8 @@ export function ImgGallery({ gig, numImgChoosen, onChooseImg, onToggleImgLightbo
             <div className="img-details-conatiner" onClick={() => onToggleImgLightbox()}>
                 <FullscreenIcon className="full-screen-icon" />
                 <img src={gig.imgUrls[numImgChoosen]} />
-                {/* CarouselImgs has a little bit css in gig Details */}
-                {/* <CarouselImgs imgUrls={gig.imgUrls} /> */}
             </div>
-            <div className="main-imgs-container">
+            <div>
                 <div className="imgs-gallery-container flex">
                     {gig.imgUrls.map((imgUrl, idx) => {
                         var className = "img-gallery"

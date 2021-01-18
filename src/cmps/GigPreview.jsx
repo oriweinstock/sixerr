@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import Favorite from '@material-ui/icons/Favorite';
 import StarIcon from '@material-ui/icons/Star';
 
-export function GigPreview({ gig, onUserViewGig, onFavoriteToggle, user }) {
+export function GigPreview({ gig, onUserViewGig, onFavoriteToggle, user, removeViewed }) {
     return (
         <li onClick={() => { onUserViewGig(gig._id) }} className="preview-item mrg-bottom">
             <div className="preview-inner">
@@ -28,6 +28,7 @@ export function GigPreview({ gig, onUserViewGig, onFavoriteToggle, user }) {
                 </Link>
                 <div className="preview-bottom flex space-between">
                     <Favorite onClick={(ev) => { onFavoriteToggle(ev, gig._id) }} className={`heart pointer ${_isLiked(user?.favoriteIds, gig._id)}`} />
+                    {removeViewed && <button onClick={()=>{removeViewed(gig._id)}}>delete viewed</button>}
                     <h3>Starting at <span>${gig.packages[0].price}</span></h3>
                 </div>
             </div>
