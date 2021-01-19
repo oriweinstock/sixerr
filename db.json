@@ -1,4 +1,179 @@
 {
+  "order": [
+    {
+      "_id": "o1225",
+      "createdAt": 9898989,
+      "buyer": "mini-user",
+      "totalPrice": 20,
+      "currency": "USD",
+      "gig": {
+        "_id": "v102",
+        "title": "I will turn your childrens book into a video with narration",
+        "imgUrl": ""
+      },
+      "status": "pending"
+    },
+    {
+      "createdAt": 1610995968412,
+      "buyer": {
+        "_id": "N-SYLBg",
+        "fullname": "David Kuperstein",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610993521/eiepdglksjpb0sjtcedi.jpg"
+      },
+      "totalPrice": 20,
+      "currency": "USD",
+      "gig": {
+        "_id": "s106",
+        "title": "I will do book cover design, book cover! ",
+        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/0a3d13aa1adc87db7368f20332b690e0-1609985633/2/design-the-ultimate-createspace-cover-and-kindle-book-cover.jpg"
+      },
+      "status": "pending",
+      "_id": "AJdav0v"
+    },
+    {
+      "createdAt": 1610996111302,
+      "buyer": {
+        "_id": "N-SYLBg",
+        "fullname": "David Kuperstein",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610993521/eiepdglksjpb0sjtcedi.jpg"
+      },
+      "totalPrice": 10,
+      "currency": "USD",
+      "gig": {
+        "_id": "s107",
+        "title": "I will design interior, redering every space in your house",
+        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/e8cfa66347588df9974bf45b90878c3f-1605225818/5/design-every-space-in-your-house.jpg"
+      },
+      "status": "pending",
+      "_id": "8PxF3-J"
+    },
+    {
+      "createdAt": 1611002732189,
+      "buyer": {
+        "_id": "N-SYLBg",
+        "fullname": "David Kuperstein",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610993521/eiepdglksjpb0sjtcedi.jpg"
+      },
+      "totalPrice": 10,
+      "currency": "USD",
+      "gig": {
+        "sellerFullname": "user3",
+        "_id": "s103",
+        "title": "I will design 2 modern minimalist logo design! 3 Days Delivery",
+        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/22527722/original/3b5876ffb817872561d9eba6788dced76cb78224/do-professional-and-unique-logo-design.jpg"
+      },
+      "status": "pending",
+      "_id": "lyWGfOa"
+    },
+    {
+      "createdAt": 1611002749152,
+      "buyer": {
+        "_id": "N-SYLBg",
+        "fullname": "David Kuperstein",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610993521/eiepdglksjpb0sjtcedi.jpg"
+      },
+      "totalPrice": 20,
+      "currency": "USD",
+      "gig": {
+        "sellerFullname": "user3",
+        "_id": "s106",
+        "title": "I will do book cover design, book cover! ",
+        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/0a3d13aa1adc87db7368f20332b690e0-1609985633/2/design-the-ultimate-createspace-cover-and-kindle-book-cover.jpg"
+      },
+      "status": "pending",
+      "_id": "YG5wUwN"
+    },
+    {
+      "createdAt": 1611003139996,
+      "buyer": {
+        "_id": "N-SYLBg",
+        "fullname": "David Kuperstein",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610993521/eiepdglksjpb0sjtcedi.jpg"
+      },
+      "totalPrice": 50,
+      "currency": "USD",
+      "gig": {
+        "sellerFullname": "tomer maruani",
+        "_id": "nn8c8we",
+        "title": "gig2",
+        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
+      },
+      "status": "pending",
+      "_id": "ye3Ffs8"
+    },
+    {
+      "createdAt": 1611003374916,
+      "buyer": {
+        "_id": "N-SYLBg",
+        "fullname": "David Kuperstein",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610993521/eiepdglksjpb0sjtcedi.jpg"
+      },
+      "totalPrice": 10,
+      "currency": "USD",
+      "gig": {
+        "sellerFullname": "user3",
+        "_id": "s107",
+        "title": "I will design interior, redering every space in your house",
+        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/e8cfa66347588df9974bf45b90878c3f-1605225818/5/design-every-space-in-your-house.jpg"
+      },
+      "status": "pending",
+      "_id": "FbacUq-"
+    },
+    {
+      "createdAt": 1611004236960,
+      "buyer": {
+        "_id": "N-SYLBg",
+        "fullname": "David Kuperstein",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610993521/eiepdglksjpb0sjtcedi.jpg"
+      },
+      "totalPrice": 40,
+      "currency": "USD",
+      "gig": {
+        "sellerFullname": "user3",
+        "_id": "s108",
+        "title": "I will design your custom album cover art",
+        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/152151716/original/bad3092487d7ebd55a1323c8114851ca679d8e5d/design-your-custom-album-cover-art.jpg"
+      },
+      "status": "pending",
+      "_id": "aMHohmD"
+    },
+    {
+      "createdAt": 1611005073259,
+      "buyer": {
+        "_id": "olqIJNj",
+        "fullname": "David K",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610716855/bl7kn3ezcnvttmwoeu6y.jpg"
+      },
+      "totalPrice": 50,
+      "currency": "USD",
+      "gig": {
+        "sellerFullname": "David Kuperstein",
+        "_id": "s101",
+        "title": "I will turn your children's book into a video with narration",
+        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/156162379/original/9087a56206fcc647d954fbe88c28fc61d673b936/create-luxury-geometric-patterns-and-background-for-you.png"
+      },
+      "status": "completed",
+      "_id": "UOfcGbf"
+    },
+    {
+      "createdAt": 1611005087417,
+      "buyer": {
+        "_id": "olqIJNj",
+        "fullname": "David K",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610716855/bl7kn3ezcnvttmwoeu6y.jpg"
+      },
+      "totalPrice": 12,
+      "currency": "USD",
+      "gig": {
+        "sellerFullname": "David Kuperstein",
+        "_id": "s109",
+        "title": "I will create architectural 3d modeling and do rendering..",
+        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/157536980/original/597962570815e37e613ed5471b6e03ba5e05e26f/create-3d-model-and-render-your-sketch-or-2d-plan.jpg"
+      },
+      "status": "completed",
+      "_id": "MD0VSwE"
+    }
+  ],
   "gig": [
     {
       "_id": "s101",
@@ -24,9 +199,9 @@
         }
       ],
       "owner": {
-        "_id": "u101",
-        "fullname": "David Abu Puki",
-        "imgUrl": "/img/img1.jpg"
+        "_id": "N-SYLBg",
+        "fullname": "David Kuperstein",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610993521/eiepdglksjpb0sjtcedi.jpg"
       },
       "imgUrls": [
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/156162379/original/9087a56206fcc647d954fbe88c28fc61d673b936/create-luxury-geometric-patterns-and-background-for-you.png",
@@ -58,9 +233,9 @@
           "createdAt": 1610788848543,
           "purchasedAt": "purchase At",
           "seller": {
-            "_id": "u101",
-            "fullname": "David Abu Puki",
-            "imgUrl": "/img/img1.jpg"
+            "_id": "N-SYLBg",
+            "fullname": "David Kuperstein",
+            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610993521/eiepdglksjpb0sjtcedi.jpg"
           },
           "by": {
             "_id": "lfE5k8E",
@@ -419,10 +594,10 @@
       ],
       "reviews": [
         {
-          "id": "WlN1Z",
+          "id": "C155t",
           "rating": 3.5,
-          "txt": "nice seller, will buy for him again for sure!",
-          "createdAt": 1610902001121,
+          "txt": "nice to order ",
+          "createdAt": 1610972597122,
           "purchasedAt": "purchase At",
           "seller": {
             "_id": "u103",
@@ -430,9 +605,9 @@
             "imgUrl": "/img/img3.jpg"
           },
           "by": {
-            "_id": "lfE5k8E",
-            "fullname": "tomer maruani",
-            "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610895097/xhuw1faknzednct0gsmf.jpg"
+            "_id": "N-SYLBg",
+            "fullname": "David Kuperstein",
+            "imgUrl": "/img/img1.jpg"
           }
         },
         {
@@ -1228,9 +1403,9 @@
         }
       ],
       "owner": {
-        "_id": "u103",
-        "fullname": "user3",
-        "imgUrl": "/img/img3.jpg"
+        "_id": "N-SYLBg",
+        "fullname": "David Kuperstein",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610993521/eiepdglksjpb0sjtcedi.jpg"
       },
       "imgUrls": [
         "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/157536980/original/597962570815e37e613ed5471b6e03ba5e05e26f/create-3d-model-and-render-your-sketch-or-2d-plan.jpg",
@@ -1742,21 +1917,10 @@
       "fullname": "David K",
       "_id": "olqIJNj",
       "viewedGigIds": [
-        "s102",
-        "s108",
-        "s104",
-        "s109",
         "s101",
         "s107",
-        "s103",
         "s106",
-        "s102",
-        "s104",
-        "s103",
-        "s109",
-        "s109",
-        "s109",
-        "nn8c8we"
+        "s109"
       ],
       "favoriteIds": [
         "s102",
@@ -1913,7 +2077,6 @@
       "username": "avital",
       "password": "123456",
       "fullname": "David Kuperstein",
-      "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
       "_id": "N-SYLBg",
       "favoriteIds": [
@@ -1921,24 +2084,19 @@
         "s102"
       ],
       "viewedGigIds": [
-        "s110",
         "s108",
+        "s103",
         "s106",
-        "nn8c8we"
-      ]
-    },
-    {
-      "username": "itay",
-      "password": "123456",
-      "fullname": "itay! ",
-      "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610902039/ohq9wwecxmuzrs8xrd8t.jpg",
-      "isAdmin": false,
-      "_id": "tvDPqKx",
-      "viewedGigIds": [
-        "s105",
+        "s107",
         "s109",
-        "9FJux2p"
-      ]
+        "s101",
+        "nn8c8we"
+      ],
+      "myGigIds": [
+        "s101",
+        "s109"
+      ],
+      "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610993521/eiepdglksjpb0sjtcedi.jpg"
     }
   ]
 }

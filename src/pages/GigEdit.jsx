@@ -23,14 +23,12 @@ class _GigEdit extends Component {
     componentDidMount() {
         const gig = this.createGigTemplate()
         this.setState({ gig })
-        // todo call createGig from service and then setState
     }
 
     onSaveNewGig = (ev) => {
         ev.preventDefault()
         const { gig } = this.state
         this.props.addGig(gig).then(() => {
-            console.log('one line before history');
             this.props.history.push('/gig');
         })
     }
@@ -72,15 +70,16 @@ class _GigEdit extends Component {
             }
         })
     }
+    
     handlePackagesInputs = ({ target }) => {
         const field = target.name
         let value;
         if (target.type === 'number') value = +target.value
         else value = target.value
         const { packages } = this.state.gig
-        const pack = { ...packages[0] }
-        pack[field] = value
-        packages[0] = { ...pack }
+        const package = { ...packages[0] }
+        package[field] = value
+        packages[0] = { ...package }
         this.setState(prevState => {
             return {
                 gig: {
