@@ -4,6 +4,7 @@ import { GigAddReview } from '../cmps/GigAddReview.jsx'
 import { PackageList } from '../cmps/PackageList.jsx'
 import { SellerPreview } from '../cmps/SellerPreview'
 import { addGig, loadGig, updateGig, removeGig } from '../store/actions/gigActions'
+import { orderGig } from '../store/actions/orderActions'
 import StarRateIcon from '@material-ui/icons/StarRate';
 import SideBar from '../cmps/SideBar.jsx'
 import ReviewList from '../cmps/ReviewList.jsx'
@@ -140,6 +141,10 @@ class _GigDetails extends React.Component {
         })
     }
 
+    onGigOrder = () => {
+        this.props.orderGig(this.state.gig, this.props.user)
+    }
+
 
 
     render() {
@@ -189,7 +194,7 @@ class _GigDetails extends React.Component {
                         {user && <GigAddReview gig={gig} user={user} onAddReview={this.onAddReview} />}
                         <ReviewList gig={gig} user={user} />
                     </div>
-                    <SideBar gig={gig} />
+                    <SideBar gig={gig} onGigOrder={this.onGigOrder} />
                 </section>
             </>
         )
@@ -207,6 +212,7 @@ const mapDispatchToProps = {
     addGig,
     updateGig,
     removeGig,
+    orderGig
 }
 
 export const GigDetails = connect(mapStateToProps, mapDispatchToProps)(_GigDetails)
