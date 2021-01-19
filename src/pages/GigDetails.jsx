@@ -17,6 +17,10 @@ import { SellerOverview } from '../cmps/SellerOverview'
 import { ReviewStats } from '../cmps/ReviewStats.jsx'
 import { ShortReviewList } from '../cmps/ShortReviewList.jsx'
 import { ImgGallery } from '../cmps/ImgGallery.jsx'
+// import Carousel from 'react-material-ui-carousel'
+// import {Paper} from '@material-ui/core'
+import { CarouselImgs } from '../cmps/Carousel.jsx'
+
 
 
 class _GigDetails extends React.Component {
@@ -152,15 +156,19 @@ class _GigDetails extends React.Component {
         const { user } = this.props
         const { currImg } = this.state
         const htmlStars = this.getAvgRate()
+        if (gig) console.log('gig.imgUrls', gig.imgUrls);
         if (!gig) return <div>Loading...</div>
         return (
             <>
+                <div className="main-layout">
+                    <CarouselImgs imgUrls={gig.imgUrls} />
+                </div>
                 <div className="add-remove-btn-container main-layout">
                     <Link className="edit-link" to={`/gig/edit/${gig._id}`}><button>Edit Gig</button></Link>
                     {user && <Link to='/gig/edit'  ><button className="add-btn">Add Gig</button></Link>}
                     <button className="remove-btn" onClick={this.onRemoveGig}>Remove Gig</button>
                 </div>
-                {isLightBoxOpen && <GigImgLightBox onToggleImgLightbox={this.onToggleImgLightbox} currImg={currImg} onNextPageLightBox={this.onNextPageLightBox} onPrevPageLightBox={this.onPrevPageLightBox} />}
+                {isLightBoxOpen && <GigImgLightBox gig={gig} onToggleImgLightbox={this.onToggleImgLightbox} currImg={currImg} onNextPageLightBox={this.onNextPageLightBox} onPrevPageLightBox={this.onPrevPageLightBox} />}
                 <section className="gig-details main-layout">
                     <div className="main-details">
                         <EditableElement field={'title'} type={'h1'} text={gig.title} save={this.onSave} editable={isTitleEditble} />
@@ -174,11 +182,6 @@ class _GigDetails extends React.Component {
                                     <ShortReviewList gig={gig} reviews={gig.reviews} />
                                 </div>
                             </div>
-                            {/* <div className="slide flex" style={{ transform: `translateX(${this.state.currShortReviewIdx * 616.188}px)` }}>
-                                <div className="list">
-                                    <ShortReviewList gig={gig} reviews={gig.reviews} />
-                                </div>
-                            </div> */}
                             {gig.reviews.length > 1 && <ChevronLeftIcon className="slide-left-review" onClick={() => this.onNextShortReview()} />}
                             {gig.reviews.length > 1 && <ChevronRightIcon className="slide-right-review" onClick={() => this.onPrevShortReview()} />}
                         </div>}

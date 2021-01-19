@@ -1,10 +1,11 @@
-import { loadGigs, addGig } from '../store/actions/gigActions.js';
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+
 import { gigService } from '../services/gigService.js'
-import { utilService } from '../services/utilService.js'
-
-
+import { cloudinaryService } from '../services/cloudinaryService.js';
+import { addGig } from '../store/actions/gigActions.js';
+import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
+import ClearIcon from '@material-ui/icons/Clear';
 
 class _GigEdit extends Component {
 
@@ -21,27 +22,14 @@ class _GigEdit extends Component {
     featureIdx = 0
 
     componentDidMount() {
-        const gigId = this.props.match.params.gigId
-        console.log("componentDidMount , gigId", gigId)
-        if (gigId) {
-            gigService.getById(gigId).then((gig) => {
-                console.log("gigService.getById , gig", gig)
-                this.setState({ gig })
-            })
-        }
-        else {
-            // const packages = this.createTemplatePackages()
-            const gig = this.createGigTemplate()
-            console.log("componentDidMount , gig", gig)
-            this.setState({ gig })
-            // todo call createGig from service and then setState
-        }
+        const gig = this.createGigTemplate()
+        this.setState({ gig })
+        // todo call createGig from service and then setState
     }
+
     onSaveNewGig = (ev) => {
-        console.log('on saved gig func :)');
         ev.preventDefault()
         const { gig } = this.state
-        console.log("gig on saved gig!", gig)
         this.props.addGig(gig).then(() => {
             console.log('one line before history');
             this.props.history.push('/gig');
@@ -54,16 +42,20 @@ class _GigEdit extends Component {
 
     createGigTemplate = () => {
         const { user } = this.props
-        console.log("user", user)
         const packages = this.createTemplatePackages()
-        const defaultImgUrl = "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
         const gig = {
             title: "",
             desc: "",
             tags: [],
             packages,
             owner: user,
-            imgUrls: [defaultImgUrl],
+            imgUrls: ["https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/157536980/original/d7411fe67086a183a78e81950000dde20ee5b689/create-3d-model-and-render-your-sketch-or-2d-plan.jpg",
+                "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/d91dab5d590614ec0c36060db1ba1c67-1606486728/Stationery%202/do-a-minimalist-logo-business-card-and-stationery.jpg",
+                "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/d91dab5d590614ec0c36060db1ba1c67-1606486728/Stationery%202/do-a-minimalist-logo-business-card-and-stationery.jpg",
+                "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/d91dab5d590614ec0c36060db1ba1c67-1606486728/Stationery%202/do-a-minimalist-logo-business-card-and-stationery.jpg",
+                "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/d91dab5d590614ec0c36060db1ba1c67-1606486728/Stationery%202/do-a-minimalist-logo-business-card-and-stationery.jpg",
+                "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/d91dab5d590614ec0c36060db1ba1c67-1606486728/Stationery%202/do-a-minimalist-logo-business-card-and-stationery.jpg",
+                "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/156162379/original/9087a56206fcc647d954fbe88c28fc61d673b936/create-luxury-geometric-patterns-and-background-for-you.png"],
             reviews: []
         }
         return gig
@@ -71,13 +63,11 @@ class _GigEdit extends Component {
 
     handleInput = ({ target }) => {
         const field = target.name
-        console.log("field", field)
         let value = target.value
         if (field === 'tags') {
             const tags = [value]
             value = tags
         }
-        console.log("value", value)
         this.setState(prevState => {
             return {
                 gig: {
@@ -96,7 +86,6 @@ class _GigEdit extends Component {
         const pack = { ...packages[0] }
         pack[field] = value
         packages[0] = { ...pack }
-        console.log("packages", packages)
         this.setState(prevState => {
             return {
                 gig: {
@@ -108,24 +97,24 @@ class _GigEdit extends Component {
         })
     }
 
-    handlePackageFeatures = (value) => {
-        console.log("value", value)
-        const { gig } = this.state
-        const { features } = gig.packages[0]
-        console.log("features", features)
-        if (!features.includes(value)) {
-            features.push(value)
-            gig.features = features
-            console.log("gig", gig)
-            this.setState(prevState => {
-                return {
-                    gig: {
-                        ...prevState.gig,
-                    }
-                }
-            })
-        }
-    }
+    // handlePackageFeatures = (value) => {
+    //     console.log("value", value)
+    //     const { gig } = this.state
+    //     const { features } = gig.packages[0]
+    //     console.log("features", features)
+    //     if (!features.includes(value)) {
+    //         features.push(value)
+    //         gig.features = features
+    //         console.log("gig", gig)
+    //         this.setState(prevState => {
+    //             return {
+    //                 gig: {
+    //                     ...prevState.gig,
+    //                 }
+    //             }
+    //         })
+    //     }
+    // }
 
     addFeature = (ev) => {
         ev.preventDefault()
@@ -154,11 +143,28 @@ class _GigEdit extends Component {
         })
     }
 
+
+    uploadImage = async (ev) => {
+        const data = await cloudinaryService.uploadImg(ev)
+        console.log(data)
+        const newUrl = data.secure_url;
+        const imgUrls = [...this.state.gig.imgUrls, newUrl]
+        this.setState(prevState => {
+            return {
+                gig: {
+                    ...prevState.gig,
+                    imgUrls
+                },
+            }
+        })
+    }
+
+    removeImage = (ev) => {
+        console.log('removing image:', ev)
+    }
     render() {
         const { gig } = this.state
-        const { packages } = gig
-        console.log("render!!!! , gig", gig)
-        console.log("render , packages", packages)
+
         if (!gig.packages) return <div>loading</div>
         return (
             <section className="gig-edit main-layout">
@@ -200,10 +206,25 @@ class _GigEdit extends Component {
                         value={gig.packages[0].revisionCount} onChange={this.handlePackagesInputs} required autoComplete="off" />
                     <input type="number" name="deliveryDays" placeholder="Days to deliver..."
                         value={gig.packages[0].deliveryDays} onChange={this.handlePackagesInputs} required autoComplete="off" />
-                    {/* <div>
-                        <button type="button" onClick={() => this.handlePackageFeatures("3D Modeling")}>3D Modeling</button>
-                        <button type="button" onClick={() => this.handlePackageFeatures("Include Environment")}>Include Environment</button>
-                    </div> */}
+
+                    <div className="gig-edit-images">
+                        <div className="flex">
+                            <label className="img-upload pointer" htmlFor="uploadImg">
+                                <input onChange={this.uploadImage} type="file" id="uploadImg" hidden />
+                                <PhotoCameraIcon className="camera-icon" />
+                            </label>
+                            <h4>Add some photos</h4>
+                        </div>
+                        <ul className="clean-list flex">
+                            {gig.imgUrls.map(url => {
+                                return <li key={url} className="pointer">
+                                    <img src={url} alt="" />
+                                    <ClearIcon className="clear-icon" onClick={this.removeImage} />
+                                </li>
+                            })}
+                        </ul>
+                    </div>
+
                 </form>
                 <div>
                     <button className="gig-save" onClick={this.onSaveNewGig} >Save</button>

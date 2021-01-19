@@ -4,19 +4,38 @@
     padding: 0.7rem 1rem;
     border: rem(1px) solid #e4e5e7;
     border-radius: 4px;
-    p{
+    p {
         max-width: rem(460px);
         margin: 0;
         margin-block-end: 0.32rem;
     }
-    .country-icon{
-        margin-inline-end:0.5rem ;
+    .content {
+        .country-icon {
+            margin-inline-start: rem(12px);
+            font-size: rem(20px);
+            padding-block-start:rem(4.9px) ;
+        }
+        margin-block-start: 0.6rem;
+        .country-name {
+            padding-inline-start: rem(8px);
+            font-weight: 600;
+            color: #95979d; //remove this color
+            font: 400 16px/24px "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif; //remove this font later
+        }
+        h6 {
+            margin: 0;
+            font-size: rem(16px);
+        }
+        span {
+            color:$starsColor;
+            font-weight: 700;
+            font-size: rem(20px);
+        }
+        .star{
+            padding-block-end: rem(1.5px);
+        }
     }
     .avatar-container {
-        padding-inline-end:0.3rem ;
+        padding-inline-end: 0.3rem;
     }
-}
-
-.content {
-    margin-block-start: 0.6rem;
 }

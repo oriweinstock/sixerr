@@ -110,3 +110,26 @@
         margin-inline-end:1rem ;
     }
 }
+
+
+
+//if we would like to use varousel here later :)
+.Carousel-root-1{
+    .Carousel-indicators-2 {
+        // display: none;
+    }
+    .Carousel-buttonWrapper-5{
+        button{
+            background-color:hidden ;
+            width: rem(15px);
+            background-color: none !important;
+            border-radius: none !important;
+            span{
+                width: 20px;
+            }
+            .MuiSvgIcon-root{
+                // color: black;
+            }
+        } 
+    }
+}

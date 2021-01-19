@@ -1,5 +1,6 @@
 import Avatar from '@material-ui/core/Avatar';
-import StarRateIcon from '@material-ui/icons/StarRate';
+import Rating from '@material-ui/lab/Rating';
+
 
 
 export function SellerPreview({ seller }) {
@@ -17,10 +18,8 @@ export function SellerPreview({ seller }) {
                         <span>{seller.fullname}</span>
                         <span>Creator of AR filters</span>
                         <div className="stars-container flex justify-center align center">
-                            <StarRateIcon className="star" />
-                            <StarRateIcon className="star" />
-                            <StarRateIcon className="star" />
-                            <StarRateIcon className="star" />
+                            {/*todo: add real stars from data later */}
+                            <Rating name="disabled" value={5} disabled />
                             <span>5.0 (40 reviews)</span>
                         </div>
                         <button>Contact Me</button>

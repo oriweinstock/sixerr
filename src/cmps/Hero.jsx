@@ -89,7 +89,7 @@ class _Hero extends React.Component {
         return (
             <>
                 <section className="hero">
-                    <h1 className="main-layout">Find the perfect {whoAmI} for your perfect business</h1>
+                    <h1 className="main-layout">Find the perfect <span>freelance</span> for your business</h1>
                     <img src={hero.imgUrl} alt="" />
                     <div className="hero-snippet">
                         <div className="stars">

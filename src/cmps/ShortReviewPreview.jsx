@@ -17,9 +17,9 @@ export function ShortReviewPreview({reviews, idx }) {
                 </div>
                 <div>
                     <div className="content flex">
-                        <h5>{reviews[idx].by.fullname}</h5>
+                        <h6>{reviews[idx].by.fullname}</h6>
                         <IconFlagUS className="country-icon" />
-                        <span>united states</span>
+                        <span className="country-name">united states</span>
                         <StarRateIcon className="star" />
                         <span>{reviews[idx].rating}</span>
                     </div>

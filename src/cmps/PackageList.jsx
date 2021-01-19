@@ -4,9 +4,9 @@ export function PackageList({ packages }) {
     console.log("PackageList , packages", packages)
     return (
         <>
-        <div className="package-list">
+        <section className="package-list">
             {packages.map(pack => <PackagePreview pack={pack}></PackagePreview>)}
-        </div>
+        </section>
         </>
     )
 }
