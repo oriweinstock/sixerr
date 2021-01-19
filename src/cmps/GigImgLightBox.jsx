@@ -2,7 +2,7 @@ import React from 'react'
 import CloseIcon from '@material-ui/icons/Close';
 import SkipNextIcon from '@material-ui/icons/SkipNext';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
-import { CarouselImgs } from '../cmps/Carousel.jsx'
+// import { CarouselImgs } from '../cmps/Carousel.jsx'
 
 export function GigImgLightBox({ currImg, onToggleImgLightbox, onNextPageLightBox, onPrevPageLightBox, gig }) {
     return (

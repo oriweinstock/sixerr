@@ -1,22 +1,24 @@
 .gig-details {
     font: 400 16px/24px "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: grid;
-    grid-template-columns: 8fr 2fr;
+    grid-template-columns: 6fr 4fr;
     color: $darkColor;
     padding: 1rem;
     .main-details {
         margin-right: 20px;
-        width: 80%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         > * {
-            width: 100%;
             outline: none;
         }
         h1 {
             text-align: left;
-            font-size: 28px;
+            font-size: rem(28px);
             line-height: 130%;
+            padding: 0;
+            padding-block-end: rem(16px);
+            margin: 0;
         }
     }
     ::selection {
@@ -26,17 +28,40 @@
 
 .desc {
     margin-block-start: 1rem;
+    margin-block-end: rem(64px);
+    h2 {
+        margin: 0;
+        font-size: rem(20px);
+        line-height: rem(28px);
+        padding-block-end: rem(25px);
+    }
     h4 {
         display: flex;
         flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
     }
 }
 
 .short-review-header {
-    margin-block-start: 3.5rem;
-    font-size: 20px;
-    line-height: 28px;
-    padding-bottom: 25px;
+    align-items: center;
+    h2 {
+        margin: 0;
+        font-size: 20px;
+        line-height: 28px;
+        padding-bottom: 25px;
+    }
+    a {
+        min-width: rem(110px);
+        color: #1dbf73;
+        font-weight: 400;
+        padding-block-end: rem(23px);
+        text-decoration: none;
+        background: transparent;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .seller-stars-container {
@@ -50,40 +75,26 @@
     }
 }
 
-.cut-text {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 42rem;
-    white-space: nowrap;
-}
-
-.text-with-dots {
-    display: block;
-    max-width: 98%;
-    white-space: nowrap;
-    overflow: hidden !important;
-    text-overflow: ellipsis;
-}
-
 .short-review-main {
+    border: rem(1px) solid #e4e5e7;
+    border-radius: 4px;
     position: relative;
-    // width: 750px;
+    width: rem(630px);
     overflow: hidden;
-    .slide{
-        max-width: rem(750px);
-    }
     .slide-left-review {
         position: absolute;
         left: -8px;
         top: 50%;
+        z-index: 2;
     }
     .slide-right-review {
         position: absolute;
         right: -7.8px;
         top: 50%;
+
+        z-index: 2;
     }
     .slide {
-        max-width: 35.9rem;
         transition: ease 0.8s;
         .short-review {
             position: relative;
@@ -92,44 +103,157 @@
                 margin-inline-end: 0.5rem;
             }
             .avatar-container {
-                margin-block-start: 1rem;
-                margin-inline-end: 0.7rem;
-            }
-            span {
-                margin-block-end: 1rem;
+                margin-inline-end: 1.2rem;
             }
         }
     }
 }
 
 .add-remove-btn-container {
-    // margin-inline-start:1rem ;
     button {
         @include defButton;
-        width:250px;
-        margin-inline-end:1rem ;
+        width: 250px;
+        margin-inline-end: 1rem;
     }
 }
 
-
-
-//if we would like to use varousel here later :)
-.Carousel-root-1{
-    .Carousel-indicators-2 {
-        // display: none;
+@media screen and (max-width: $wideLayout) {
+    .gig-details {
+        padding: rem(50px);
+        grid-template-columns: 1fr;
+        .main-details {
+            width: 100%;
+        }
     }
-    .Carousel-buttonWrapper-5{
-        button{
-            background-color:hidden ;
-            width: rem(15px);
-            background-color: none !important;
-            border-radius: none !important;
-            span{
-                width: 20px;
+}
+
+@media screen and(max-width:1200px) {
+    .gig-details {
+        .short-review-header {
+            display: flex;
+            h2 {
+                padding-inline-end: rem(70px);
             }
-            .MuiSvgIcon-root{
-                // color: black;
+        }
+        .short-review-header {
+            margin-block-start: rem(40px);
+        }
+        .short-review-main {
+            display: none;
+        }
+        .carousle-container{
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
-        } 
+        }
+    }
+}
+
+@media screen and(max-width:$wideLayout) {
+    .gig-details {
+        padding: 4rem !important;
+        .sidebar {
+            background-color: white;
+            width: 100% !important;
+            margin-inline-end: 0 !important;
+            margin-inline-start: 0 !important;
+            border: 1px solid #cacaca;
+        }
+        .MuiAvatar-root {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and(max-width:$mediumLayout) {
+    .gig-details {
+        padding: rem(100px);
+        grid-template-columns: 1fr;
+        .main-details {
+            width: 90%;
+        }
+        .Carousel-root-13 {
+            width: 100%;
+        }
+        .short-review-main {
+            width: 30rem;
+        }
+        .short-content {
+            width: 30rem !important;
+        }
+        padding-inline-end: rem(3px) !important;
+        padding-inline-start: none !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .gig-details {
+        padding: none !important;
+        .short-review-main {
+            width: 25rem;
+        }
+        .short-content {
+            width: 25rem;
+        }
+    }
+}
+
+@media screen and (max-width: $smallLayout) {
+    .gig-details {
+        padding: rem(30px);
+        padding: rem(10px) !important;
+        .main-details {
+            width: 100%;
+            textarea {
+                width: rem(387px);
+                margin-bottom: 1px;
+                border: $border;
+            }
+            .add-review {
+                width: rem(388px);
+            }
+        }
+        .reviews {
+            .review-card {
+                width: rem(388px);
+            }
+        }
+        .short-review-main {
+            width: 20rem;
+        }
+        .short-content {
+            width: 20rem;
+        }
+        .imgs-gallery-container {
+            width: 20rem;
+        }
+        .main-details {
+            padding: 35px !important;
+            .content-edit-wrapper {
+                width: rem(388px);
+            }
+            .carousle-container {
+                width: rem(388px);
+            }
+        }
+        .responsive-side-bar-container {
+            width: rem(388px);
+        }
+        .short-review-header {
+            flex-direction: column;
+            align-items: center;
+            width: rem(388px);
+            h2 {
+                padding-inline-end: 0 !important;
+            }
+        }
+        .seller-stats {
+            width: rem(388px);
+        }
+    }
+    .seller-overview{
+        font-size: rem(15.5px);
     }
 }

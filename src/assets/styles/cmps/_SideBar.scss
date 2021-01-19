@@ -1,15 +1,17 @@
 .sidebar {
-    padding: 1.25rem;
     background-color: white;
-    min-width: 400px;
+    width: 90%;
+    margin-left: 20px;
+    // min-width: 400px;
+    // max-width: rem(416px);
     // max-height: 380px;
     height: -webkit-fill-available;
-    padding-block-end:3rem ;
     position: sticky;
     border: 1px solid rgb(202, 202, 202);
     top: 3rem;
     h3 {
-        font-size: 16px;
+        font-size: rem(16px);
+        margin: 0;
         margin-block-end: 2rem;
     }
     .delivery {
@@ -22,52 +24,110 @@
         margin-block-start: 0.6rem;
         color: #62646a;
     }
-}
-
-.btns-container {
-    margin-block-start: 2rem;
-    .continue {
-        background-color: $boldColor;
-        color: $lightColor;
-        width: 100%;
-        display: inline-block;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        position: relative;
-        padding: 12px 24px;
-        border: 1px solid transparent;
-        border-radius: 4px;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 100%;
-        text-decoration: none;
-        text-align: center;
-        cursor: pointer;
-        -webkit-transition: 0.15s ease-in-out;
-        -o-transition: 0.15s ease-in-out;
-        transition: 0.15s ease-in-out;
-        &:hover{
-            background-color: $darkColor;
+    .package-content {
+        // background-color: chartreuse;
+        padding-block-start: rem(20px);
+        padding-inline-start: rem(24px);
+        padding-inline-end: rem(24px);
+        padding-block-end: rem(20px);
+    }
+    .btns-container {
+        margin-block-start: 2rem;
+        .continue {
+            background-color: $boldColor;
+            color: $lightColor;
+            width: 100%;
+            display: inline-block;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            position: relative;
+            padding: 12px 24px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            -webkit-transition: 0.15s ease-in-out;
+            -o-transition: 0.15s ease-in-out;
+            transition: 0.15s ease-in-out;
+            &:hover {
+                background-color: $darkColor;
+            }
         }
     }
-}
 
-.icons {
-    font-size: 14px;
-    color: rgb(97, 97, 97);
-    font-weight: bold;
-    .clock {
-        align-self: center;
+    .icons {
+        font-size: rem(14px);
+        color: rgb(97, 97, 97);
+        font-weight: bold;
+        .clock {
+            align-self: center;
+            // padding-inline-end: rem(8px);
+            margin-inline-end: rem(8px);
+        }
+        .loop {
+            align-self: center;
+            // padding-inline-end: rem(8px);
+            margin-inline-end: rem(8px);
+        }
+    }
+
+    .include {
         margin-inline-end: 0.5rem;
-    }
-    .loop {
-        align-self: center;
-        margin-inline-end: 0.3rem;
+        color: #1dbf73;
+        // font-size: rem(24px);
     }
 }
 
-.include {
-    margin-inline-end: 0.5rem;
-    color: #1dbf73;
-    font-weight: bold !important;
-}
+// .btns-container {
+//     margin-block-start: 2rem;
+//     .continue {
+//         background-color: $boldColor;
+//         color: $lightColor;
+//         width: 100%;
+//         display: inline-block;
+//         -webkit-box-sizing: border-box;
+//         box-sizing: border-box;
+//         position: relative;
+//         padding: 12px 24px;
+//         border: 1px solid transparent;
+//         border-radius: 4px;
+//         font-weight: 600;
+//         font-size: 16px;
+//         line-height: 100%;
+//         text-decoration: none;
+//         text-align: center;
+//         cursor: pointer;
+//         -webkit-transition: 0.15s ease-in-out;
+//         -o-transition: 0.15s ease-in-out;
+//         transition: 0.15s ease-in-out;
+//         &:hover{
+//             background-color: $darkColor;
+//         }
+//     }
+// }
+
+// .icons {
+//     font-size: rem(14px);
+//     color: rgb(97, 97, 97);
+//     font-weight: bold;
+//     .clock {
+//         align-self: center;
+//         // padding-inline-end: rem(8px);
+//         margin-inline-end: rem(8px);
+//     }
+//     .loop {
+//         align-self: center;
+//         // padding-inline-end: rem(8px);
+//         margin-inline-end: rem(8px);
+//     }
+// }
+
+// .include {
+//     margin-inline-end: 0.5rem;
+//     color: #1dbf73;
+//     // font-size: rem(24px);
+// }

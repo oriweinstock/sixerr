@@ -2,12 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { utilService } from '../services/utilService.js'
 import { addGig, updateGig, loadGig } from '../store/actions/gigActions'
-import StarIcon from '@material-ui/icons/Star';
-// import Rating from '../cmps/HoverRating.jsx'
 import { HoverRating } from '../cmps/HoverRating.jsx'
-// import setValue from '../cmps/HoverRating.jsx'
-// import Rating from '@material-ui/lab/Rating';
-// import {HalfRating} from './HoverRating.jsx'
+
 
 class _GigAddReview extends Component {
 

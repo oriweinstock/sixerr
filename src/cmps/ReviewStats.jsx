@@ -3,7 +3,6 @@ import StarRateIcon from '@material-ui/icons/StarRate';
 
 export function ReviewStats() {
     //calculate real stats later!!
-    const avg = `${200}px`
     return (
         <section className="review-stats-container" >
             <div className="flex space-between">

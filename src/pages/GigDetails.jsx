@@ -1,26 +1,23 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { GigAddReview } from '../cmps/GigAddReview.jsx'
-import { PackageList } from '../cmps/PackageList.jsx'
+// import { PackageList } from '../cmps/PackageList.jsx'
 import { SellerPreview } from '../cmps/SellerPreview'
 import { addGig, loadGig, updateGig, removeGig } from '../store/actions/gigActions'
 import StarRateIcon from '@material-ui/icons/StarRate';
 import SideBar from '../cmps/SideBar.jsx'
 import ReviewList from '../cmps/ReviewList.jsx'
 import { GigImgLightBox } from '../cmps/GigImgLightBox';
-import { Link } from 'react-router-dom'
 import { EditableElement } from '../cmps/EditableElement.jsx'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import { SellerOverview } from '../cmps/SellerOverview'
-import { ReviewStats } from '../cmps/ReviewStats.jsx'
+// import { ReviewStats } from '../cmps/ReviewStats.jsx'
 import { ShortReviewList } from '../cmps/ShortReviewList.jsx'
 import { ImgGallery } from '../cmps/ImgGallery.jsx'
-// import Carousel from 'react-material-ui-carousel'
-// import {Paper} from '@material-ui/core'
 import { CarouselImgs } from '../cmps/Carousel.jsx'
-
-
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+// import DetailsNav from '../cmps/DetailsNav.jsx'
 
 class _GigDetails extends React.Component {
 
@@ -32,7 +29,9 @@ class _GigDetails extends React.Component {
         numImgChoosen: 0,
         isLightBoxOpen: false,
         currImg: "",
-        currShortReviewIdx: 0
+        currShortReviewIdx: 0,
+        shortReviewSize: 39.4189375,
+        isFullSizeScreen: true,
     }
 
     async componentDidMount() {
@@ -41,8 +40,20 @@ class _GigDetails extends React.Component {
         const { numImgChoosen } = this.state
         const currImg = gig.imgUrls[numImgChoosen]
         if (currImg) this.setState({ gig, currImg })
+        this.onSetSizes()
         this.setState({ gig })
+    }
 
+    onSetSizes = () => {
+        let isFullSizeScreen = true;
+        let shortReviewSize;
+        const windowWitdh = window.innerWidth
+        if (windowWitdh > 1200) shortReviewSize = 39.4189375;
+        if (windowWitdh < 1200 && windowWitdh >= 1040) shortReviewSize = 39.4189375
+        if (windowWitdh < 1040 && windowWitdh >= 860) shortReviewSize = 45
+        if (windowWitdh < 860) shortReviewSize = 30
+        if (windowWitdh <= 1040) isFullSizeScreen = false
+        this.setState({ shortReviewSize, isFullSizeScreen })
     }
 
     onToggleImgLightbox = () => {
@@ -80,7 +91,7 @@ class _GigDetails extends React.Component {
     onNextShortReview = () => {
         let { currShortReviewIdx } = this.state
         const { reviews } = this.state.gig
-        if (currShortReviewIdx == 0) currShortReviewIdx = -reviews.length
+        if (currShortReviewIdx === 0) currShortReviewIdx = -reviews.length
         currShortReviewIdx++
         this.setState({ currShortReviewIdx })
     }
@@ -147,53 +158,60 @@ class _GigDetails extends React.Component {
 
 
     render() {
-        const { gig, numImgChoosen, isTitleEditble, isGigOwner, isDescEditble, isLightBoxOpen } = this.state
+        const { gig, numImgChoosen, isTitleEditble, isGigOwner, isDescEditble, isLightBoxOpen, isFullSizeScreen, shortReviewSize } = this.state
         const { user } = this.props
         const { currImg } = this.state
         const htmlStars = this.getAvgRate()
-        if (gig) console.log('gig.imgUrls', gig.imgUrls);
         if (!gig) return <div>Loading...</div>
         return (
             <>
-                <div className="main-layout">
+                {/* <div className="main-layout">
                     <CarouselImgs imgUrls={gig.imgUrls} />
-                </div>
-                <div className="add-remove-btn-container main-layout">
+                </div> */}
+                {/* <div className="add-remove-btn-container main-layout">
                     <Link className="edit-link" to={`/gig/edit/${gig._id}`}><button>Edit Gig</button></Link>
                     {user && <Link to='/gig/edit'  ><button className="add-btn">Add Gig</button></Link>}
                     <button className="remove-btn" onClick={this.onRemoveGig}>Remove Gig</button>
-                </div>
+                </div> */}
                 {isLightBoxOpen && <GigImgLightBox gig={gig} onToggleImgLightbox={this.onToggleImgLightbox} currImg={currImg} onNextPageLightBox={this.onNextPageLightBox} onPrevPageLightBox={this.onPrevPageLightBox} />}
-                <section className="gig-details main-layout">
-                    <div className="main-details">
-                        <EditableElement field={'title'} type={'h1'} text={gig.title} save={this.onSave} editable={isTitleEditble} />
-                        {isTitleEditble && <button onClick={this.onEdit}>Save</button>}
-                        <SellerOverview gig={gig} htmlStars={htmlStars} />
-                        <ImgGallery gig={gig} numImgChoosen={numImgChoosen} onChooseImg={this.onChooseImg} onToggleImgLightbox={this.onToggleImgLightbox} />
-                        <h2 className="short-review-header">What people loved about this seller</h2>
-                        {gig.reviews && <div className="short-review-main">
-                            <div className="slide flex" style={{ transform: `translateX(${this.state.currShortReviewIdx * 38.381275}rem)` }}>
-                                <div className="list">
-                                    <ShortReviewList gig={gig} reviews={gig.reviews} />
+                <div className="details-wrapper main-layout">
+                    <section className="gig-details main-layout">
+                        <div className="main-details">
+                            <EditableElement field={'title'} type={'h1'} text={gig.title} save={this.onSave} editable={isTitleEditble} />
+                            {isTitleEditble && <button onClick={this.onEdit}>Save</button>}
+                            <SellerOverview gig={gig} htmlStars={htmlStars} />
+                            {!isFullSizeScreen && <div className="carousle-container" >
+                                <CarouselImgs imgUrls={gig.imgUrls} />
+                                <h1></h1>
+                            </div>}
+                            {isFullSizeScreen && <ImgGallery gig={gig} numImgChoosen={numImgChoosen} onChooseImg={this.onChooseImg} onToggleImgLightbox={this.onToggleImgLightbox} />}
+                            <div className="responsive-side-bar-container">
+                                {!isFullSizeScreen && <SideBar gig={gig} />}
+                            </div>
+                            <div className="short-review-header flex space-between">
+                                <h2 >What people loved about this seller</h2>
+                                <AnchorLink href='#reviews'>See all reviews</AnchorLink>
+                            </div>
+                            {gig.reviews && <div className="short-review-main">
+                                <ShortReviewList shortReviewSize={shortReviewSize} currShortReviewIdx={this.state.currShortReviewIdx} gig={gig} reviews={gig.reviews} />
+                                {gig.reviews.length > 1 && <ChevronLeftIcon className="slide-left-review" onClick={() => this.onNextShortReview()} />}
+                                {gig.reviews.length > 1 && <ChevronRightIcon className="slide-right-review" onClick={() => this.onPrevShortReview()} />}
+                            </div>}
+                            <div id="description" className="desc">
+                                <h2>About This Gig</h2>
+                                <div className="about flex">
+                                    {isGigOwner && <EditableElement className="gig-desc" field={'desc'} type={'h4'} text={gig.desc} save={this.onSave} editable={isDescEditble} />}
                                 </div>
                             </div>
-                            {gig.reviews.length > 1 && <ChevronLeftIcon className="slide-left-review" onClick={() => this.onNextShortReview()} />}
-                            {gig.reviews.length > 1 && <ChevronRightIcon className="slide-right-review" onClick={() => this.onPrevShortReview()} />}
-                        </div>}
-                        <div className="desc">
-                            <h2>About This Gig</h2>
-                            <div className="about flex">
-                                {isGigOwner && <EditableElement className="gig-desc" field={'desc'} type={'h4'} text={gig.desc} save={this.onSave} editable={isDescEditble} />}
-                            </div>
+                            <SellerPreview seller={gig.owner} />
+                            {/* <PackageList packages={gig.packages} /> */}
+                            {/* <ReviewStats /> */}
+                            {user && <GigAddReview gig={gig} user={user} onAddReview={this.onAddReview} />}
+                            <ReviewList gig={gig} user={user} />
                         </div>
-                        <SellerPreview seller={gig.owner} />
-                        {/* <PackageList packages={gig.packages} /> */}
-                        {/* <ReviewStats /> */}
-                        {user && <GigAddReview gig={gig} user={user} onAddReview={this.onAddReview} />}
-                        <ReviewList gig={gig} user={user} />
-                    </div>
-                    <SideBar gig={gig} />
-                </section>
+                        {isFullSizeScreen && <SideBar gig={gig} />}
+                    </section>
+                </div>
             </>
         )
     }

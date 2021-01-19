@@ -1,7 +1,47 @@
+.about-seller-container {
+    margin-block-end: rem(25px);
+    h2 {
+        margin: 0;
+        padding-block-end: rem(25px);
+        font-size: rem(20px);
+        line-height: rem(28px);
+        padding-inline-end: rem(25px);
+    }
+    .content {
+        padding-inline-start: rem(15px);
+        a {
+            display: block;
+            color: #62646a;
+            font-weight: 700;
+            padding-inline-end: rem(25px);
+        }
+        .stars-container {
+            padding-block-start: rem(5px);
+            align-items: center;
+            svg {
+                margin-inline-end: rem(3px);
+                color: #ffbf00;
+                    font-weight: 700;
+            }
+        }
+        .contact-btn-div{
+            margin-block-start: rem(18px);
+            button {
+                @include defButton;
+                width: 130px;
+                margin-block-start: 0.5rem;
+            }
+        }
+        button{
+            @include defButton;
+
+        }
+    }
+}
+
 .seller-img-container {
-    margin-inline-end: 3rem;
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     img {
         width: 100%;
         height: 100%;
@@ -12,7 +52,7 @@
 
 .seller-stats {
     font-size: 1rem;
-    margin-block-start: 2rem;
+    margin: 0;
     border: 1px solid #dadbdd;
     padding: 1rem;
     .user-stats {
@@ -22,12 +62,11 @@
         }
         border-bottom: 1px solid grey;
     }
-    .bold{
+    .bold {
         display: block;
         padding-top: 4px;
         color: #62646a;
-        // margin: 0;
-        padding-block-start:0 ;
-        padding-block-end:1rem ;
+        padding-block-start: 0;
+        padding-block-end: 1rem;
     }
 }

@@ -1,4 +1,4 @@
-import { loadGigs, addGig } from '../store/actions/gigActions.js';
+import {addGig } from '../store/actions/gigActions.js';
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { gigService } from '../services/gigService.js'
@@ -23,7 +23,6 @@ class _GigEdit extends Component {
         const gigId = this.props.match.params.gigId
         if (gigId) {
             gigService.getById(gigId).then((gig) => {
-                console.log("gigService.getById , gig", gig)
                 this.setState({ gig })
             })
         }
@@ -118,7 +117,7 @@ class _GigEdit extends Component {
         ev.preventDefault()
         const packages = [...this.state.gig.packages]
         const currFeature = ev.target.value
-        if (ev.keyCode == 13) {
+        if (ev.keyCode === 13) {
             packages[0].features[this.featureIdx] = currFeature
             this.setState(prevState => {
                 return {

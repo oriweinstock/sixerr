@@ -1,12 +1,10 @@
 .gig-edit {
-
     margin-top: 20px;
     .gig-save {
         width: 150px;
         margin-bottom: 20px;
-        @include defButton()
+        @include defButton();
     }
-
     form {
         width: 50vw;
 
@@ -16,7 +14,6 @@
         }
 
         .package-features {
-
             ul {
                 margin-inline-start: 20px;
             }
@@ -25,25 +22,26 @@
                 color: $darkColor;
                 font-size: 0.8rem;
                 padding: 5px 8px;
-                border-radius: 0.55em ;
+                border-radius: 0.55em;
                 margin-inline-end: 10px;
                 margin-bottom: 20px;
                 align-self: baseline;
             }
         }
     }
-
-
-    textarea, select, input {
+    textarea,
+    select,
+    input {
         padding: 10px;
         margin-bottom: 20px;
     }
     textarea {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         outline: none;
         resize: none;
     }
-    input, select {
+    input,
+    select {
         margin-bottom: 20px;
         width: 25vw;
     }

@@ -13,6 +13,7 @@
     "material-ui-flags": "^1.2.4",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-contenteditable": "^3.3.5",
     "react-dom": "^17.0.1",
     "react-fontawesome": "^1.7.1",
