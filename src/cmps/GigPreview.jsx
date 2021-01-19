@@ -15,12 +15,14 @@ export function GigPreview({ gig, onUserViewGig, onFavoriteToggle, user, removeV
                     <div className="preview-img">
                         <img src={gig.imgUrls[0]} alt="" />
                     </div>
-                    <Link to="/profile">
-                        <div className="gig-owner">
-                            <p>{gig.owner.fullname}</p>
-                            <p>Level 3 seller</p>
-                        </div>
-                    </Link>
+                </Link>
+                <Link to="/profile">
+                    <div className="gig-owner">
+                        <p>{gig.owner.fullname}</p>
+                        <p>Level 3 seller</p>
+                    </div>
+                </Link>
+                <Link to={`/gig/${gig._id}`}>
                     <div className="preview-title">
                         <h2>{gig.title}</h2>
                     </div>

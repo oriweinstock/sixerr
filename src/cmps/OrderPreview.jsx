@@ -1,5 +1,7 @@
 export function OrderPreview({ order, onOrderStatusChanged }) {
 
+    const isSeller = !!onOrderStatusChanged
+
     return (
         <li className="order-item flex">
             <div className="order-inner">

@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: red;
+    color: $lightColor;
+}
+
 body {
     background-color: $lightColor;
 }
@@ -21,4 +26,18 @@ button {
     // max-width: 1400px;
     max-width: 1200px;
     margin: 0 auto;
+
+    @media screen and (max-width: $wideLayout) {
+        max-width: 960px;
+    }
+    @media screen and (max-width: $mediumLayout) {
+        max-width: 760px;
+    }
+    @media screen and (max-width: $smallLayout) {
+        max-width: 520px;
+    }
+    @media screen and (max-width: $mobileLayout) {
+        max-width: 500px;
+    }
+
 }

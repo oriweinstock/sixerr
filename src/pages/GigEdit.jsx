@@ -226,7 +226,7 @@ class _GigEdit extends Component {
                             value={this.state.currTag} onChange={this.addTag} onKeyUp={this.addTag} />
                         <ul className="clean-list flex">
                             {gig.tags.map(tag => {
-                                if (tag.length > 0) return <li key={tag}>
+                                return <li key={tag}>
                                     {tag}
                                     <ClearIcon className="clear-icon pointer" onClick={() => this.removeTag(tag)} />
 
@@ -249,7 +249,7 @@ class _GigEdit extends Component {
                                 value={this.state.currFeature} onChange={this.addFeature} onKeyUp={this.addFeature} />
                             <ul className="clean-list flex">
                                 {gig.packages[0].features.map(feature => {
-                                    if (feature.length > 0) return <li key={feature}>
+                                    return <li key={feature}>
                                         {feature}
                                         <ClearIcon className="clear-icon pointer" onClick={() => this.removeFeature(feature)} />
 

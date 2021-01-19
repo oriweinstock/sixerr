@@ -1,10 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { GigList } from '../cmps/GigList.jsx';
-import { Login } from './Login.jsx'
 import { loadGigs, setFilter, removeGig } from "../store/actions/gigActions.js";
 import { updateUser } from "../store/actions/userActions.js";
-import { GigStrip } from '../cmps/GigStrip.jsx';
 
 
 class _SixerrApp extends React.Component {
@@ -38,11 +36,10 @@ class _SixerrApp extends React.Component {
         const {user} = this.props
         if (user) console.log('user favorites', user.favoriteIds)
         return (
-            <section className="sixerr-app main-layout">
-                <div className="flex space-around align-center mrg-top mrg-bottom">
-                    {/* <GigFilter /> */}
-                </div>
-                {/* <GigStrip gigs={this.props.gigs} onUserViewGig={this.onUserViewGig} onFavoriteToggle={this.onFavoriteToggle} user={this.props.user} onDelete={this.onDelete} /> */}
+            <section className="sixerr-app">
+                {/* <div className="flex space-around align-center mrg-top mrg-bottom">
+                    <GigFilter />
+                </div> */}
                 <GigList gigs={this.props.gigs} onUserViewGig={this.onUserViewGig} onFavoriteToggle={this.onFavoriteToggle} user={this.props.user} onDelete={this.onDelete} />
             </section>
 
