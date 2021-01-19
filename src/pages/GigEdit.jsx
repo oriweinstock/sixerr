@@ -15,10 +15,12 @@ class _GigEdit extends Component {
             packages: null,
             tags: '',
         },
-        currFeature: ''
+        currFeature: '',
+        currTag: ''
     }
 
     featureIdx = 0
+    tagIdx = 0
 
     componentDidMount() {
         const gig = this.createGigTemplate()
@@ -28,6 +30,8 @@ class _GigEdit extends Component {
     onSaveNewGig = (ev) => {
         ev.preventDefault()
         const { gig } = this.state
+        gig.tags.filter(tag => tag.length < 1)
+        gig.packages[0].features.filter(feature => feature.length < 1)
         this.props.addGig(gig).then(() => {
             this.props.history.push('/gig');
         })
@@ -70,7 +74,7 @@ class _GigEdit extends Component {
             }
         })
     }
-    
+
     handlePackagesInputs = ({ target }) => {
         const field = target.name
         let value;
@@ -99,6 +103,7 @@ class _GigEdit extends Component {
             packages[0].features[this.featureIdx] = currFeature
             this.setState(prevState => {
                 return {
+                    ...prevState,
                     gig: {
                         ...prevState.gig,
                         packages
@@ -124,6 +129,7 @@ class _GigEdit extends Component {
 
         this.setState(prevState => {
             return {
+                ...prevState,
                 gig: {
                     ...prevState.gig,
                     packages
@@ -132,6 +138,46 @@ class _GigEdit extends Component {
         })
     }
 
+    addTag = (ev) => {
+        ev.preventDefault()
+        const { tags } = { ...this.state.gig }
+        const currTag = ev.target.value
+        if (ev.keyCode === 13) {
+            tags[this.tagIdx] = currTag
+            this.setState(prevState => {
+                return {
+                    ...prevState,
+                    gig: {
+                        ...prevState.gig,
+                        tags
+                    },
+                    currTag: ''
+                }
+            })
+            this.tagIdx += 1
+        } else {
+            this.setState(prevState => {
+                return {
+                    ...prevState, currTag
+                }
+            })
+        }
+    }
+
+    removeTag = (tagToRemove) => {
+        const { tags } = this.state.gig
+        const updatedTags = tags.filter(tag => tag !== tagToRemove)
+
+        this.setState(prevState => {
+            return {
+                ...prevState,
+                gig: {
+                    ...prevState.gig,
+                    tags: updatedTags
+                },
+            }
+        })
+    }
 
     uploadImage = async (ev) => {
         const data = await cloudinaryService.uploadImg(ev)
@@ -168,58 +214,68 @@ class _GigEdit extends Component {
         return (
             <section className="gig-edit main-layout">
                 <form className="flex column justify-center">
-                    <h4>Gig title</h4>
-                    <textarea name="title" autoFocus rows="2" cols="60" type="text" placeholder="Enter Gig Title..." value={gig.title} onChange={this.handleInput} required autoComplete="off" />
-                    <h4>Description</h4>
-                    <textarea name="desc" rows="5" cols="60" type="text" placeholder="Enter Gig Desc..." value={gig.desc} onChange={this.handleInput} required autoComplete="off" />
-                    <h4>Add label</h4>
-                    <select onChange={this.handleInput} name="tags" required>
-                        <option value="graphic design">Graphic design</option>
-                        <option value="minimalist">Minimalist</option>
-                        <option value="flat">Flat</option>
-                        <option value="modern">Modern</option>
-                        <option value="book">Book</option>
-                        <option value="logo design">Logo design</option>
-                        <option value="cover">Cover</option>
-                    </select>
-                    <h4>Package</h4>
-                    <textarea name="desc" rows="3" cols="60"
-                        value={gig.packages[0].desc}
-                        type="text" placeholder="Enter package Desc..."
-                        onChange={this.handlePackagesInputs}
-                        required autoComplete="off" />
-                    <h4>Add some package features</h4>
-                    <div className="package-features flex">
-                        <input type="text" name="feature" placeholder="ex: responsive design, multi-language"
-                            value={this.state.currFeature} onChange={this.addFeature} onKeyUp={this.addFeature} />
+                    <div className="gig-basics">
+                        <h4>Gig title</h4>
+                        <textarea name="title" autoFocus rows="2" cols="60" type="text" placeholder="Enter Gig Title..." value={gig.title} onChange={this.handleInput} required autoComplete="off" />
+                        <h4>Description</h4>
+                        <textarea name="desc" rows="5" cols="60" type="text" placeholder="Enter Gig Desc..." value={gig.desc} onChange={this.handleInput} required autoComplete="off" />
+                        <h4>Add some tags</h4>
+                        <div className="gig-tags flex">
+
+                        <input type="text" name="tag" placeholder="video editing, session musician"
+                            value={this.state.currTag} onChange={this.addTag} onKeyUp={this.addTag} />
                         <ul className="clean-list flex">
-                            {gig.packages[0].features.map(feature => {
-                                if (feature.length > 0) return <li key={feature}>
-                                    {feature}
-                                    <ClearIcon className="clear-icon pointer" onClick={() => this.removeFeature(feature)} />
+                            {gig.tags.map(tag => {
+                                if (tag.length > 0) return <li key={tag}>
+                                    {tag}
+                                    <ClearIcon className="clear-icon pointer" onClick={() => this.removeTag(tag)} />
 
                                 </li>
                             })}
                         </ul>
+                        </div>
                     </div>
-                    <div className="package-details">
-                        <h4>Package additional details</h4>
-                        <div className="flex wrap">
-                            <div className="flex wrap align-base">
-                                <label htmlFor="price">Price:</label>
-                                <input type="number" name="price" id="price" placeholder="Package price"
-                                    value={gig.packages[0].price} onChange={this.handlePackagesInputs} required autoComplete="off" />
-                            </div>
-                            <div className="flex wrap align-base">
+                    <div className="gig-package">
 
-                                <label htmlFor="revisionCount">Revisions:</label>
-                                <input type="number" name="revisionCount" id="revisionCount" placeholder="Revision Count..."
-                                    value={gig.packages[0].revisionCount} onChange={this.handlePackagesInputs} required autoComplete="off" />
-                            </div>
-                            <div className="flex wrap align-base">
-                                <label htmlFor="deliveryDays">Delivery (days):</label>
-                                <input type="number" name="deliveryDays" id="deliveryDays" placeholder="Days to deliver..."
-                                    value={gig.packages[0].deliveryDays} onChange={this.handlePackagesInputs} required autoComplete="off" />
+                        <h4>Package</h4>
+                        <textarea name="desc" rows="3" cols="60"
+                            value={gig.packages[0].desc}
+                            type="text" placeholder="Enter package Desc..."
+                            onChange={this.handlePackagesInputs}
+                            required autoComplete="off" />
+                        <h4>Add some package features</h4>
+                        <div className="package-features flex">
+                            <input type="text" name="feature" placeholder="ex: responsive design, multi-language"
+                                value={this.state.currFeature} onChange={this.addFeature} onKeyUp={this.addFeature} />
+                            <ul className="clean-list flex">
+                                {gig.packages[0].features.map(feature => {
+                                    if (feature.length > 0) return <li key={feature}>
+                                        {feature}
+                                        <ClearIcon className="clear-icon pointer" onClick={() => this.removeFeature(feature)} />
+
+                                    </li>
+                                })}
+                            </ul>
+                        </div>
+                        <div className="package-details">
+                            <h4>Package additional details</h4>
+                            <div className="flex wrap">
+                                <div className="flex wrap align-base">
+                                    <label htmlFor="price">Price:</label>
+                                    <input type="number" name="price" id="price" placeholder="Package price"
+                                        value={gig.packages[0].price} onChange={this.handlePackagesInputs} required autoComplete="off" />
+                                </div>
+                                <div className="flex wrap align-base">
+
+                                    <label htmlFor="revisionCount">Revisions:</label>
+                                    <input type="number" name="revisionCount" id="revisionCount" placeholder="Revision Count..."
+                                        value={gig.packages[0].revisionCount} onChange={this.handlePackagesInputs} required autoComplete="off" />
+                                </div>
+                                <div className="flex wrap align-base">
+                                    <label htmlFor="deliveryDays">Delivery (days):</label>
+                                    <input type="number" name="deliveryDays" id="deliveryDays" placeholder="Days to deliver..."
+                                        value={gig.packages[0].deliveryDays} onChange={this.handlePackagesInputs} required autoComplete="off" />
+                                </div>
                             </div>
                         </div>
                     </div>

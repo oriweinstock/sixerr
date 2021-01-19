@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom'
 import Favorite from '@material-ui/icons/Favorite';
+import ClearIcon from '@material-ui/icons/Clear';
 
 export function GigPreview({ gig, onUserViewGig, onFavoriteToggle, user, removeViewed }) {
     return (
         <li onClick={() => { onUserViewGig(gig._id) }} className="preview-item mrg-bottom">
             <div className="preview-inner">
+                {removeViewed && <ClearIcon className="clear-icon pointer" onClick={(ev) => {
+                    ev.stopPropagation()
+                    removeViewed(gig._id)
+                }} />}
+
                 <Link to={`/gig/${gig._id}`}>
                     <div className="preview-img">
                         <img src={gig.imgUrls[0]} alt="" />
@@ -26,7 +32,7 @@ export function GigPreview({ gig, onUserViewGig, onFavoriteToggle, user, removeV
                 </Link>
                 <div className="preview-bottom flex space-between">
                     <Favorite onClick={(ev) => { onFavoriteToggle(ev, gig._id) }} className={`heart pointer ${_isLiked(user?.favoriteIds, gig._id)}`} />
-                    {removeViewed && <button onClick={()=>{removeViewed(gig._id)}}>delete viewed</button>}
+                    {/* {removeViewed && <button onClick={() => { removeViewed(gig._id) }}>delete viewed</button>} */}
                     <h3>Starting at <span>${gig.packages[0].price}</span></h3>
                 </div>
             </div>

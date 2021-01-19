@@ -172,6 +172,60 @@
       },
       "status": "completed",
       "_id": "MD0VSwE"
+    },
+    {
+      "createdAt": 1611059948330,
+      "buyer": {
+        "_id": "h8mW4vL",
+        "fullname": "Ori Weinstock",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
+      },
+      "totalPrice": 100,
+      "currency": "USD",
+      "gig": {
+        "sellerFullname": "user2",
+        "_id": "s102",
+        "title": "Our Studio will do a minimalist logo, business card and stationery.",
+        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/133456867/original/35fab1d0bbf2bc7bf1a53d53f7559ab2931cd225/do-a-minimalist-logo-business-card-and-stationery.jpg"
+      },
+      "status": "pending",
+      "_id": "FG_Xy18"
+    },
+    {
+      "createdAt": 1611059964520,
+      "buyer": {
+        "_id": "h8mW4vL",
+        "fullname": "Ori Weinstock",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
+      },
+      "totalPrice": 15,
+      "currency": "USD",
+      "gig": {
+        "sellerFullname": "user3",
+        "_id": "s104",
+        "title": "I will design card game and board game full with box, rule, and anything!",
+        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/118336630/original/21068b7fbac9a20f329665f92f1827793fa58e35/design-card-game-from-concept-or-rough-sketch.png"
+      },
+      "status": "pending",
+      "_id": "hx4YSW1"
+    },
+    {
+      "createdAt": 1611070860868,
+      "buyer": {
+        "_id": "h8mW4vL",
+        "fullname": "Ori Weinstock",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
+      },
+      "totalPrice": 40,
+      "currency": "USD",
+      "gig": {
+        "sellerFullname": "user3",
+        "_id": "s108",
+        "title": "I will design your custom album cover art",
+        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/152151716/original/bad3092487d7ebd55a1323c8114851ca679d8e5d/design-your-custom-album-cover-art.jpg"
+      },
+      "status": "pending",
+      "_id": "e37nmgC"
     }
   ],
   "gig": [
@@ -1872,6 +1926,54 @@
       ],
       "reviews": [],
       "_id": "Gtlb70M"
+    },
+    {
+      "title": "I will create a profile page with many components",
+      "desc": "Don't waste your time designing a complex user profile page when you can easily outsource it!",
+      "tags": [
+        "web design",
+        "css",
+        "js"
+      ],
+      "packages": [
+        {
+          "type": "basic",
+          "desc": "Basic page layout",
+          "price": 30,
+          "revisionCount": 1,
+          "deliveryDays": 3,
+          "features": [
+            "grid",
+            "flex",
+            "margins"
+          ]
+        }
+      ],
+      "owner": {
+        "username": "oriw",
+        "password": "123456",
+        "fullname": "Ori Weinstock",
+        "_id": "h8mW4vL",
+        "viewedGigIds": [
+          "s102",
+          "s104",
+          "s108"
+        ],
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg",
+        "favoriteIds": [
+          "s106",
+          "s107",
+          "s102",
+          "s104"
+        ]
+      },
+      "imgUrls": [
+        "https://res.cloudinary.com/dzocvtwca/image/upload/v1611076565/mzv7rsh594bycc4ddkr7.jpg",
+        "https://res.cloudinary.com/dzocvtwca/image/upload/v1611076569/q6fqu9pgmnaa4w8gw4ir.jpg",
+        "https://res.cloudinary.com/dzocvtwca/image/upload/v1611076572/ocq1gdsgtwtqyc1my02e.jpg"
+      ],
+      "reviews": [],
+      "_id": "Lmt1XpA"
     }
   ],
   "user": [
@@ -1938,7 +2040,7 @@
         "s102",
         "s104",
         "s108",
-        "s103"
+        "Lmt1XpA"
       ],
       "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg",
       "favoriteIds": [
