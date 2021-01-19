@@ -77,9 +77,9 @@ class _GigEdit extends Component {
         if (target.type === 'number') value = +target.value
         else value = target.value
         const { packages } = this.state.gig
-        const package = { ...packages[0] }
-        package[field] = value
-        packages[0] = { ...package }
+        const pack = { ...packages[0] }
+        pack[field] = value
+        packages[0] = { ...pack }
         this.setState(prevState => {
             return {
                 gig: {
