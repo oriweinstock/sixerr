@@ -3,8 +3,10 @@
     margin-top: 20px;
     .gig-save {
         width: 150px;
-        margin-bottom: 20px;
-        @include defButton()
+        // margin-bottom: 20px;
+        // margin-inline-start: 10%;
+        @include defButton();
+        margin: 3rem 0 1rem 10%;
     }
 
     form {
@@ -22,7 +24,8 @@
                 margin-inline-start: 20px;
             }
             li {
-                background-color: $altColor;
+                position: relative;
+                border: $border;
                 color: $darkColor;
                 font-size: 0.8rem;
                 padding: 5px 8px;
@@ -31,10 +34,27 @@
                 margin-bottom: 20px;
                 align-self: baseline;
 
-                
+                .clear-icon {
+                    position: absolute;
+                    top: -5px;
+                    font-size: 1rem;
+                }
             }
         }
 
+        .package-details {
+            background-color: $borderColor;
+            padding: 1rem;
+
+            h4 {
+                margin-bottom: 2rem;
+            }
+            label, input {
+                font-size: 0.875rem;
+                margin-inline-end: 0.5rem;
+                max-width: 7rem;
+            }
+        }
         .gig-edit-images {
 
             h4 {
@@ -46,8 +66,8 @@
                 position: relative;
                 display: block;
                 margin: 20px 0 ;
-                width: 120px;
-                height: 120px;
+                width: 12vw;
+                height: 12vw;
                 border: 2px solid $borderColor;
                 overflow: hidden;
                 
@@ -73,8 +93,8 @@
                 li {
                     position: relative;
                     background: rgb(0, 0, 0);
-                    width: 10vw;
-                    height: 10vw;
+                    width: 12vw;
+                    height: 12vw;
                     
                     img {
                         width: 100%;
@@ -122,4 +142,5 @@
         margin-bottom: 20px;
         width: 25vw;
     }
+
 }

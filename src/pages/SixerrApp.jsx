@@ -42,7 +42,7 @@ class _SixerrApp extends React.Component {
                 <div className="flex space-around align-center mrg-top mrg-bottom">
                     {/* <GigFilter /> */}
                 </div>
-                <GigStrip gigs={this.props.gigs} onUserViewGig={this.onUserViewGig} onFavoriteToggle={this.onFavoriteToggle} user={this.props.user} onDelete={this.onDelete} />
+                {/* <GigStrip gigs={this.props.gigs} onUserViewGig={this.onUserViewGig} onFavoriteToggle={this.onFavoriteToggle} user={this.props.user} onDelete={this.onDelete} /> */}
                 <GigList gigs={this.props.gigs} onUserViewGig={this.onUserViewGig} onFavoriteToggle={this.onFavoriteToggle} user={this.props.user} onDelete={this.onDelete} />
             </section>
 

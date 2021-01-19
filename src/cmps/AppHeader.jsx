@@ -48,7 +48,7 @@ class _AppHeader extends React.Component {
                             </NavLink>}
                         <NavLink to="/profile">
                             {/* {user && <h3>{user.username}</h3>} */}
-                            {user && <li><img src={user.imgUrl} /></li>}
+                            {user && <li><img src={user.imgUrl} alt="user" /></li>}
                         </NavLink>
                     </ul>
 

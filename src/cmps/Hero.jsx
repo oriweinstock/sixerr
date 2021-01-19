@@ -3,34 +3,6 @@ import { connect } from 'react-redux'
 import StarRateIcon from '@material-ui/icons/StarRate';
 import { SixerrApp } from '../pages/SixerrApp.jsx';
 
-const heros = [
-    {
-        imgUrl: 'https://images.unsplash.com/photo-1569124589354-615739ae007b',
-        whoAmI: 'woman',
-        username: 'Andrea',
-        occupation: 'Video Editor',
-        rating: 5
-    },
-    {
-        imgUrl: 'https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5',
-        whoAmI: 'woman',
-        username: 'Hiluli',
-        occupation: 'DevOps'
-    },
-    {
-        imgUrl: 'https://images.unsplash.com/photo-1567468219153-4b1dea5227ea',
-        whoAmI: 'woman',
-        username: 'Puka bat David',
-        occupation: 'React JS Expert',
-        rating: 5
-    },
-    {
-        imgUrl: 'https://images.unsplash.com/photo-1581368135153-a506cf13b1e1',
-        whoAmI: 'man',
-        username: 'Zach',
-        occupation: 'Narrator'
-    }
-]
 class _Hero extends React.Component {
 
     state = {
@@ -85,7 +57,7 @@ class _Hero extends React.Component {
     render() {
         const { heros, currHeroIdx } = this.state
         const hero = heros[currHeroIdx]
-        const whoAmI = heros[currHeroIdx].whoAmI
+        
         return (
             <>
                 <section className="hero">
