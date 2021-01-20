@@ -1789,31 +1789,44 @@
       "_id": "BTlid80"
     },
     {
-      "title": "sadsd",
-      "desc": "fsdfsdf",
+      "title": "sdfdsfgfdgfd",
+      "desc": "sdfsdfdf",
       "tags": [
-        "modern"
+        "flat"
       ],
       "packages": [
         {
           "type": "basic",
-          "desc": "dsfsdf",
+          "desc": "dsffdf",
           "price": 5,
           "revisionCount": 5,
           "deliveryDays": 5,
-          "features": []
+          "features": [
+            "Include Environment"
+          ]
         }
       ],
       "owner": {
-        "username": "itay",
-        "password": "123456",
-        "fullname": "itay! ",
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610902039/ohq9wwecxmuzrs8xrd8t.jpg",
+        "username": "admin",
+        "password": "admin",
+        "fullname": "tomer maruani",
+        "imgUrl": "/img/img1.jpg",
         "isAdmin": false,
-        "_id": "tvDPqKx",
+        "_id": "lfE5k8E",
         "viewedGigIds": [
-          "s105",
-          "s109"
+          "s103",
+          "s106",
+          "s101",
+          "nn8c8we",
+          "s107",
+          "s104",
+          "s110",
+          "MWAYi0x",
+          "s108",
+          "s102",
+          "G91yvoB",
+          "s109",
+          "s105"
         ]
       },
       "imgUrls": [

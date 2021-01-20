@@ -26,11 +26,13 @@ class _Profile extends React.Component {
     async componentDidMount() {
         await this.props.loadGigs() // TODO: CHANGE all waits to first go and then get all at the end....
         await this.props.loadOrders()
+        console.log('orders', this.props.orders)
         const { user } = this.props
         const ordersAsBuyer = this.props.orders.filter(order => order.buyer._id === user._id)
         const ordersAsSeller = this.props.orders.filter(order => user.myGigIds?.some(gigId => gigId === order.gig._id))
         console.log(ordersAsSeller)
         const myGigs = user.myGigIds ? await getGigs(user.myGigIds) : []
+        // const myGigs = await loadGigs({owner: user._id})
         const lastViewed = user.viewedGigIds ? await getGigs(user.viewedGigIds) : []
         const favoriteGigs = user.favoriteIds ? await getGigs(user.favoriteIds) : []
         this.setState(prevState =>

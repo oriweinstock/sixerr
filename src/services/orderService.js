@@ -1,6 +1,8 @@
 // import { storageService } from './storageService.js';
 // import { utilService } from './utilService.js';
 import { httpService } from './httpService'
+const BASE_URL = 'api/order' // REAL SERVER
+// const BASE_URL = 'order' // JSON SERVER
 
 export const orderService = {
     query,
@@ -11,7 +13,7 @@ export const orderService = {
 }
 
 async function query() {
-    return httpService.get('order')
+    return httpService.get(BASE_URL)
 }
 
 // async function getById(gigId) {
@@ -26,12 +28,12 @@ async function query() {
 async function createOrder(gig, user) {
     const order = _prepareOrder(gig, user)
     console.log('ordering:', order)
-    return httpService.post('order', order) 
+    return httpService.post(BASE_URL, order) 
 }
 
 async function update(order) {
     console.log('updating order:', order)
-    return httpService.put(`order/${order._id}`, order) 
+    return httpService.put(`${BASE_URL}/${order._id}`, order) 
 }
 
 

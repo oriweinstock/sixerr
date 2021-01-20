@@ -18,7 +18,7 @@ export function gigReducer(state = initialState, action) {
                 ...state,
                 gigs: [...state.gigs, action.savedGig]
             }
-        case 'FILTER_GIGS':
+        case 'SET_FILTER':
             return { ...state, filterBy: action.filterBy }
         case 'REMOVE_GIG':
             return { ...state, gigs: state.gigs.filter(gig => gig._id !== action.gigId) }

@@ -1,9 +1,10 @@
 import { gigService } from "../../services/gigService.js";
 import { cloudinaryService } from "../../services/cloudinaryService.js";
 
-export function loadGigs() {
-    return async (dispatch, getState) => {
-        const { filterBy } = getState().gigModule
+export function loadGigs(filterBy ={}) {
+    return async (dispatch) => {
+    // return async (dispatch, getState) => {
+        // const { filterBy } = getState().gigModule
         const gigs = await gigService.query(filterBy)
         const action = {
             type: 'SET_GIGS',
@@ -61,7 +62,7 @@ export function updateGig(gig) {
 export function setFilter(filterBy) {
     return (dispatch) => {
         const action = {
-            type: 'FILTER_GIGS',
+            type: 'SET_FILTER',
             filterBy
         }
         dispatch(action)

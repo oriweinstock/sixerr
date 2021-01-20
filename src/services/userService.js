@@ -1,6 +1,8 @@
 // import { storageService } from './asyncStorageService'
 import { httpService } from './httpService'
-const SCORE_FOR_REVIEW = 10
+const BASE_URL = 'api/user' // REAL SERVER
+// const BASE_URL = 'user' // JSON SERVER
+
 
 export const userService = {
     login,
@@ -20,21 +22,21 @@ window.userService = userService
 
 function getUsers() {
     // return storageService.query('user')
-    return httpService.get(`user`)
+    return httpService.get(BASE_URL)
 }
 
 function getById(userId) {
     // return storageService.get('user', userId)
-    return httpService.get(`user/${userId}`)
+    return httpService.get(`${BASE_URL}/${userId}`)
 }
 function remove(userId) {
     // return storageService.remove('user', userId)
-    return httpService.delete(`user/${userId}`)
+    return httpService.delete(`${BASE_URL}/${userId}`)
 }
 
 async function update(user) {
     // return storageService.put('user', user)
-    user = await httpService.put(`user/${user._id}`, user)
+    user = await httpService.put(`${BASE_URL}/${user._id}`, user)
     console.log('Service', user.favoriteIds )
     // Handle case in which admin updates other user's details
     if (getLoggedinUser()._id === user._id) _saveLocalUser(user)
@@ -42,25 +44,27 @@ async function update(user) {
 }
 
 async function login(userCred) {
-    const users = await httpService.get('user')
-    const user = users.find(user => user.username === userCred.username && user.password === userCred.password)
-    if (user) {
-        console.log('Found user')
-        return _saveLocalUser(user)
-    }
-    else throw new Error('no user')
-    // const user = await httpService.post('auth/login', userCred)
-    // if (user) return _saveLocalUser(user)
+    //JSON SERVER
+    // const users = await httpService.get('user')
+    // const user = users.find(user => user.username === userCred.username && user.password === userCred.password)
+    // if (user) {
+    //     console.log('Found user')
+    //     return _saveLocalUser(user)
+    // }
+    // else throw new Error('no user')
+    // REAL SERVER
+    const user = await httpService.post('api/auth/login', userCred)
+    if (user) return _saveLocalUser(user)
 }
 async function signup(userCred) {
-    const user = await httpService.post('user', userCred)
-    // const user = await httpService.post('auth/signup', userCred)
+    // const user = await httpService.post('user', userCred) //JSON SERVER
+    const user = await httpService.post('api/auth/signup', userCred) // REAL SERVER
     return _saveLocalUser(user)
 }
 async function logout() {
     sessionStorage.clear()
-    return
-    // return await httpService.post('auth/logout')
+    // return //JSON SERVER
+    return await httpService.post('api/auth/logout') // REAL SERVER
 }
 function _saveLocalUser(user) {
     sessionStorage.setItem('loggedinUser', JSON.stringify(user))
