@@ -187,6 +187,15 @@
         padding-inline-start: none !important;
     }
 }
+@media screen and (max-width: 730px) {
+    .gig-details{
+        .review-stats-container{
+            font-size: rem(16px);
+            // background-color: blue;
+        }
+    }
+}
+
 
 @media screen and (max-width: 700px) {
     .gig-details {
@@ -197,6 +206,33 @@
         .short-content {
             width: 25rem;
         }
+        .review-stats-header{
+            margin: 0 auto;
+        }
+        .review-stats-container{
+
+        }
+       .right-side-stats{
+           display: none !important;
+       }
+       .review-stats-container {
+           flex-direction: column;
+           margin: 0 auto;
+           .stars{
+               display: none;
+           }
+       }
+       .review-card{
+           .review-info{
+               p{
+                width : 300px;
+                overflow:hidden;
+                display:inline-block;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+               }
+           }
+       }
     }
 }
 
@@ -254,6 +290,6 @@
         }
     }
     .seller-overview{
-        font-size: rem(15.5px);
+        font-size: rem(10.6px);
     }
 }

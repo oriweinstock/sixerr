@@ -1,4 +1,5 @@
 import { gigService } from "../../services/gigService.js";
+import { cloudinaryService } from "../../services/cloudinaryService.js";
 
 export function loadGigs() {
     return async (dispatch, getState) => {

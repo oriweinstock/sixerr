@@ -8,7 +8,7 @@ export function SellerPreview({ seller }) {
         <>
             <section id="about-seller" className="about-seller-container flex column">
                 <h2>About The Seller</h2>
-                <div className="flex">
+                <div className="content flex">
                     <div className="seller-img-container">
                         <img src={seller.imgUrl} />
                         {/* <Avatar src={`${seller.imgUrl}`} /> */}

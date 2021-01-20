@@ -2,7 +2,7 @@ import React from 'react'
 import QueryBuilderIcon from '@material-ui/icons/QueryBuilder';
 import LoopIcon from '@material-ui/icons/Loop';
 import DoneIcon from '@material-ui/icons/Done';
-export default function SideBar({ gig  }) {
+export default function SideBar({ gig, onGigOrder }) {
     return (
         <>
             <div className="sidebar">
@@ -31,7 +31,7 @@ export default function SideBar({ gig  }) {
                         </ul>
                     </div>
                     <div className="btns-container flex justify-center">
-                        <button className="continue">Continue<span>{' '}</span>(${gig.packages[0].price})</button>
+                        <button className="continue" onClick={onGigOrder} >Continue<span>{' '}</span>(${gig.packages[0].price})</button>
                     </div>
                 </div>
             </div>
