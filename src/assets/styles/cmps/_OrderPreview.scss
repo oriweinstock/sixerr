@@ -1,0 +1,50 @@
+.order-item {
+    width: 60vw;
+    border: $border;
+    color: $darkColor;
+    margin-bottom: 0.5rem;
+
+    .order-inner {
+
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+
+        .order-img {
+    
+            grid-column: 1 / 2;
+            width: 100px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .order-info {
+            margin-bottom: 0.5rem;
+        }
+        h4 {
+            margin: 0.75rem 0 0.75rem;
+            padding-inline-start: 1rem;
+        }
+        
+        p {
+            margin: 0 0 0.25rem;
+            padding-inline-start: 1rem;
+            font-size: 0.875rem;
+            line-height: 0.875rem;
+            span {
+                font-weight: bold;
+            }
+        }
+        .status span {
+            color: $greenColor;
+        }
+
+        .gig {
+            grid-column: 2 / 3;
+        }
+    }
+        // height: 8rem;
+    
+}

@@ -1,14 +1,51 @@
 .gig-strip {
 
+    position: relative;
     overflow: hidden;
+    // background-color: #eeeeee;
 
+    .strip-title {
+        font-size: 2rem;
+        margin: 0.75rem 0 0;
+        padding-inline-start: 1rem;
+        color: $darkColor;
+    }
     ul {
-        transition: 1s ease-out;
-
         display: flex;
-
+        
+        transition: .8s ease-out;
         li {
             flex: 0 0 25%;
         }
     }
+
+    button {
+        opacity: 0.5;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $lightColor;
+        width: 4vw;
+        height: 4vw;
+        color: $darkColor;
+        border: $border;
+        border-radius: 50%;
+        font-weight: bold;
+        font-size: 1.5rem;
+        transition: .2s;
+
+        &:hover {
+            opacity: 1;
+            background-color: $lightColor;
+        }
+    }
+
+    .scroll-right {
+        right: 0.5%;
+    }
+    .scroll-left {
+        left: 0.5%;
+    }
+
+    
 }

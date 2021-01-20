@@ -14,17 +14,22 @@
 @import '../cmps/GigList';
 @import '../cmps/GigStrip';
 @import '../cmps/GigPreview';
+@import '../cmps/GigMiniPreview';
 @import '../cmps/GigDetails';
 @import '../cmps/GigEdit';
 @import '../cmps/SellerPreview';
-@import '../cmps/SideBar.scss';
-@import '../cmps/ReviewPreview.scss';
-@import '../cmps/GigAddReview.scss';
-@import '../cmps/GigImgLightBox.scss';
+@import '../cmps/SideBar';
+@import '../cmps/ReviewPreview';
+@import '../cmps/GigAddReview';
+@import '../cmps/GigImgLightBox';
+
 @import '../cmps/Profile';
-@import '../cmps//ShortReviewPreview.scss';
+@import '../cmps/OrderPreview';
+@import '../cmps/OrderList';
+
+@import '../cmps//ShortReviewPreview';
 @import '../cmps/SellerOverview';
-@import '../cmps/ImgGallery.scss';
+@import '../cmps/ImgGallery';
 @import '../cmps/EditableElement';
 @import '../cmps/ReviewStats';
 @import '../cmps/DetailsNav';

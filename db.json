@@ -174,220 +174,58 @@
       "_id": "MD0VSwE"
     },
     {
-      "createdAt": 1611051837361,
+      "createdAt": 1611059948330,
       "buyer": {
-        "_id": "lfE5k8E",
-        "fullname": "Hello - I love you",
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1611020754/ughb8fi9zhjmgu2ybctc.jpg"
+        "_id": "h8mW4vL",
+        "fullname": "Ori Weinstock",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
       },
-      "totalPrice": 5,
+      "totalPrice": 100,
       "currency": "USD",
       "gig": {
-        "sellerFullname": "itay! ",
-        "_id": "nvDftH4",
-        "title": "I will be your social media content creator and post creator",
-        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
+        "sellerFullname": "user2",
+        "_id": "s102",
+        "title": "Our Studio will do a minimalist logo, business card and stationery.",
+        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/133456867/original/35fab1d0bbf2bc7bf1a53d53f7559ab2931cd225/do-a-minimalist-logo-business-card-and-stationery.jpg"
       },
       "status": "pending",
-      "_id": "OeMA1-D"
+      "_id": "FG_Xy18"
     },
     {
-      "createdAt": 1611051837891,
+      "createdAt": 1611059964520,
       "buyer": {
-        "_id": "lfE5k8E",
-        "fullname": "Hello - I love you",
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1611020754/ughb8fi9zhjmgu2ybctc.jpg"
+        "_id": "h8mW4vL",
+        "fullname": "Ori Weinstock",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
       },
-      "totalPrice": 5,
-      "currency": "USD",
-      "gig": {
-        "sellerFullname": "itay! ",
-        "_id": "nvDftH4",
-        "title": "I will be your social media content creator and post creator",
-        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
-      },
-      "status": "pending",
-      "_id": "ImG2hcM"
-    },
-    {
-      "createdAt": 1611051838847,
-      "buyer": {
-        "_id": "lfE5k8E",
-        "fullname": "Hello - I love you",
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1611020754/ughb8fi9zhjmgu2ybctc.jpg"
-      },
-      "totalPrice": 5,
-      "currency": "USD",
-      "gig": {
-        "sellerFullname": "itay! ",
-        "_id": "nvDftH4",
-        "title": "I will be your social media content creator and post creator",
-        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
-      },
-      "status": "pending",
-      "_id": "_fYD5pv"
-    },
-    {
-      "createdAt": 1611051839194,
-      "buyer": {
-        "_id": "lfE5k8E",
-        "fullname": "Hello - I love you",
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1611020754/ughb8fi9zhjmgu2ybctc.jpg"
-      },
-      "totalPrice": 5,
-      "currency": "USD",
-      "gig": {
-        "sellerFullname": "itay! ",
-        "_id": "nvDftH4",
-        "title": "I will be your social media content creator and post creator",
-        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
-      },
-      "status": "pending",
-      "_id": "xUDJiNq"
-    },
-    {
-      "createdAt": 1611051839386,
-      "buyer": {
-        "_id": "lfE5k8E",
-        "fullname": "Hello - I love you",
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1611020754/ughb8fi9zhjmgu2ybctc.jpg"
-      },
-      "totalPrice": 5,
-      "currency": "USD",
-      "gig": {
-        "sellerFullname": "itay! ",
-        "_id": "nvDftH4",
-        "title": "I will be your social media content creator and post creator",
-        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
-      },
-      "status": "pending",
-      "_id": "Fciz7G1"
-    },
-    {
-      "createdAt": 1611051922080,
-      "buyer": {
-        "_id": "lfE5k8E",
-        "fullname": "Hello - I love you",
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1611020754/ughb8fi9zhjmgu2ybctc.jpg"
-      },
-      "totalPrice": 5,
-      "currency": "USD",
-      "gig": {
-        "sellerFullname": "itay! ",
-        "_id": "nvDftH4",
-        "title": "I will be your social media content creator and post creator",
-        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
-      },
-      "status": "pending",
-      "_id": "q7hgcb_"
-    },
-    {
-      "createdAt": 1611051927830,
-      "buyer": {
-        "_id": "lfE5k8E",
-        "fullname": "Hello - I love you",
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1611020754/ughb8fi9zhjmgu2ybctc.jpg"
-      },
-      "totalPrice": 5,
-      "currency": "USD",
-      "gig": {
-        "sellerFullname": "itay! ",
-        "_id": "nvDftH4",
-        "title": "I will be your social media content creator and post creator",
-        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/176041336/original/f83ff537301d6eeb9c0cac8300bfa078098e95fb/design-and-develop-an-eye-catchy-website.jpg"
-      },
-      "status": "pending",
-      "_id": "kgBd3it"
-    },
-    {
-      "createdAt": 1611052110363,
-      "buyer": {
-        "_id": "QzjOUki",
-        "fullname": "iaty",
-        "imgUrl": "/img/img1.jpg"
-      },
-      "totalPrice": 10,
+      "totalPrice": 15,
       "currency": "USD",
       "gig": {
         "sellerFullname": "user3",
-        "_id": "s103",
-        "title": "I will design 2 modern minimalist logo design! 3 Days Delivery 123",
-        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/22527722/original/3b5876ffb817872561d9eba6788dced76cb78224/do-professional-and-unique-logo-design.jpg"
+        "_id": "s104",
+        "title": "I will design card game and board game full with box, rule, and anything!",
+        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/118336630/original/21068b7fbac9a20f329665f92f1827793fa58e35/design-card-game-from-concept-or-rough-sketch.png"
       },
       "status": "pending",
-      "_id": "x_c04nL"
+      "_id": "hx4YSW1"
     },
     {
-      "createdAt": 1611052111013,
+      "createdAt": 1611070860868,
       "buyer": {
-        "_id": "QzjOUki",
-        "fullname": "iaty",
-        "imgUrl": "/img/img1.jpg"
+        "_id": "h8mW4vL",
+        "fullname": "Ori Weinstock",
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg"
       },
-      "totalPrice": 10,
+      "totalPrice": 40,
       "currency": "USD",
       "gig": {
         "sellerFullname": "user3",
-        "_id": "s103",
-        "title": "I will design 2 modern minimalist logo design! 3 Days Delivery 123",
-        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/22527722/original/3b5876ffb817872561d9eba6788dced76cb78224/do-professional-and-unique-logo-design.jpg"
+        "_id": "s108",
+        "title": "I will design your custom album cover art",
+        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/152151716/original/bad3092487d7ebd55a1323c8114851ca679d8e5d/design-your-custom-album-cover-art.jpg"
       },
       "status": "pending",
-      "_id": "VlDYuGb"
-    },
-    {
-      "createdAt": 1611052147915,
-      "buyer": {
-        "_id": "QzjOUki",
-        "fullname": "iaty",
-        "imgUrl": "/img/img1.jpg"
-      },
-      "totalPrice": 50,
-      "currency": "USD",
-      "gig": {
-        "sellerFullname": "David Kuperstein",
-        "_id": "s101",
-        "title": "I will turn your children's book into a video with narration",
-        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/156162379/original/9087a56206fcc647d954fbe88c28fc61d673b936/create-luxury-geometric-patterns-and-background-for-you.png"
-      },
-      "status": "completed",
-      "_id": "k1LkAe3"
-    },
-    {
-      "createdAt": 1611053163509,
-      "buyer": {
-        "_id": "1nnRqJA",
-        "fullname": "tomer maruani",
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1611052726/s1zlkcdmwtg5hzrwktoo.jpg"
-      },
-      "totalPrice": 10,
-      "currency": "USD",
-      "gig": {
-        "sellerFullname": "user3",
-        "_id": "s107",
-        "title": "I will design interior, redering every space in your house",
-        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/e8cfa66347588df9974bf45b90878c3f-1605225818/5/design-every-space-in-your-house.jpg"
-      },
-      "status": "pending",
-      "_id": "MUjjWX_"
-    },
-    {
-      "createdAt": 1611076006637,
-      "buyer": {
-        "_id": "QzjOUki",
-        "fullname": "itay\n\n",
-        "imgUrl": "/img/img1.jpg"
-      },
-      "totalPrice": 20,
-      "currency": "USD",
-      "gig": {
-        "sellerFullname": "Ori Weinstock",
-        "_id": "Gtlb70M",
-        "title": "I will add photo upload service to your App",
-        "imgUrl": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/157536980/original/d7411fe67086a183a78e81950000dde20ee5b689/create-3d-model-and-render-your-sketch-or-2d-plan.jpg"
-      },
-      "status": "pending",
-      "_id": "hSfJ2Xr"
+      "_id": "e37nmgC"
     }
   ],
   "gig": [
@@ -2169,56 +2007,52 @@
       "_id": "Gtlb70M"
     },
     {
-      "title": "ori",
-      "desc": "desc",
+      "title": "I will create a profile page with many components",
+      "desc": "Don't waste your time designing a complex user profile page when you can easily outsource it!",
       "tags": [
-        "minimalist"
+        "web design",
+        "css",
+        "js"
       ],
       "packages": [
         {
           "type": "basic",
-          "desc": "packages",
-          "price": 2,
-          "revisionCount": 2,
-          "deliveryDays": 2,
+          "desc": "Basic page layout",
+          "price": 30,
+          "revisionCount": 1,
+          "deliveryDays": 3,
           "features": [
-            "list"
+            "grid",
+            "flex",
+            "margins"
           ]
         }
       ],
       "owner": {
-        "username": "admin",
-        "password": "admin",
-        "fullname": "Hello - I love you",
-        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1611020754/ughb8fi9zhjmgu2ybctc.jpg",
-        "isAdmin": false,
-        "_id": "lfE5k8E",
+        "username": "oriw",
+        "password": "123456",
+        "fullname": "Ori Weinstock",
+        "_id": "h8mW4vL",
         "viewedGigIds": [
-          "s103",
-          "s106",
-          "s101",
-          "nn8c8we",
-          "s107",
-          "s104",
-          "s110",
-          "MWAYi0x",
-          "s108",
           "s102",
-          "G91yvoB",
-          "s109",
-          "s105",
-          "nvDftH4",
-          "YLUCCS2"
+          "s104",
+          "s108"
+        ],
+        "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg",
+        "favoriteIds": [
+          "s106",
+          "s107",
+          "s102",
+          "s104"
         ]
       },
       "imgUrls": [
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/157536980/original/d7411fe67086a183a78e81950000dde20ee5b689/create-3d-model-and-render-your-sketch-or-2d-plan.jpg",
-        "https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/d91dab5d590614ec0c36060db1ba1c67-1606486728/Stationery%202/do-a-minimalist-logo-business-card-and-stationery.jpg",
-        "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/156162379/original/9087a56206fcc647d954fbe88c28fc61d673b936/create-luxury-geometric-patterns-and-background-for-you.png",
-        "https://res.cloudinary.com/dzocvtwca/image/upload/v1611051269/bbmrarzgjoxbaa759r7r.jpg"
+        "https://res.cloudinary.com/dzocvtwca/image/upload/v1611076565/mzv7rsh594bycc4ddkr7.jpg",
+        "https://res.cloudinary.com/dzocvtwca/image/upload/v1611076569/q6fqu9pgmnaa4w8gw4ir.jpg",
+        "https://res.cloudinary.com/dzocvtwca/image/upload/v1611076572/ocq1gdsgtwtqyc1my02e.jpg"
       ],
       "reviews": [],
-      "_id": "lcMeWsb"
+      "_id": "Lmt1XpA"
     }
   ],
   "user": [
@@ -2285,7 +2119,7 @@
         "s102",
         "s104",
         "s108",
-        "s103"
+        "Lmt1XpA"
       ],
       "imgUrl": "https://res.cloudinary.com/dzocvtwca/image/upload/v1610804924/j4adyx3lylmjjes5sbbt.jpg",
       "favoriteIds": [
@@ -2430,16 +2264,16 @@
       "_id": "N-SYLBg",
       "favoriteIds": [
         "s104",
-        "s102"
+        "s102",
+        "s106"
       ],
       "viewedGigIds": [
         "s108",
-        "s103",
-        "s106",
         "s107",
         "s109",
         "s101",
-        "nn8c8we"
+        "nn8c8we",
+        "s102"
       ],
       "myGigIds": [
         "s101",

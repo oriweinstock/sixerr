@@ -92,7 +92,7 @@ class _Profile extends React.Component {
         if (!user) return <div>Loading...</div>
         return (
             <section className="profile main-layout mrg-top">
-                <div className="flex">
+                <div className="flex top-section space-around">
                     <div className="about-user flex column">
                         <label className="img-upload pointer" htmlFor="uploadImg">
                             <img src={user.imgUrl} />
@@ -106,13 +106,31 @@ class _Profile extends React.Component {
                         <button>Send Message</button>
                     </div>
 
+                    {ordersAsBuyer.length !== 0 &&
+                        <div className="buyer-orders">
+                            <h1>My Orders</h1>
+                            <OrderList orders={ordersAsBuyer} />
+                        </div>}
                 </div>
-                <h1>Orders from me</h1>
-                <OrderList orders={ordersAsSeller} onOrderStatusChanged={this.onOrderStatusChanged} />
-                <h1>My Orders</h1>
-                <OrderList orders={ordersAsBuyer} />
-                <h1>My Gigs</h1>
-                <GigList gigs={myGigs} onDelete={this.onDelete} onUserViewGig={() => { }} onFavoriteToggle={this.onFavoriteToggle} user={user} />
+
+                {ordersAsSeller.length !== 0 && <div className="seller-orders">
+                    <h1>Orders from me</h1>
+                    <OrderList orders={ordersAsSeller} onOrderStatusChanged={this.onOrderStatusChanged} />
+                </div>}
+
+
+                <div className="my-gigs">
+                    <h1>My Gigs</h1>
+                    {myGigs.length === 0 &&
+                        <div className="start-selling flex align-center">
+                            <h2>You do not have any gigs yet.</h2>
+                            <button onClick={() => this.props.history.push('/gig/edit')}> 
+                                Start Selling
+                            </button>
+                        </div>}
+                    <GigList gigs={myGigs} onDelete={this.onDelete} onUserViewGig={() => { }} onFavoriteToggle={this.onFavoriteToggle} user={user} />
+                </div>
+
                 {lastViewed.length !== 0 &&
                     <div className="recently-viewed flex column">
                         <h1>Last viewed</h1>
@@ -121,7 +139,7 @@ class _Profile extends React.Component {
                 <h1>Favorites</h1>
                 <GigList gigs={favoriteGigs} onDelete={this.onDelete} onUserViewGig={() => { }} onFavoriteToggle={this.onFavoriteToggle} user={user} />
                 <h1>Suggested</h1>
-                <GigList gigs={suggestedGigs} onDelete={this.onDelete} onUserViewGig={() => { }} onFavoriteToggle={this.onFavoriteToggle} user={user} />
+                <GigList gigs={suggestedGigs} onDelete={this.onDelete} onUserViewGig={() => { }} onFavoriteToggle={this.onFavoriteToggle} user={user} isSmallPreview={true}/>
             </section>
         )
     }
