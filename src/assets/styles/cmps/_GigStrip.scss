@@ -8,7 +8,7 @@
         font-size: 2rem;
         margin: 0.75rem 0 0;
         padding-inline-start: 1rem;
-        color: $greenColor;
+        color: $darkColor;
     }
     ul {
         display: flex;
@@ -20,25 +20,31 @@
     }
 
     button {
+        opacity: 0.5;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background-color: #fff;
-        width: 5vw;
-        height: 5vw;
+        background-color: $lightColor;
+        width: 4vw;
+        height: 4vw;
         color: $darkColor;
         border: $border;
         border-radius: 50%;
         font-weight: bold;
         font-size: 1.5rem;
+        transition: .2s;
 
         &:hover {
-            background-color: $borderColor;
+            opacity: 1;
+            background-color: $lightColor;
         }
     }
 
     .scroll-right {
-        right: 0%;
+        right: 0.5%;
+    }
+    .scroll-left {
+        left: 0.5%;
     }
 
     

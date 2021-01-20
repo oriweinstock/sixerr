@@ -5,7 +5,7 @@ export function GigList({ gigs, onUserViewGig, onFavoriteToggle, user, removeVie
 
     return (
         <section className="gig-list">
-            <ul className="previews-wrap clean-list">
+            <ul className="previews-wrap clean-list main-layout">
                 {isSmallPreview &&
                      gigs.map(gig => <GigMiniPreview key={gig._id} gig={gig}></GigMiniPreview>) }
                 {!isSmallPreview &&

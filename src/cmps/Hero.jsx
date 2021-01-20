@@ -116,7 +116,7 @@ class _Hero extends React.Component {
                         onFavoriteToggle={this.onFavoriteToggle}
                         user={this.props.user}
                         onDelete={this.onDelete} />
-                    <h2>Suggested</h2>
+                    <h3>Suggested</h3>
                     <GigList gigs={suggestedGigs} onDelete={this.onDelete} onUserViewGig={() => { }} onFavoriteToggle={this.onFavoriteToggle} isSmallPreview={true} />
 
                 </section>

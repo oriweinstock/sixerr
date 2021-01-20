@@ -336,7 +336,7 @@
     {
       "_id": "s102",
       "title": "Our Studio will do a minimalist logo, business card and stationery.",
-      "desc": "Hello We are a team of professionals who have experience in the field of Logo Design, Business card and other stationery designs for more than 9 years..\n\n",
+      "desc": "Hello We are a team of professionals who have experience in the field of Logo Design, Business card and other stationery designs for more than 9 years..",
       "tags": [
         "minimalist",
         "stationery",
@@ -2183,7 +2183,8 @@
       "_id": "N-SYLBg",
       "favoriteIds": [
         "s104",
-        "s102"
+        "s102",
+        "s106"
       ],
       "viewedGigIds": [
         "s108",
