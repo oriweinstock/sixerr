@@ -1,6 +1,6 @@
 // import React, { Component } from 'react'
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { Login } from '../pages/Login'
 import { logout } from '../store/actions/userActions'
@@ -14,14 +14,14 @@ class _AppHeader extends React.Component {
 
     componentDidMount() {
     }
-    // logout = async () => {
-    //     await this.props.logout()
-    //     // console.log('user logged out. frontend')
-    // }
-
 
     onToggleLogin = () => {
         this.setState({ isLoginOpen: !this.state.isLoginOpen })
+    }
+
+    onLogout = async () => {
+        await this.props.logout()
+        this.props.history.push('/gig')
     }
 
     render() {
@@ -39,7 +39,7 @@ class _AppHeader extends React.Component {
                         <NavLink className="fast-trans" to="/gig"><li>Explore</li></NavLink>
                         {/* <NavLink className="fast-trans" to="/chat"><li>Messages</li></NavLink> */}
                         {/* <NavLink className="fast-trans" to="/order"><li>Orders</li></NavLink> */}
-                        {user && <NavLink className="fast-trans" to="#" onClick={this.props.logout}>
+                        {user && <NavLink className="fast-trans" to="#" onClick={this.onLogout}>
                             <li>Logout</li>
                         </NavLink>}
                         {!user &&
@@ -48,7 +48,7 @@ class _AppHeader extends React.Component {
                             </NavLink>}
                         <NavLink to="/profile">
                             {/* {user && <h3>{user.username}</h3>} */}
-                            {user && <li><img src={user.imgUrl} /></li>}
+                            {user && <li><img src={user.imgUrl} alt="user" /></li>}
                         </NavLink>
                     </ul>
 
@@ -69,4 +69,4 @@ const mapDispatchToProps = {
     logout
 }
 
-export const AppHeader = connect(mapGlobalStateToProps, mapDispatchToProps)(_AppHeader)
+export const AppHeader = connect(mapGlobalStateToProps, mapDispatchToProps)(withRouter(_AppHeader))

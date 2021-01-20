@@ -1,41 +1,65 @@
 .short-content {
-    // width: 615.9px;
-    width: rem(614.4px);
-    padding: 0.7rem 1rem;
-    border: rem(1px) solid #e4e5e7;
-    border-radius: 4px;
+    display: inline-table;
+    width: rem(630.703px);
+    // border: rem(1px) solid #e4e5e7;
+    // border-radius: 4px;
+    height: 100%;
+    .content-wrapper {
+        padding-inline-start: rem(30px);
+        padding-block-start: rem(8px);
+    }
     p {
-        max-width: rem(460px);
+        width: 90%;
         margin: 0;
         margin-block-end: 0.32rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        margin-block-end: 0;
+        padding-inline-start: 86.5px;
+        padding-block-end: rem(4.3px);
     }
     .content {
+        padding-block-end: rem(5px);
         .country-icon {
             margin-inline-start: rem(12px);
-            font-size: rem(20px);
-            padding-block-start:rem(4.9px) ;
+            font-size: rem(18px);
         }
         margin-block-start: 0.6rem;
         .country-name {
+            margin: 0;
             padding-inline-start: rem(8px);
             font-weight: 600;
             color: #95979d; //remove this color
             font: 400 16px/24px "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif; //remove this font later
         }
+        .star-icon {
+            margin-inline-start: rem(9px);
+            color: #ffbf00;
+            font-weight: 700;
+        }
         h6 {
             margin: 0;
             font-size: rem(16px);
         }
-        span {
-            color:$starsColor;
+        .rating {
+            color: $starsColor;
             font-weight: 700;
-            font-size: rem(20px);
+            font-size: rem(16px);
+            padding-inline-start: rem(5px);
         }
-        .star{
+        .star {
             padding-block-end: rem(1.5px);
         }
+        margin-block-start: 0;
     }
     .avatar-container {
-        padding-inline-end: 0.3rem;
+        .MuiAvatar-root {
+            width: rem(32px);
+            height: rem(32px);
+        }
+        margin-block-start: rem(10px);
+        margin-inline-end: rem(25px);
     }
 }
+

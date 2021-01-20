@@ -1,9 +1,13 @@
 .review-card {
-        margin-block-start: 2rem;
+    margin-block-start: 2rem;
     border-bottom: 1px solid #dadbdd;
     .avatar-container {
-        margin-block-start: 1.2rem;
+        margin-block-start: 2.22rem;
         padding-inline-end: 1rem;
+        .avatar {
+            width: 32px;
+            height: 32px;
+        }
     }
     .review-info {
         margin-block-start: 1.2rem;
@@ -14,8 +18,6 @@
             margin-right: 10px;
         }
         .icons {
-            outline: none !important;
-            margin-block-end:1rem ;
             span {
                 margin-inline-end: 1rem;
             }
@@ -29,59 +31,62 @@
                 color: rgb(146, 146, 146);
             }
         }
+        .rating {
+            margin: 0;
+            font-size: 1.2rem;
+            // color: $starsColor;
+            color: #ffbf00;
+            font-weight: 700;
+        }
+        svg {
+            margin-inline-end: rem(5px);
+            color: #ffbf00;
+            font-weight: 700;
+        }
+        padding-block-start: rem(12px);
+        padding-block-end: rem(12px);
     }
     p {
         margin: 0 !important;
         margin-block-start: 0.5rem;
         // margin-block-end: 2rem;
-        line-height: 22px;
-        font-size: 14px;
         // padding:8px 0px;
         color: #404145;
         font: 400 16px/24px "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
     .published-at {
-        margin-block-start: 1rem !important;
-        margin-block-end: 1rem !important;
+        line-height: rem(21px);
+        font-size: rem(14px);
         color: #95979d;
-        font-size: 14px;
-        line-height: 21px;
-        font: 400 16px/24px "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        padding: rem(8px) 0;
     }
     .country {
         display: flex;
         align-items: center;
         justify-content: start;
-        margin-block-start: 0.3rem;
-        margin-block-end: 0.6rem;
+        padding: rem(8px) 0px;
+        padding-block-start: 0.3rem;
         padding: 0, 0, 3rem, 3rem;
         span {
             // margin: 0;
             margin-inline-start: 10px;
             color: #95979d;
-            font-size: 14px;
+            font-size: rem(14px);
             font-weight: 600;
-        }
-        .rating {
-            margin: 0;
-            font-size: 1.2rem;
-            color: $starsColor;
         }
         > * {
             padding: none !important;
         }
-        .country-icon {
-            color: #95979d;
-            font-size: 14px;
-            font-weight: 600;
-            margin: auto;
-            padding: none !important;
+
+        .country-name {
+            margin: 0;
+            padding-inline-start: rem(5px);
         }
     }
+    .star {
+        margin-inline-start: 0.4rem;
+        color: $starsColor;
+        font-size: 1.65rem !important;
+    }    
 }
 
-.star {
-    margin-inline-start: 0.4rem;
-    color: $starsColor;
-    font-size: 1.65rem !important;
-}

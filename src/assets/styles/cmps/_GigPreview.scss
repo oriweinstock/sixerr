@@ -25,6 +25,21 @@
     
     .preview-inner {
         border: $border;
+        position: relative;
+
+        &:hover .clear-icon {
+            opacity: 1;
+        }
+        .clear-icon {
+            color: $darkColor;
+            position: absolute;
+            right: -10%;
+            top: -10%;
+            font-size: 2rem;
+            opacity: 0;
+
+            transition: .3s;
+        }
 
         .preview-img {
             background: #000;
@@ -133,7 +148,6 @@
                 }
             }
         }
-    
     
     }
 }

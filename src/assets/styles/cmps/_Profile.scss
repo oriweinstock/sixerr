@@ -1,65 +1,93 @@
 .profile {
-    margin-top: 20px;
-    
+    padding: 0 5vw;
+    margin: 2rem auto;
+
     h1 {
         color: $darkColor;
+        margin: 0.25rem 0 0.5rem;
     }
-    .about-user {
-        text-align: center;
-        border: $border;
-        background-color: #fff;
-        min-width: 250px;
-        height: fit-content;
 
-        button {
-            width: 90%;
-            margin: 15px auto;
-            @include defButton;
-        }
-        .img-upload {
-            position: relative;
-            display: block;
-            margin: 20px auto;
-            background: rgb(0, 0, 0);
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            overflow: hidden;
-            
-            
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                opacity: 1;
-                transition: .3s;
+    .top-section {
+        gap: 2rem;
+        margin-bottom: 1.75rem;
+        .about-user {
+            text-align: center;
+            border: $border;
+            background-color: #fff;
+            min-width: 250px;
+            max-width: 33vw;
+            // height: fit-content;
+    
+            button {
+                width: 90%;
+                margin: 15px auto;
+                @include defButton;
             }
-
-            &:hover img {
-                opacity: 0.75;
-            }
-            &:hover .camera-icon {
-                opacity: 1;
-            }
-            .camera-icon {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                color: $lightColor;
-                opacity: 0;
+            .img-upload {
+                position: relative;
+                display: block;
+                margin: 20px auto;
+                background: rgb(0, 0, 0);
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                overflow: hidden;
                 
-                transition: .3s;
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 1;
+                    transition: .3s;
+                }
+    
+                &:hover img {
+                    opacity: 0.75;
+                }
+                &:hover .camera-icon {
+                    opacity: 1;
+                }
+                .camera-icon {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: $lightColor;
+                    opacity: 0;
+                    
+                    transition: .3s;
+                }
+    
             }
-
+            
+            > * {
+                outline: none;
+            }
         }
-        
-        > * {
-            outline: none;
+    }
+
+    .my-gigs {
+
+        .start-selling {
+            border: 2px solid $greenColor;
+            padding-inline-start: 1rem;
+
+            button {
+                margin-inline-start: 1rem;
+            }
+        }
+
+        margin-bottom: 1.5rem;
+    }
+
+    .buyer-orders {
+        // border: $border;
+        h1 {
+            padding-inline-start: 0;
         }
     }
     .recently-viewed {
-        margin-inline-start: 30px;
         h1 {
             color: $darkColor;
             margin-top: 0;

@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: red;
+    color: $lightColor;
+}
+
 body {
     background-color: $lightColor;
 }
@@ -21,4 +26,21 @@ button {
     // max-width: 1400px;
     max-width: 1200px;
     margin: 0 auto;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+
+    @media screen and (min-width: $smallLayout) {
+        max-width: $smallLayout;
+    }
+    @media screen and (min-width: $mediumLayout) {
+        max-width: $mediumLayout;
+    }
+    @media screen and (min-width: $wideLayout) {
+        max-width: $wideLayout;
+    }
+
+    // @media screen and (min-width: $mobileLayout) {
+    //     max-width: $mobileLayout;
+    // }
+
 }

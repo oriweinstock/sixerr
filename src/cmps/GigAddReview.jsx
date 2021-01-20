@@ -2,12 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { utilService } from '../services/utilService.js'
 import { addGig, updateGig, loadGig } from '../store/actions/gigActions'
-import StarIcon from '@material-ui/icons/Star';
-// import Rating from '../cmps/HoverRating.jsx'
 import { HoverRating } from '../cmps/HoverRating.jsx'
-// import setValue from '../cmps/HoverRating.jsx'
-// import Rating from '@material-ui/lab/Rating';
-// import {HalfRating} from './HoverRating.jsx'
+
 
 class _GigAddReview extends Component {
 
@@ -28,8 +24,9 @@ class _GigAddReview extends Component {
     createReviewTemplate = (gig, user) => {
         const by = { _id: user._id, fullname: user.fullname, imgUrl: user.imgUrl }
         const id = utilService.makeId()
-        const review = { id, rating: '', txt: '', createdAt: null, purchasedAt: null, seller: gig.owner, by }
+        const review = { id, rating: '', txt: '', createdAt: null, purchasedAt: null, by }
         return review
+        //gig.reviews[0].seller => gig.owner
     }
 
     handleChange = ({ target }) => {
@@ -61,20 +58,25 @@ class _GigAddReview extends Component {
         reviewToAdd.purchasedAt = purchasedAt
         gig.reviews.unshift(reviewToAdd)
         this.props.updateGig(gig).then(() => {
-            this.setState({review:null})
+            this.setState({ review: null })
             console.log('review added succefully')
         })
 
     }
 
     render() {
-        const {review } = this.state
-        if(!review) return <div></div>
+        const { mobileStarStats } = this.props
+        console.log("render , mobileStarStats", mobileStarStats)
+        const { review } = this.state
+        if (!review) return <div></div>
         return (
             <>
-                 <HoverRating className="stars-rate" handleRate={this.handleRate} val={review.rating} />
-                <textarea rows="6" cols="60" type="text" name="txt" placeholder='enter review...' value={review.txt}  onChange={this.handleChange} required />
-                <button className="add-review" onClick={() => this.onAddReview()}>Add Review</button>
+                {!mobileStarStats && <HoverRating className="stars-rate" handleRate={this.handleRate} val={review.rating} />}
+                <textarea rows="6" cols="60" type="text" name="txt" placeholder='enter review...' value={review.txt} onChange={this.handleChange} required />
+                <div className="rate-mobile-view-container">
+                    {mobileStarStats && <HoverRating className="stars-rate" handleRate={this.handleRate} val={review.rating} />}
+                </div>
+                    <button className="add-review" onClick={() => this.onAddReview()}>Add Review</button>
             </>
         )
     }
